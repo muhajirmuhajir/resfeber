@@ -13,6 +13,6 @@ class TransactionTraveler extends Model
 
     public function transaction()
     {
-        return $this->belongsTo(TransactionDB::class, 'transaction_id');
+        return $this->belongsTo(Transaction::class, 'transaction_id');
     }
 }
