@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Facility extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function tempatWisata()
+    {
+        return $this->belongsTo(TempatWisata::class, 'tempat_wisata_id');
+    }
 }
