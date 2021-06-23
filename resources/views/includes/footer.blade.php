@@ -28,9 +28,9 @@
 
                 <!-- social starts -->
                 <ul class="dtr-social dtr-social-list dtr-mt-20">
-                    <li><a href="#" class="dtr-instagram" target="_blank" title="instagram"></a></li>
+                    <li><a href="https://www.instagram.com/farhanakey/" class="dtr-instagram" target="_blank" title="instagram"></a></li>
                     <li><a href="#" class="dtr-google" target="_blank" title="google"></a></li>
-                    <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                    <li><a href="https://twitter.com/home" class="dtr-twitter" target="_blank" title="twitter"></a></li>
                 </ul>
                 <!-- social ends -->
 
