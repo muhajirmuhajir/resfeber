@@ -5,7 +5,7 @@
     <div class="container">
 
         <!-- small devices logo -->
-        <a href="index.html"><img src="assets/images/resfeber-logo.png" alt="logo"></a>
+        <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo"></a>
         <!-- small devices logo ends -->
 
         <!-- menu button -->
@@ -25,10 +25,10 @@
         <div class="dtr-header-left">
 
             <!-- logo -->
-            <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo"></a>
+            <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/resfeber-logo.png" alt="logo"></a>
 
             <!-- logo on scroll -->
-            <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo"></a>
+            <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/resfeber-logo.png" alt="logo"></a>
             <!-- logo on scroll ends -->
 
         </div>
