@@ -10,7 +10,7 @@
 
             <!-- column 1 starts -->
             <div class="col-12 col-md-6 footer-col-1"> <img src="assets/images/resfeber-logo.png" alt="logo">
-                <p class="dtr-mt-20">&copy; Copyright 2021. Made by <a href="https://themeforest.net/user/tansh">Tansh</a></p>
+                <p class="dtr-mt-20">&copy; Copyright 2021.</a></p>
             </div>
             <!-- column 1 ends -->
 
@@ -19,18 +19,16 @@
 
                 <!-- list starts -->
                 <ul class="dtr-list-inline">
-                    <li><a href="#home" class="dtr-scroll-link">Home</a></li>
-                    <li><a href="#about" class="dtr-scroll-link">About</a></li>
-                    <li><a href="#properties" class="dtr-scroll-link">Properties</a></li>
-                    <li><a href="#services" class="dtr-scroll-link">Services</a></li>
-                    <li><a href="#contact" class="dtr-scroll-link">Contact</a></li>
+                    <li><a href="#home" class="dtr-scroll-link">Beranda</a></li>
+                    <li><a href="#about" class="dtr-scroll-link">Tempat</a></li>
+                    <li><a href="#properties" class="dtr-scroll-link">Paket</a></li>
+                    <li><a href="#services" class="dtr-scroll-link">Tentang</a></li>
                 </ul>
                 <!-- list ends -->
 
                 <!-- social starts -->
                 <ul class="dtr-social dtr-social-list dtr-mt-20">
                     <li><a href="#" class="dtr-instagram" target="_blank" title="instagram"></a></li>
-                    <li><a href="#" class="dtr-skype" target="_blank" title="skype"></a></li>
                     <li><a href="#" class="dtr-google" target="_blank" title="google"></a></li>
                     <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
                 </ul>
