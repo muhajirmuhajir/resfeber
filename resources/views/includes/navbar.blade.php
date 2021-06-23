@@ -44,7 +44,7 @@
                 <a href="{{route('dashboard')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Dashboard<span class="btn-span"><i
                     class="icon-arrow-right"></i></span></a>
                 @else
-                <a href="{{route('login')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Login<span class="btn-span"><i
+                <a href="{{route('login')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Masuk<span class="btn-span"><i
                     class="icon-arrow-right"></i></span></a>
                 @endauth
 
@@ -55,10 +55,34 @@
             <!-- menu starts-->
             <div class="main-navigation dtr-menu-light mt-2">
                 <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
-                    <li> <a class="nav-link" href="#home">Beranda.</a> </li>
-                    <li> <a class="nav-link" href="#about">Tempat.</a> </li>
-                    <li> <a class="nav-link" href="#properties">Paket.</a> </li>
-                    <li> <a class="nav-link" href="#services">Tentang.</a> </li>
+                    <li> <a class="nav-link" href="#home">Beranda</a> </li>
+                    <li> <a class="nav-link" href="#">Lokasi</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="index.html">Jawa Timur</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Malang</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Surabaya</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Probolinggo</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="index02.html">Jawa Tengah</a>
+                            </li>
+                            <li>
+                                <a href="index02.html">Jawa Barat</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li> <a class="nav-link" href="#properties">Paket</a> </li>
+                    <li> <a class="nav-link" href="#services">Tentang</a> </li>
                 </ul>
             </div>
             <!-- menu ends -->
