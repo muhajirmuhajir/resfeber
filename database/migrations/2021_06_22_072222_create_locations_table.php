@@ -18,6 +18,7 @@ class CreateLocationsTable extends Migration
             $table->integer('tempat_wisata_id');
             $table->string('name');
             $table->longText('address');
+            $table->string('city');
             $table->string('latitude');
             $table->string('longitude');
             $table->timestamps();
