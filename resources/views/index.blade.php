@@ -43,6 +43,102 @@
     <!-- hero section ends
 ================================================== -->
 
+<!-- blog section starts
+================================================== -->
+<section id="blog" class="dtr-section dtr-box-layout dtr-py-100">
+
+    <!-- heading starts -->
+    <div class="dtr-section-heading-wrapper">
+        <h2>Terpopuler</h2>
+        <p>Bingung mau liburan kemana? Berikut ini adalah 3 rekomendasi <br> destinasi wisata terpopuler yang paling sering dikunjungi! </p>
+    </div>
+    <!-- heading ends -->
+
+    <!--== row starts ==-->
+    <div class="row">
+
+        <!-- blog item 1 starts -->
+        <div class="col-12 col-md-4">
+            <div class="dtr-blog-item">
+                <!-- image -->
+                <div class="dtr-post-img"> <img src="assets/images/ranu.png" alt="image"> </div>
+                <!-- content -->
+                <div class="dtr-post-content"> <span class="dtr-blog-cat">Jawa Timur</span>
+                    <h5><a href="#">Ranu Kumbolo</a></h5>
+                    <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
+                    <!-- meta -->
+                    <div class="dtr-blog-meta clearfix">
+                        <div class="dtr-meta-author-img"><img src="assets/images/izza.png" alt="image">
+                        </div>
+                        <div class="dtr-meta-text">
+                            <h6 class="dtr-meta-author">oleh Mohammad Izza</h6>
+                            <span class="dtr-meta-date">25 January 2021</span>
+                        </div>
+                    </div>
+                    <!-- meta ends -->
+                </div>
+                <!-- content ends -->
+            </div>
+        </div>
+        <!-- blog item 1 ends -->
+
+        <!-- blog item 2 starts -->
+        <div class="col-12 col-md-4">
+            <div class="dtr-blog-item">
+                <!-- image -->
+                <div class="dtr-post-img"> <img src="assets/images/ranu.png" alt="image"> </div>
+                <!-- content -->
+                <div class="dtr-post-content"> <span class="dtr-blog-cat">Jawa Timur</span>
+                    <h5><a href="#">Ranu Kumbolo</a></h5>
+                    <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
+                    <!-- meta -->
+                    <div class="dtr-blog-meta clearfix">
+                        <div class="dtr-meta-author-img"><img src="assets/images/hana.png" alt="image">
+                        </div>
+                        <div class="dtr-meta-text">
+                            <h6 class="dtr-meta-author">oleh Qonita Farhana</h6>
+                            <span class="dtr-meta-date">12 February 2021</span>
+                        </div>
+                    </div>
+                    <!-- meta ends -->
+                </div>
+                <!-- content ends -->
+            </div>
+        </div>
+        <!-- blog item 2 ends -->
+
+        <!-- blog item 3 starts -->
+        <div class="col-12 col-md-4">
+            <div class="dtr-blog-item">
+                <!-- image -->
+                <div class="dtr-post-img"> <img src="assets/images/ranu.png" alt="image"> </div>
+                <!-- content -->
+                <div class="dtr-post-content"> <span class="dtr-blog-cat">Jawa Timur</span>
+                    <h5><a href="#">Ranu Kumbolo</a></h5>
+                    <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
+                    <!-- meta -->
+                    <div class="dtr-blog-meta clearfix">
+                        <div class="dtr-meta-author-img"><img src="assets/images/muhajir.png" alt="image">
+                        </div>
+                        <div class="dtr-meta-text">
+                            <h6 class="dtr-meta-author">oleh Muhajir</h6>
+                            <span class="dtr-meta-date">13 March 2021</span>
+                        </div>
+                    </div>
+                    <!-- meta ends -->
+                </div>
+                <!-- content ends -->
+            </div>
+        </div>
+        <!-- blog item 3 ends -->
+
+    </div>
+    <!--== row ends ==-->
+
+</section>
+<!-- blog section ends
+================================================== -->
+
     <!-- features section starts
 ================================================== -->
     <section id="features" class="dtr-section dtr-box-layout dtr-py-100">
@@ -638,105 +734,7 @@
     <!-- testimonial section ends
 ================================================== -->
 
-    <!-- blog section starts
-================================================== -->
-    <section id="blog" class="dtr-section dtr-box-layout dtr-py-100">
 
-        <!-- heading starts -->
-        <div class="dtr-section-heading-wrapper">
-            <h2>Recent News</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod<br>
-                tempor incididunt labore et dolore magna aliqua</p>
-        </div>
-        <!-- heading ends -->
-
-        <!--== row starts ==-->
-        <div class="row">
-
-            <!-- blog item 1 starts -->
-            <div class="col-12 col-md-4">
-                <div class="dtr-blog-item">
-                    <!-- image -->
-                    <div class="dtr-post-img"> <img src="assets/images/blogpost-img1.jpg" alt="image"> </div>
-                    <!-- content -->
-                    <div class="dtr-post-content"> <span class="dtr-blog-cat">Property</span>
-                        <h5><a href="#">How to achieve financial independence through real estate</a></h5>
-                        <p>There are many variations of passages of lorem ipsum available, but the majority have
-                            suffered alteration in some form by injected humour or randomised words.</p>
-                        <!-- meta -->
-                        <div class="dtr-blog-meta clearfix">
-                            <div class="dtr-meta-author-img"><img src="assets/images/user-3.jpg" alt="image">
-                            </div>
-                            <div class="dtr-meta-text">
-                                <h6 class="dtr-meta-author">by Emily Anderson</h6>
-                                <span class="dtr-meta-date">25 January 2021</span>
-                            </div>
-                        </div>
-                        <!-- meta ends -->
-                    </div>
-                    <!-- content ends -->
-                </div>
-            </div>
-            <!-- blog item 1 ends -->
-
-            <!-- blog item 2 starts -->
-            <div class="col-12 col-md-4">
-                <div class="dtr-blog-item">
-                    <!-- image -->
-                    <div class="dtr-post-img"> <img src="assets/images/blogpost-img2.jpg" alt="image"> </div>
-                    <!-- content -->
-                    <div class="dtr-post-content"> <span class="dtr-blog-cat">Listing</span>
-                        <h5><a href="#">The most popular cities for homebuyers</a></h5>
-                        <p>There are many variations of passages of lorem ipsum available, but the majority have
-                            suffered alteration in some form by injected humour or randomised words.</p>
-                        <!-- meta -->
-                        <div class="dtr-blog-meta clearfix">
-                            <div class="dtr-meta-author-img"><img src="assets/images/user-3.jpg" alt="image">
-                            </div>
-                            <div class="dtr-meta-text">
-                                <h6 class="dtr-meta-author">by Emily Anderson</h6>
-                                <span class="dtr-meta-date">12 February 2021</span>
-                            </div>
-                        </div>
-                        <!-- meta ends -->
-                    </div>
-                    <!-- content ends -->
-                </div>
-            </div>
-            <!-- blog item 2 ends -->
-
-            <!-- blog item 3 starts -->
-            <div class="col-12 col-md-4">
-                <div class="dtr-blog-item">
-                    <!-- image -->
-                    <div class="dtr-post-img"> <img src="assets/images/blogpost-img3.jpg" alt="image"> </div>
-                    <!-- content -->
-                    <div class="dtr-post-content"> <span class="dtr-blog-cat">Commercial</span>
-                        <h5><a href="#">Learn how real estate really shapes our future</a></h5>
-                        <p>There are many variations of passages of lorem ipsum available, but the majority have
-                            suffered alteration in some form by injected humour or randomised words.</p>
-                        <!-- meta -->
-                        <div class="dtr-blog-meta clearfix">
-                            <div class="dtr-meta-author-img"><img src="assets/images/user-3.jpg" alt="image">
-                            </div>
-                            <div class="dtr-meta-text">
-                                <h6 class="dtr-meta-author">by Emily Anderson</h6>
-                                <span class="dtr-meta-date">13 March 2021</span>
-                            </div>
-                        </div>
-                        <!-- meta ends -->
-                    </div>
-                    <!-- content ends -->
-                </div>
-            </div>
-            <!-- blog item 3 ends -->
-
-        </div>
-        <!--== row ends ==-->
-
-    </section>
-    <!-- blog section ends
-================================================== -->
 
     <!-- contact section starts
 ================================================== -->
