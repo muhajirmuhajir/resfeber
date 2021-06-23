@@ -5,7 +5,7 @@
     <div class="container">
 
         <!-- small devices logo -->
-        <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo"></a>
+        <a href="index.html"><img src="assets/images/resfeber-logo.png" alt="logo"></a>
         <!-- small devices logo ends -->
 
         <!-- menu button -->
