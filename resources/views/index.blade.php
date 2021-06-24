@@ -1,11 +1,18 @@
-@extends('home');
+@extends('home')
 
 @section('content')
+
 <div id="dtr-main-content">
 
     <!-- hero section starts
 ================================================== -->
     <section id="home" class="dtr-section dtr-box-layout dtr-hero-section-top-padding">
+        <div class="mt-4 position-relative">
+            <form class="d-flex position-absolute">
+                <input class="form-control me-2 shadow-none" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+        </div>
         <!-- dtr-bg-shapes-type-1 : Class for shapes to background. Easy to change image color, refer local help doc -->
         <div class="dtr-box-wrapper-round dtr-bg-shapes-type-1 bg-white">
 

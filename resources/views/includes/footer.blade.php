@@ -19,11 +19,10 @@
 
                 <!-- list starts -->
                 <ul class="dtr-list-inline">
-                    <li><a href="#home" class="dtr-scroll-link">Home</a></li>
-                    <li><a href="#about" class="dtr-scroll-link">About</a></li>
-                    <li><a href="#properties" class="dtr-scroll-link">Properties</a></li>
-                    <li><a href="#services" class="dtr-scroll-link">Services</a></li>
-                    <li><a href="#contact" class="dtr-scroll-link">Contact</a></li>
+                    <li><a href="#home" class="dtr-scroll-link">Beranda</a></li>
+                    <li><a href="#about" class="dtr-scroll-link">Lokasi</a></li>
+                    <li><a href="#properties" class="dtr-scroll-link">Paket</a></li>
+                    <li><a href="#services" class="dtr-scroll-link">Tentang</a></li>
                 </ul>
                 <!-- list ends -->
 
