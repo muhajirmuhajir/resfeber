@@ -1,12 +1,9 @@
 <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
-
-        <!-- Validation Errors -->
+    <div class="h-screen grid overflow-y-hidden p-16 bg-gray-300 box-border">
+        <div class="rounded-3xl overflow-hidden bg-white">
+            <div class="px-6 box-border">
+                <h1 class="pt-8 text-xl">Register akun Resfeber</h1>
+                <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <form method="POST" action="{{ route('register') }}">
@@ -55,5 +52,8 @@
                 </x-button>
             </div>
         </form>
-    </x-auth-card>
+            </div>
+        </div>
+    </div>
+
 </x-guest-layout>

@@ -9,7 +9,7 @@
         <div class="row">
 
             <!-- column 1 starts -->
-            <div class="col-12 col-md-6 footer-col-1"> <img src="assets/images/logo-dark.png" alt="logo">
+            <div class="col-12 col-md-6 footer-col-1"> <img src="{{url('assets/images/logo-dark.png')}}" alt="logo">
                 <p class="dtr-mt-20">&copy; Copyright 2021. Made by <a href="https://themeforest.net/user/tansh">Tansh</a></p>
             </div>
             <!-- column 1 ends -->

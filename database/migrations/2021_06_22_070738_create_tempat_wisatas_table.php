@@ -15,6 +15,7 @@ class CreateTempatWisatasTable extends Migration
     {
         Schema::create('tempat_wisatas', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->string('name');
             $table->string('contact');
             $table->longText('history');

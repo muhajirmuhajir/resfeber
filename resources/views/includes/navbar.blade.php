@@ -5,7 +5,7 @@
     <div class="container">
 
         <!-- small devices logo -->
-        <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo"></a>
+        <a href="index.html"><img src="{{url('assets/images/logo-dark.png')}}" alt="logo"></a>
         <!-- small devices logo ends -->
 
         <!-- menu button -->
@@ -25,10 +25,10 @@
         <div class="dtr-header-left">
 
             <!-- logo -->
-            <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo"></a>
+            <a class="logo-default dtr-scroll-link" href="#home"><img src="{{url('assets/images/logo-dark.png')}}" alt="logo"></a>
 
             <!-- logo on scroll -->
-            <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo"></a>
+            <a class="logo-alt dtr-scroll-link" href="#home"><img src="{{url('assets/images/logo-dark.png')}}" alt="logo"></a>
             <!-- logo on scroll ends -->
 
         </div>
@@ -44,7 +44,7 @@
                 <a href="{{route('dashboard')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Dashboard<span class="btn-span"><i
                     class="icon-arrow-right"></i></span></a>
                 @else
-                <a href="{{route('login')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Masuk<span class="btn-span"><i
+                <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Masuk<span class="btn-span"><i
                     class="icon-arrow-right"></i></span></a>
                 @endauth
 
@@ -55,7 +55,7 @@
             <!-- menu starts-->
             <div class="main-navigation dtr-menu-light mt-2">
                 <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
-                    <li> <a class="nav-link" href="#home">Beranda</a> </li>
+                    <li> <a class="nav-link" href="{{route('home')}}">Beranda</a> </li>
                     <li> <a class="nav-link" href="#">Lokasi</a>
                         <ul class="sub-menu">
                             <li>
