@@ -9,8 +9,9 @@
         <div class="row">
 
             <!-- column 1 starts -->
-            <div class="col-12 col-md-6 footer-col-1"> <img src="{{url('assets/images/logo-dark.png')}}" alt="logo">
-                <p class="dtr-mt-20">&copy; Copyright 2021. Made by <a href="https://themeforest.net/user/tansh">Tansh</a></p>
+
+            <div class="col-12 col-md-6 footer-col-1"> <img src="assets/images/resfeber-logo.png" alt="logo">
+                <p class="dtr-mt-20">&copy; Copyright 2021.</a></p>
             </div>
             <!-- column 1 ends -->
 
@@ -28,10 +29,10 @@
 
                 <!-- social starts -->
                 <ul class="dtr-social dtr-social-list dtr-mt-20">
-                    <li><a href="#" class="dtr-instagram" target="_blank" title="instagram"></a></li>
-                    <li><a href="#" class="dtr-skype" target="_blank" title="skype"></a></li>
+                    <li><a href="https://www.instagram.com/farhanakey/" class="dtr-instagram" target="_blank"
+                            title="instagram"></a></li>
                     <li><a href="#" class="dtr-google" target="_blank" title="google"></a></li>
-                    <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                    <li><a href="https://twitter.com/home" class="dtr-twitter" target="_blank" title="twitter"></a></li>
                 </ul>
                 <!-- social ends -->
 

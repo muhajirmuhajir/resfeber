@@ -1,5 +1,4 @@
-
-    <!-- Small Devices Header
+<!-- Small Devices Header
 ============================================= -->
 <div class="dtr-responsive-header fixed-top">
     <div class="container">
@@ -9,7 +8,8 @@
         <!-- small devices logo ends -->
 
         <!-- menu button -->
-        <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
+        <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span class="dtr-hamburger-lines-wrapper"><span
+                    class="dtr-hamburger-lines"></span></span></button>
     </div>
     <div class="dtr-responsive-header-menu"></div>
 </div>
@@ -25,10 +25,13 @@
         <div class="dtr-header-left">
 
             <!-- logo -->
-            <a class="logo-default dtr-scroll-link" href="#home"><img src="{{url('assets/images/logo-dark.png')}}" alt="logo"></a>
+
+            <a class="logo-default dtr-scroll-link" href="#home"><img src="{{url('assets/images/logo-dark.png')}}"
+                    alt="logo"></a>
 
             <!-- logo on scroll -->
-            <a class="logo-alt dtr-scroll-link" href="#home"><img src="{{url('assets/images/logo-dark.png')}}" alt="logo"></a>
+            <a class="logo-alt dtr-scroll-link" href="#home"><img src="{{url('assets/images/logo-dark.png')}}"
+                    alt="logo"></a>
             <!-- logo on scroll ends -->
 
         </div>
@@ -41,11 +44,12 @@
             <div class="dtr-header-contact dtr-ml-50">
                 @if (Route::has('login'))
                 @auth
-                <a href="{{route('dashboard')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Dashboard<span class="btn-span"><i
-                    class="icon-arrow-right"></i></span></a>
+                <a href="{{route('dashboard')}}"
+                    class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Dashboard<span class="btn-span"><i
+                            class="icon-arrow-right"></i></span></a>
                 @else
-                <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Masuk<span class="btn-span"><i
-                    class="icon-arrow-right"></i></span></a>
+                <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Masuk<span
+                        class="btn-span"><i class="icon-arrow-right"></i></span></a>
                 @endauth
 
                 @endif
