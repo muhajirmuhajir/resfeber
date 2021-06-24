@@ -20,7 +20,11 @@
                 <!-- list starts -->
                 <ul class="dtr-list-inline">
                     <li><a href="#home" class="dtr-scroll-link">Beranda</a></li>
+<<<<<<< HEAD
                     <li><a href="#about" class="dtr-scroll-link">Tempat</a></li>
+=======
+                    <li><a href="#about" class="dtr-scroll-link">Lokasi</a></li>
+>>>>>>> fcd6b4d0c2c6adf53c930c435f7b7ac74c6e9381
                     <li><a href="#properties" class="dtr-scroll-link">Paket</a></li>
                     <li><a href="#services" class="dtr-scroll-link">Tentang</a></li>
                 </ul>
