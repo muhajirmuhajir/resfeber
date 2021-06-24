@@ -41,11 +41,40 @@
         <div class="konten-box">
             <h1>Jawa Timur</h1>
             <p>Daftar destinasi wisata sekitar Jawa Timur.</p>
-            <div class="card-container">
-                <div class="card">
-                    halo ini card!
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/images/ranu.png" class="card-img-top">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Ranu Kumbolo</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/images/ranu.png" class="card-img-top ">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Ranu Kumbolo</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/images/ranu.png" class="card-img-top">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Ranu Kumbolo</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
                 </div>
             </div>
+
+
         </div>
     </section>
 </div>
