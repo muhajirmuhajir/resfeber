@@ -10,7 +10,8 @@
 
             <!-- column 1 starts -->
 
-            <div class="col-12 col-md-6 footer-col-1"> <img src="assets/images/resfeber-logo.png" alt="logo">
+            <div class="col-12 col-md-6 footer-col-1"> <img src="{{url('frontpage/assets/images/logo-dark.png')}}"
+                    alt="logo">
                 <p class="dtr-mt-20">&copy; Copyright 2021.</a></p>
             </div>
             <!-- column 1 ends -->

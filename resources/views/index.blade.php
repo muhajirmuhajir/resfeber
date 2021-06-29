@@ -73,7 +73,8 @@
             <div class="col-12 col-md-4">
                 <div class="dtr-blog-item">
                     <!-- image -->
-                    <div class="dtr-post-img"> <img src="assets/images/ranu.png" alt="image"> </div>
+                    <div class="dtr-post-img"> <img src="{{url('assets/images/ranu.png')}}" alt="image">
+                    </div>
                     <!-- content -->
                     <div class="dtr-post-content"> <span class="dtr-blog-cat">Jawa Timur</span>
                         <h5><a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}">Ranu Kumbolo</a></h5>
