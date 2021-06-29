@@ -34,7 +34,8 @@
             <div class="row">
                 <div class="col-lg-4 mb-3">
                     <div class="card-box">
-                        <img src="assets/images/blogpost-img1.jpg" alt="" srcset="" class="d-block img-fluid">
+                        <img src="{{url('frontpage/assets/images/blogpost-img1.jpg')}}" alt="" srcset=""
+                            class="d-block img-fluid">
                         <div class="card-content">
                             <div class="d-flex align-items-center">
                                 <span class="location">Jawa Timur</span>
@@ -86,7 +87,8 @@
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="card-box">
-                        <img src="assets/images/blogpost-img1.jpg" alt="" srcset="" class="d-block img-fluid">
+                        <img src="{{url('frontpage/assets/images/blogpost-img1.jpg')}}" alt="" srcset=""
+                            class="d-block img-fluid">
                         <div class="card-content">
                             <div class="d-flex align-items-center">
                                 <span class="location">Jawa Timur</span>
@@ -107,7 +109,7 @@
 
                                 <p> 9.7</p>
                             </div>
-                            <h5>Ranu Kumbolo</h5>
+                            <a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}" class="h4">Ranu Kumbolo</a>
                             <div class="d-flex justify-items-center">
                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +140,8 @@
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="card-box">
-                        <img src="assets/images/blogpost-img1.jpg" alt="" srcset="" class="d-block img-fluid">
+                        <img src="{{url('frontpage/assets/images/blogpost-img1.jpg')}}" alt="" srcset=""
+                            class="d-block img-fluid">
                         <div class="card-content">
                             <div class="d-flex align-items-center">
                                 <span class="location">Jawa Timur</span>
@@ -159,7 +162,7 @@
 
                                 <p> 9.7</p>
                             </div>
-                            <h5>Ranu Kumbolo</h5>
+                            <a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}" class="h4">Ranu Kumbolo</a>
                             <div class="d-flex justify-items-center">
                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +193,8 @@
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="card-box">
-                        <img src="assets/images/blogpost-img1.jpg" alt="" srcset="" class="d-block img-fluid">
+                        <img src="{{url('frontpage/assets/images/blogpost-img1.jpg')}}" alt="" srcset=""
+                            class="d-block img-fluid">
                         <div class="card-content">
                             <div class="d-flex align-items-center">
                                 <span class="location">Jawa Timur</span>
@@ -211,7 +215,7 @@
 
                                 <p> 9.7</p>
                             </div>
-                            <h5>Ranu Kumbolo</h5>
+                            <a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}" class="h4">Ranu Kumbolo</a>
                             <div class="d-flex justify-items-center">
                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +246,8 @@
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="card-box">
-                        <img src="assets/images/blogpost-img1.jpg" alt="" srcset="" class="d-block img-fluid">
+                        <img src="{{url('frontpage/assets/images/blogpost-img1.jpg')}}" alt="" srcset=""
+                            class="d-block img-fluid">
                         <div class="card-content">
                             <div class="d-flex align-items-center">
                                 <span class="location">Jawa Timur</span>
@@ -263,7 +268,7 @@
 
                                 <p> 9.7</p>
                             </div>
-                            <h5>Ranu Kumbolo</h5>
+                            <a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}" class="h4">Ranu Kumbolo</a>
                             <div class="d-flex justify-items-center">
                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -282,7 +287,6 @@
                                 <h6 class="h6 d-inline-block ml-1">
                                     Probolinggo</h6>
                             </div>
-
                             <hr>
                             <div class="facility-container">
                                 <span class="badge badge-pink">Kamar Mandi</span>
