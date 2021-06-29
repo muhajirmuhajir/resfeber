@@ -1,5 +1,10 @@
 @extends('layouts.frontpage')
 
+@section('style')
+<link rel="stylesheet" href="{{url('frontpage/assets/css/custom.css')}}">
+@endsection
+
+
 @section('content')
 
 <div id="dtr-main-content">
@@ -54,9 +59,8 @@
     <!-- hero section ends
 ================================================== -->
 
-    <!-- blog section starts
-================================================== -->
-    <section id="blog" class="dtr-section dtr-box-layout dtr-py-100">
+    <!-- wisata section starts -->
+    <section id="wisata" class="dtr-section dtr-box-layout dtr-py-100">
 
         <!-- heading starts -->
         <div class="dtr-section-heading-wrapper">
@@ -152,8 +156,45 @@
         <!--== row ends ==-->
 
     </section>
-    <!-- blog section ends
-================================================== -->
+    <!-- wisata section ends -->
+
+    <section id="city" class="dtr-section dtr-box-layout dtr-py-100">
+        <!-- heading starts -->
+        <div class="dtr-section-heading-wrapper">
+            <h2>Kota Terpopuler</h2>
+            <p>Berikut ini adalah 3 kota terpopuler yang sering dicari
+            </p>
+        </div>
+        <!-- heading ends -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="position-relative">
+                    <img class="img-fluid" src="{{url('frontpage/assets/images/malang.png')}}" alt="">
+
+                    <a href="#" class="position-absolute city-text">
+                        Malang
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative">
+                    <img class="img-fluid" src="{{url('frontpage/assets/images/yogyakarta.png')}}" alt="">
+
+                    <a href="#" class="position-absolute city-text">
+                        Yogyakarta
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="position-relative">
+                    <img class="img-fluid" src="{{url('frontpage/assets/images/surabaya.png')}}" alt="">
+                    <a href="#" class="position-absolute city-text">
+                        Surabaya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- services section starts
 ================================================== -->

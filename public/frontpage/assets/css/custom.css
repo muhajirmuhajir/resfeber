@@ -1,72 +1,90 @@
 /* Filter */
 .filter-container {
-  background-color: #efdbfe;
-  padding: 12px;
-  border-radius: 8px;
+    background-color: #efdbfe;
+    padding: 12px;
+    border-radius: 8px;
 }
 
 .form-check {
-  display: flex;
-  margin-bottom: 8px;
-  align-items: center;
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
 }
 
 .form-check-input {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 /* Card */
 .card-box {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-content {
-  box-sizing: border-box;
-  padding: 8px 18px;
+    box-sizing: border-box;
+    padding: 8px 18px;
 }
 
 .facility-container .facility-item {
-  font-size: 12px;
-  box-sizing: border-box;
-  padding: 4px 6px;
-  background-color: #efdbfe;
-  border-radius: 8px;
-  margin-right: 3px;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    background-color: #efdbfe;
+    border-radius: 8px;
+    margin-right: 3px;
 }
 
 .card-box .location {
-  background-color: #69aef8;
-  border-radius: 8px;
-  box-sizing: border-box;
-  padding: 2px 10px;
-  color: white;
+    background-color: #69aef8;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    color: white;
 }
 
 /* Accordion */
 .accordion-title {
-  font-size: 2rem;
-  text-shadow: 3px 3px #dbe7fe;
-  color: #1e247e;
+    font-size: 2rem;
+    text-shadow: 3px 3px #dbe7fe;
+    color: #1e247e;
 }
 
 .badge-pink {
-  background-color: #efdbfe;
-  color: #000;
-  font-size: 1rem;
-  font-weight: normal;
+    background-color: #efdbfe;
+    color: #000;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .produk-text {
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  font-weight: normal;
-  color: #fff;
-  font-size: 1.5rem;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-weight: normal;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.city-text {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-weight: normal;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.city-text:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.411);
 }
