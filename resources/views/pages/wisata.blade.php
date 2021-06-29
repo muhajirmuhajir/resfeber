@@ -50,7 +50,7 @@
                 <div class="card-body">
                   <span class="dtr-blog-cat">Jawa Timur</span>
                   <h5 class="card-title">Ranu Kumbolo</h5>
-                  <p class="card-text">Probolinggo</p>
+                  <p class="card-text"><i class="icon-map-pin1"> </i>Probolinggo</p>
                 </div>
                 <div class="card-footer">
                     <span class="badge badge-secondary">kamar mandi</span>
@@ -66,7 +66,7 @@
                 <div class="card-body">
                   <span class="dtr-blog-cat">Jawa Timur</span>
                   <h5 class="card-title">Ranu Kumbolo</h5>
-                  <p class="card-text">Probolinggo</p>
+                  <p class="card-text"><i class="icon-map-pin1"> </i>Probolinggo</p>
                 </div>
                 <div class="card-footer">
                     <span class="badge badge-secondary">kamar mandi</span>
@@ -82,7 +82,7 @@
                 <div class="card-body">
                   <span class="dtr-blog-cat">Jawa Timur</span>
                   <h5 class="card-title">Ranu Kumbolo</h5>
-                  <p class="card-text">Probolinggo</p>
+                  <p class="card-text"><i class="icon-map-pin1"> </i>Probolinggo</p>
                 </div>
                 <div class="card-footer">
                     <span class="badge badge-secondary">kamar mandi</span>
