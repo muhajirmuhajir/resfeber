@@ -88,3 +88,12 @@
     color: #fff;
     background-color: rgba(0, 0, 0, 0.411);
 }
+
+/* Icon */
+.icon-center {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 12px;
+    box-sizing: border-box;
+}
