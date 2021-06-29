@@ -97,3 +97,27 @@
     padding: 12px;
     box-sizing: border-box;
 }
+
+.card-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding-bottom: 60px;
+}
+
+.login-text-position {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0px 100px 0px 0px;
+}
+
+.register-text-position {
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0px 100px 0px 0px;
+}
