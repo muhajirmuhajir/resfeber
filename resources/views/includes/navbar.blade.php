@@ -38,15 +38,16 @@
         <!-- header left ends -->
 
         <!-- header right starts -->
-        <div class="dtr-header-right ml-auto">
+        <div class="dtr-header-right ml-auto d-flex flex-row-reverse align-items-center">
 
             <!-- contact starts -->
             <div class="dtr-header-contact dtr-ml-50">
                 @if (Route::has('login'))
                 @auth
-                <a href="{{route('dashboard')}}"
-                    class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Dashboard<span class="btn-span"><i
-                            class="icon-arrow-right"></i></span></a>
+                <a href="{{route('dashboard')}}">
+                    <img style="width: 50%; height: auto;" src="{{url('frontpage/assets/images/ic-profile.png')}}"
+                        alt="" srcset="">
+                </a>
                 @else
                 @if (Route::getCurrentRoute()->getName() == 'login')
                 <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Daftar<span
@@ -64,7 +65,7 @@
             <!-- contact ends -->
 
             <!-- menu starts-->
-            <div class="main-navigation dtr-menu-light mt-2">
+            <div class="main-navigation dtr-menu-light">
                 <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
                     <li> <a class="nav-link {{Route::getCurrentRoute()->getName() == 'home'? 'active': ''}}"
                             href="{{route('home')}}">Beranda</a> </li>

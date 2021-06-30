@@ -1,6 +1,7 @@
 @extends('layouts.frontpage')
 
 @section('style')
+<link rel="stylesheet" href="{{url('frontpage/assets/css/xzoom.min.css')}}">
 <link rel="stylesheet" href="{{url('frontpage/assets/css/custom.css')}}">
 @endsection
 
@@ -24,20 +25,37 @@
         <div class="row">
             <div class="col-md-8">
 
-                <img class="img-fluid" src="{{url('frontpage')}}/assets/images/img-1.jpg" alt="">
+                <img id="main-image" class="img-fluid" src="{{url('frontpage')}}/assets/images/img-1.jpg"
+                    xoriginal="{{url('frontpage')}}/assets/images/img-1.jpg" alt="">
                 <!-- Images -->
                 <div class="row mt-4">
                     <div class="col-3">
-                        <img class="img-fluid" src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        <a href="{{url('frontpage')}}/assets/images/blogpost-img1.jpg">
+                            <img class="img-fluid xzoom-gallery"
+                                src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg"
+                                xpreview="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img class="img-fluid" src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        <a href="{{url('frontpage')}}/assets/images/blogpost-img1.jpg">
+                            <img class="img-fluid xzoom-gallery"
+                                src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg"
+                                xpreview="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img class="img-fluid" src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        <a href="{{url('frontpage')}}/assets/images/blogpost-img1.jpg">
+                            <img class="img-fluid xzoom-gallery"
+                                src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg"
+                                xpreview="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img class="img-fluid" src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        <a href="{{url('frontpage')}}/assets/images/blogpost-img1.jpg">
+                            <img class="img-fluid xzoom-gallery"
+                                src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg"
+                                xpreview="{{url('frontpage')}}/assets/images/blogpost-img1.jpg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -177,4 +195,12 @@
         </div>
 </div>
 
+@endsection
+
+@section('script')
+<script src="{{url('frontpage/assets/js/xzoom.min.js')}}"></script>
+
+<script>
+    $("#main-image, .xzoom-gallery").xzoom();
+</script>
 @endsection
