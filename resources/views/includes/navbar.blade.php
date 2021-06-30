@@ -94,7 +94,8 @@
 
                         </ul>
                     </li>
-                    <li> <a class="nav-link" href="{{route('paket')}}">Paket</a> </li>
+                    <li> <a class="nav-link {{Route::getCurrentRoute()->getName() == 'paket'? 'active': ''}}"
+                            href="{{route('paket')}}">Paket</a> </li>
                     <li> <a class="nav-link" href="#services">Tentang</a> </li>
                 </ul>
             </div>

@@ -45,8 +45,9 @@
                             <input type="password" class="form-control" id="exampleInputPassword1"
                                 placeholder="Konfirmasi Password">
                         </div>
-                        <button type="submit" class="dtr-btn btn-dark-blue d-block w-100 mt-5">Buat
-                            Akun</button>
+                        <a type="" href="{{route('information-complete')}}"
+                            class="dtr-btn btn-dark-blue d-block w-100 mt-5">Buat
+                            Akun</a>
                     </form>
                 </div>
             </div>

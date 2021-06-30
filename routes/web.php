@@ -29,4 +29,8 @@ Route::get('wisata/{slug}', [TempatWisataController::class, 'show'])->name('deta
 Route::get('paket', [PaketController::class, 'index'])->name('paket');
 Route::get('paket/{slug}', [paketController::class, 'show'])->name('detailpaket');
 
+Route::get('information-complete', function (){
+    return view('pages.information-complete');
+})->name('information-complete');
+
 require __DIR__.'/auth.php';
