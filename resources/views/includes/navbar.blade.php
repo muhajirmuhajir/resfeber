@@ -4,7 +4,7 @@
     <div class="container">
 
         <!-- small devices logo -->
-        <a href="index.html"><img src="{{url('frontpage/assets/images/logo-dark.png')}}" alt="logo"></a>
+        <a href="{{route('home')}}"><img src="{{url('frontpage/assets/images/logo-dark.png')}}" alt="logo"></a>
         <!-- small devices logo ends -->
 
         <!-- menu button -->
@@ -26,12 +26,12 @@
 
             <!-- logo -->
 
-            <a class="logo-default dtr-scroll-link" href="#home"><img
+            <a class="logo-default dtr-scroll-link" href="{{route('home')}}"><img
                     src="{{url('frontpage/assets/images/logo-dark.png')}}" alt="logo"></a>
 
             <!-- logo on scroll -->
-            <a class="logo-alt dtr-scroll-link" href="#home"><img src="{{url('frontpage/assets/images/logo-dark.png')}}"
-                    alt="logo"></a>
+            <a class="logo-alt dtr-scroll-link" href="{{route('home')}}"><img
+                    src="{{url('frontpage/assets/images/logo-dark.png')}}" alt="logo"></a>
             <!-- logo on scroll ends -->
 
         </div>
@@ -48,8 +48,15 @@
                     class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Dashboard<span class="btn-span"><i
                             class="icon-arrow-right"></i></span></a>
                 @else
-                <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Masuk<span
+                @if (Route::getCurrentRoute()->getName() == 'login')
+                <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Daftar<span
                         class="btn-span"><i class="icon-arrow-right"></i></span></a>
+                @else
+                <a href="{{route('login')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Masuk<span
+                        class="btn-span"><i class="icon-arrow-right"></i></span></a>
+
+                @endif
+
                 @endauth
 
                 @endif
@@ -59,8 +66,10 @@
             <!-- menu starts-->
             <div class="main-navigation dtr-menu-light mt-2">
                 <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
-                    <li> <a class="nav-link" href="{{route('home')}}">Beranda</a> </li>
-                    <li> <a class="nav-link" href="{{route('wisata')}}">Lokasi</a>
+                    <li> <a class="nav-link {{Route::getCurrentRoute()->getName() == 'home'? 'active': ''}}"
+                            href="{{route('home')}}">Beranda</a> </li>
+                    <li> <a class="nav-link {{Route::getCurrentRoute()->getName() == 'wisata'? 'active': ''}}"
+                            href="{{route('wisata')}}">Lokasi</a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="index.html">Jawa Timur</a>
@@ -85,7 +94,7 @@
 
                         </ul>
                     </li>
-                    <li> <a class="nav-link" href="#properties">Paket</a> </li>
+                    <li> <a class="nav-link" href="{{route('paket')}}">Paket</a> </li>
                     <li> <a class="nav-link" href="#services">Tentang</a> </li>
                 </ul>
             </div>

@@ -171,7 +171,7 @@
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/malang.png')}}" alt="">
 
-                    <a href="#" class="position-absolute city-text">
+                    <a href="#" class="position-absolute city-text h1">
                         Malang
                     </a>
                 </div>
@@ -180,7 +180,7 @@
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/yogyakarta.png')}}" alt="">
 
-                    <a href="#" class="position-absolute city-text">
+                    <a href="#" class="position-absolute city-text h1">
                         Yogyakarta
                     </a>
                 </div>
@@ -188,7 +188,7 @@
             <div class="col-md-4">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/surabaya.png')}}" alt="">
-                    <a href="#" class="position-absolute city-text">
+                    <a href="#" class="position-absolute city-text h1">
                         Surabaya
                     </a>
                 </div>
