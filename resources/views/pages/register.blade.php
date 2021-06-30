@@ -24,30 +24,33 @@
             <div class="col-md-6">
                 <div class="card-container border-box px-4 pt-5">
                     <h1 class="h1">Daftar akun</h1>
-                    <form>
+                    @if ($errors->any())
+                    {{$errors}}
+                    @endif
+                    <form method="post" action="{{route('register')}}">
+                        @csrf
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Nama">
+                            <label for="name">Nama</label>
+                            <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp"
+                                placeholder="Nama">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email"
                                 aria-describedby="emailHelp" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
                                 placeholder="Password">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Konfirmasi Password">
+                            <label for="password_confirmation">Konfirmasi Password</label>
+                            <input type="password" class="form-control" name="password_confirmation"
+                                id="password_confirmation" placeholder="Konfirmasi Password">
                         </div>
-                        <a type="" href="{{route('information-complete')}}"
-                            class="dtr-btn btn-dark-blue d-block w-100 mt-5">Buat
-                            Akun</a>
+                        <button type="submit" class="dtr-btn btn-dark-blue d-block w-100 mt-5">Buat
+                            Akun</button>
                     </form>
                 </div>
             </div>
