@@ -41,13 +41,21 @@
         <div class="dtr-header-right ml-auto d-flex flex-row-reverse align-items-center">
 
             <!-- contact starts -->
-            <div class="dtr-header-contact dtr-ml-50">
+            <div class="dtr-header-contact dtr-ml-50 position-relative">
                 @if (Route::has('login'))
                 @auth
-                <a href="{{route('dashboard')}}">
+                <a href="{{route('dashboard')}}" class="menu-dropdown">
                     <img style="width: 50%; height: auto;" src="{{url('frontpage/assets/images/ic-profile.png')}}"
                         alt="" srcset="">
                 </a>
+                <div class="bg-white rounded p-3 pop-up-menu">
+                    <a href="{{route('profile')}}" class="d-block">Profile</a>
+                    <a href="{{route('transaksi')}}" class="d-block">Transaksi</a>
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <button type="submit" class="d-block">Logout</button>
+                    </form>
+                </div>
                 @else
                 @if (Route::currentRouteName() == 'login')
                 <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Daftar<span
