@@ -137,3 +137,27 @@
 .btn-dark-blue {
     border-width: 0;
 }
+
+.btn-outline-primary {
+    color: #1e247e;
+    border-color: #1e247e;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #7a7a7e;
+    border-color: #7a7a7e;
+}
+
+.card-title-header {
+    position: absolute;
+    border-radius: 12px;
+    left: -10px;
+    right: -10px;
+    top: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title-content {
+    padding-top: 60px;
+}

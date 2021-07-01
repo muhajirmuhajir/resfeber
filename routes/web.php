@@ -33,4 +33,8 @@ Route::get('information-complete', function (){
     return view('pages.information-complete');
 })->name('information-complete');
 
+Route::get('checkout', function (){
+    return view('pages.checkout');
+})->name('checkout');
+
 require __DIR__.'/auth.php';

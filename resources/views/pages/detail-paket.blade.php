@@ -78,7 +78,7 @@
                                 <p>Harga</p>
                                 <p class="h4 text-dark">Rp. 600.000/orang</p>
                             </div>
-                            <button class="btn btn-dark-blue btn-small">PESAN PAKET</button>
+                            <a href="{{route('checkout')}}" class="btn btn-dark-blue btn-small">PESAN PAKET</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                                 <p>Harga</p>
                                 <p class="h4 text-dark">Rp. 600.000/orang</p>
                             </div>
-                            <button class="btn btn-dark-blue btn-small">PESAN PAKET</button>
+                            <a href="{{route('checkout')}}" class="btn btn-dark-blue btn-small">PESAN PAKET</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                                 <p>Harga</p>
                                 <p class="h4 text-dark">Rp. 600.000/orang</p>
                             </div>
-                            <button class="btn btn-dark-blue btn-small">PESAN PAKET</button>
+                            <a href="{{route('checkout')}}" class="btn btn-dark-blue btn-small">PESAN PAKET</a>
                         </div>
                     </div>
                 </div>
