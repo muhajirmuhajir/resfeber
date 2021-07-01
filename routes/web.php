@@ -41,4 +41,12 @@ Route::get('about', function (){
     return view('pages.about');
 })->name('about');
 
+Route::get('profile', function (){
+    return view('pages.profile');
+})->name('profile');
+
+Route::get('transaksi', function (){
+    return view('pages.transaksi');
+})->name('transaksi');
+
 require __DIR__.'/auth.php';
