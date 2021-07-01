@@ -37,4 +37,8 @@ Route::get('checkout', function (){
     return view('pages.checkout');
 })->name('checkout');
 
+Route::get('about', function (){
+    return view('pages.about');
+})->name('about');
+
 require __DIR__.'/auth.php';

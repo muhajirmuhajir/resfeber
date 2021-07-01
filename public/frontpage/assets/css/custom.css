@@ -161,3 +161,8 @@
 .card-title-content {
     padding-top: 60px;
 }
+
+.ctm-active {
+    background-color: #efdbfe;
+    border-radius: 8px;
+}

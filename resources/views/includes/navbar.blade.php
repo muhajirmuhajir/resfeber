@@ -49,7 +49,7 @@
                         alt="" srcset="">
                 </a>
                 @else
-                @if (Route::getCurrentRoute()->getName() == 'login')
+                @if (Route::currentRouteName() == 'login')
                 <a href="{{route('register')}}" class="dtr-btn dtr-btn-right-icon dtr-mr-5 btn-dark-blue">Daftar<span
                         class="btn-span"><i class="icon-arrow-right"></i></span></a>
                 @else
@@ -67,9 +67,9 @@
             <!-- menu starts-->
             <div class="main-navigation dtr-menu-light">
                 <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
-                    <li> <a class="nav-link {{Route::getCurrentRoute()->getName() == 'home'? 'active': ''}}"
+                    <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'home'? 'ctm-active': ''}}"
                             href="{{route('home')}}">Beranda</a> </li>
-                    <li> <a class="nav-link {{Route::getCurrentRoute()->getName() == 'wisata'? 'active': ''}}"
+                    <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'wisata'? 'ctm-active': ''}}"
                             href="{{route('wisata')}}">Lokasi</a>
                         <ul class="sub-menu">
                             <li>
@@ -95,9 +95,10 @@
 
                         </ul>
                     </li>
-                    <li> <a class="nav-link {{Route::getCurrentRoute()->getName() == 'paket'? 'active': ''}}"
+                    <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'paket'? 'ctm-active': ''}}"
                             href="{{route('paket')}}">Paket</a> </li>
-                    <li> <a class="nav-link" href="#services">Tentang</a> </li>
+                    <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'about'? 'ctm-active': ''}}"
+                            href="{{route('about')}}">Tentang</a> </li>
                 </ul>
             </div>
             <!-- menu ends -->

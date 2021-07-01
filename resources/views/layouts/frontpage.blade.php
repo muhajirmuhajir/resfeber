@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Reales HTML Landing Page Template</title>
+    <title>Resfeber - Explore the globe with us</title>
     <meta name="author" content="tansh">
     <meta name="description" content="HTML Landing Page Teamplate">
     <meta name="keywords" content="real estate, agency, business, one page">
@@ -41,11 +41,16 @@
         </div>
         <!-- preloader ends -->
         @include('includes.navbar')
-        <!-- == main content starts == -->
-        @yield('content')
 
-        @include('includes.footer')
+        <div class="bg-wrapper">
+            <!-- == main content starts == -->
+            @yield('content')
 
+            @if (Route::currentRouteName() != 'about')
+            @include('includes.footer')
+            @endif
+
+        </div>
     </div>
     <!-- #dtr-wrapper ends -->
 
