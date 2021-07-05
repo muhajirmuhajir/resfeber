@@ -49,4 +49,10 @@ Route::get('transaksi', function (){
     return view('pages.transaksi');
 })->name('transaksi');
 
+Route::prefix('admin')->name('admin.')->group(function(){
+    Route::get('/', function (){
+        return view('pages.admin.dashboard');
+    })->name('dashboard');
+});
+
 require __DIR__.'/auth.php';
