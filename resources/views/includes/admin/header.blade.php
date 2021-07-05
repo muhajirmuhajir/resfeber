@@ -29,7 +29,25 @@
             <div class="collapse navbar-collapse justify-content-between">
                 <div class="header-left">
                     <div class="dashboard_bar">
-                        Dashboard
+                        @switch(Route::currentRouteName())
+                        @case('admin.dashboard')
+                        {{'Dashboard'}}
+                        @break
+                        @case('admin.tempat-wisata.index')
+                        {{'Tempat Wisata'}}
+                        @break
+                        @case('admin.paket-wisata.index')
+                        {{'Paket Wisata'}}
+                        @break
+                        @case('admin.travel')
+                        {{'Travel'}}
+                        @break
+                        @case('admin.transaksi')
+                        {{'Transaksi'}}
+                        @break
+                        @default
+                        {{'Resfeber'}}
+                        @endswitch
                     </div>
                 </div>
                 <ul class="navbar-nav header-right">

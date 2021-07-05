@@ -53,6 +53,11 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::get('/', function (){
         return view('pages.admin.dashboard');
     })->name('dashboard');
+
+    Route::resource('tempat-wisata', App\Http\Controllers\Admin\TempatWisataController::class);
+
+    Route::resource('paket-wisata', App\Http\Controllers\Admin\PaketWisataController::class);
+
 });
 
 require __DIR__.'/auth.php';
