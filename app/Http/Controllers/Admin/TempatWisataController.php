@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\TempatWisata;
 
 class TempatWisataController extends Controller
 {
@@ -14,7 +16,9 @@ class TempatWisataController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.tempat-wisata.index');
+        $wisata = TempatWisata::paginate(2);
+
+        return view('pages.admin.tempat-wisata.index', compact('wisata'));
     }
 
     /**
@@ -24,7 +28,7 @@ class TempatWisataController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.tempat-wisata.create');
     }
 
     /**
@@ -35,7 +39,14 @@ class TempatWisataController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fields = $request->validate([
+            'name' => 'required'
+        ]);
+        $fields['slug'] = Str::slug($fields['name']);
+
+        TempatWisata::create($fields);
+
+        return back();
     }
 
     /**

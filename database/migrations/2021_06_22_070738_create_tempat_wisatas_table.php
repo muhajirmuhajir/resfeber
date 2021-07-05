@@ -17,10 +17,11 @@ class CreateTempatWisatasTable extends Migration
             $table->id();
             $table->string('slug')->unique();
             $table->string('name');
-            $table->string('contact');
-            $table->longText('history');
-            $table->time('jam_buka');
-            $table->time('jam_tutup');
+            $table->string('contact')->nullable();
+            $table->longText('history')->nullable();
+            $table->time('jam_buka')->nullable();
+            $table->time('jam_tutup')->nullable();
+            $table->string('status')->default('DRAFT');
             $table->timestamps();
         });
     }
