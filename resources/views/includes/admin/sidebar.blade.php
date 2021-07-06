@@ -1,17 +1,24 @@
 <div class="deznav">
     <div class="deznav-scroll">
         <ul class="metismenu" id="menu">
-            <li><a href="{{route('admin.dashboard')}}" class="ai-icon" aria-expanded="false">
+            <li class="{{Route::currentRouteName() == 'admin.dashboard' ? 'mm-active' : ''}}"><a
+                    href="{{route('admin.dashboard')}}" class="ai-icon " aria-expanded="false">
                     <i class="flaticon-381-networking"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
             </li>
-            <li><a href="{{route('admin.tempat-wisata.index')}}" class="ai-icon" aria-expanded="false">
+            <li class="{{Route::currentRouteName() == 'admin.tempat-wisata.index' ? 'mm-active' : ''}}"><a
+                    href="{{route('admin.tempat-wisata.index')}}"
+                    class="ai-icon {{Route::currentRouteName() == 'admin.tempat-wisata.index' ? 'mm-active' : ''}}"
+                    aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Tempat Wisata</span>
                 </a>
             </li>
-            <li><a href="{{route('admin.paket-wisata.index')}}" class="ai-icon" aria-expanded="false">
+            <li class="{{Route::currentRouteName() == 'admin.paket-wisata.index' ? 'mm-active' : ''}}"><a
+                    href="{{route('admin.paket-wisata.index')}}"
+                    class="ai-icon {{Route::currentRouteName() == 'admin.paket-wisata.index' ? 'mm-active' : ''}}"
+                    aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Paket Wisata</span>
                 </a>

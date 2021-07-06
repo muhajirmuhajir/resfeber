@@ -28,7 +28,7 @@ class TempatWisataController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.tempat-wisata.create');
+        return view('pages.admin.tempat-wisata.update');
     }
 
     /**
@@ -57,7 +57,9 @@ class TempatWisataController extends Controller
      */
     public function show($id)
     {
-        //
+        $wisata = TempatWisata::findOrFail($id);
+
+        return view('pages.admin.tempat-wisata.update', compact('wisata'));
     }
 
     /**
@@ -68,7 +70,9 @@ class TempatWisataController extends Controller
      */
     public function edit($id)
     {
-        //
+        $wisata = TempatWisata::findOrFail($id);
+
+        return view('pages.admin.tempat-wisata.update', compact('wisata'));
     }
 
     /**
@@ -80,7 +84,18 @@ class TempatWisataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $fields = $request->validate([
+            'name' => 'required',
+            'history' => 'nullable',
+            'jam_buka' => 'nullable',
+            'jam_tutup' => 'nullable',
+            'contact' => 'nullable'
+        ]);
+
+        $wisata = TempatWisata::findOrFail($id);
+        $wisata->update($fields);
+
+        return back();
     }
 
     /**
@@ -91,6 +106,8 @@ class TempatWisataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        TempatWisata::destroy($id);
+
+        return back();
     }
 }

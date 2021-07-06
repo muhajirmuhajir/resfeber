@@ -81,8 +81,15 @@
                                                 </svg>
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
+                                                <a class="dropdown-item"
+                                                    href="{{route('admin.tempat-wisata.edit', ['tempat_wisatum' => $item->id])}}">Edit</a>
+                                                <form
+                                                    action="{{route('admin.tempat-wisata.destroy', ['tempat_wisatum' => $item->id])}}"
+                                                    method="post">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button type="submit" class="dropdown-item">Delete</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </td>
