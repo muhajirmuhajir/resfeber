@@ -18,6 +18,7 @@ class CreateTicketsTable extends Migration
             $table->integer('tempat_wisata_id');
             $table->string('name');
             $table->integer('price');
+            $table->timestamps();
         });
     }
 

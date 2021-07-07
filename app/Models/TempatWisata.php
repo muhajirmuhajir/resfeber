@@ -21,9 +21,9 @@ class TempatWisata extends Model
         return $this->hasMany(Produk::class);
     }
 
-    public function locations()
+    public function location()
     {
-        return $this->hasMany(Location::class);
+        return $this->hasOne(Location::class);
     }
 
     public function tickets()
