@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TempatWisata;
 use Illuminate\Http\Request;
 
 class TempatWisataController extends Controller
@@ -13,6 +14,7 @@ class TempatWisataController extends Controller
 
     public function show($slug)
     {
-        return view('pages.detail-wisata');
+        $wisata = TempatWisata::where('slug', $slug)->first();
+        return view('pages.detail-wisata', compact('wisata'));
     }
 }

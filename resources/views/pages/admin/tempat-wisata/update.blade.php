@@ -4,7 +4,7 @@
 <!-- Clockpicker -->
 <link href="{{url('backpage/vendor/clockpicker/css/bootstrap-clockpicker.min.css')}}" rel="stylesheet">
 <link href="{{url('backpage/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
-
+<link href="{{url('backpage/vendor/lightgallery/css/lightgallery.min.css')}}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -23,4 +23,13 @@
 
 <script src="{{url('backpage/js/plugins-init/clock-picker-init.js')}}"></script>
 
+<script src="{{url('backpage/vendor/lightgallery/js/lightgallery-all.min.js')}}"></script>
+
+<script>
+    $('#lightgallery').lightGallery({
+        loop:true,
+        thumbnail:true,
+        exThumbImage: 'data-exthumbimage'
+    });
+</script>
 @endsection

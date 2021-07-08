@@ -6,21 +6,23 @@
             </div>
             <div class="card-body">
                 <div class="basic-form">
-                    <form wire:submit.prevent="updateWisata">
+                    <form action="{{route('admin.tempat-wisata.update',['tempat_wisatum' => $tempatWisata->id])}}"
+                        method="post">
                         @csrf
                         @method('put')
                         @error('name') <span class="error">{{ $message }}</span> @enderror
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Nama</label>
                             <div class="col-sm-9">
-                                <input type="text" name="name" class="form-control" wire:model="name" required>
+                                <input type="text" name="name" value="{{$tempatWisata->name}}" class="form-control"
+                                    required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Deskripsi</label>
                             <div class="col-sm-9">
-                                <textarea name="history" class="form-control" rows="4" wire:model="history"
-                                    id="comment"></textarea>
+                                <textarea name="history" class="form-control" rows="4"
+                                    id="comment">{{$tempatWisata->history}}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -28,16 +30,17 @@
                                 <label>Jam Buka</label>
                                 <div class="input-group clockpicker" data-placement="bottom" data-align="top"
                                     data-autoclose="true">
-                                    <input type="text" name="jam_buka" class="form-control" wire:model="jam_buka"> <span
-                                        class="input-group-append"><span class="input-group-text"><i
-                                                class="fa fa-clock-o"></i></span></span>
+                                    <input type="text" class="form-control" name="jam_buka"
+                                        value="{{$tempatWisata->jam_buka}}"> <span class="input-group-append"><span
+                                            class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                 </div>
                             </div>
                             <div class="col-md-6 col-xl-3 col-xxl-6 mb-3">
                                 <label>Jam Tutup</label>
                                 <div class="input-group clockpicker" data-placement="bottom" data-align="top"
                                     data-autoclose="true">
-                                    <input type="text" name="jam_tutup" class="form-control" wire:model="jam_tutup">
+                                    <input type="text" class="form-control" name="jam_tutup"
+                                        value="{{$tempatWisata->jam_tutup}}">
                                     <span class="input-group-append"><span class="input-group-text"><i
                                                 class="fa fa-clock-o"></i></span></span>
                                 </div>
@@ -46,7 +49,8 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Kontak pengelola</label>
                             <div class="col-sm-9">
-                                <input type="text" name="contact" class="form-control" wire:model="contact" required>
+                                <input type="text" name="contact" class="form-control"
+                                    value="{{$tempatWisata->contact}}" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -87,7 +91,7 @@
                 </form>
 
                 <div class="table-responsive">
-                    <table class="table table-responsive-md">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th class="width80">No</th>
@@ -102,7 +106,8 @@
                                 <td>{{$i+1}}</td>
                                 <td>{{$tiket->name}}</td>
                                 <td>{{$tiket->price}}</td>
-                                <td><a wire:click="deleteTiket({{$tiket->id}})">Hapus</a></td>
+                                <td><button wire:click="deleteTiket({{$tiket->id}})"
+                                        class="btn btn-small btn-outline-danger">Hapus</button></td>
                             </tr>
                             @empty
                             <tr>
@@ -122,10 +127,13 @@
                 <h4 class="card-title">Status</h4>
             </div>
             <div class="card-body">
-                <form wire:submit.prevent="updateStatus">
+                <form wire:submit.prevent="saveStatus">
                     <div class="form-group">
                         <label class="form-label">Status</label>
-                        <input type="text" name="status" class="form-control" wire:model="status" required>
+                        <select class="form-control" name="status" wire:model="status" required>
+                            <option value="PUBLISH">PUBLISH</option>
+                            <option value="DRAFT">DRAFT</option>
+                        </select>
                     </div>
                     <div class="form-group ">
                         <label class="form-label">Terkahir diperbarui</label>
@@ -168,7 +176,7 @@
                 </form>
 
                 <div class="table-responsive">
-                    <table class="table table-responsive-md">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th class="width80">No</th>
@@ -183,7 +191,8 @@
                                 <td>{{$i+1}}</td>
                                 <td>{{$produk->name}}</td>
                                 <td>{{$produk->description}}</td>
-                                <td>Hapus</td>
+                                <td><button wire:click="deleteProduk({{$produk->id}})"
+                                        class="btn btn-small btn-outline-danger">Hapus</button></td>
                             </tr>
                             @empty
                             <tr>
@@ -205,7 +214,47 @@
                 <h4 class="card-title">Info Fasilitas</h4>
             </div>
             <div class="card-body">
+                <form wire:submit.prevent="addFacility">
+                    @error('name') <span class="error">{{ $message }}</span> @enderror
+                    <div class="row align-items-end">
+                        <div class="form-group col-md-10">
+                            <label class="col-form-label">Nama Fasilitas</label>
+                            <input type="text" name="facility_name" class="form-control" wire:model="facility_name"
+                                required>
+                        </div>
+                        <div class="form-group row col-md-2">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary ml-auto d-block">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
 
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="width80">No</th>
+                                <th>Nama</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($wisata->facilities as $i => $facility)
+                            <tr>
+                                <td>{{$i+1}}</td>
+                                <td>{{$facility->name}}</td>
+                                <td><button wire:click="deleteFacility({{$facility->id}})"
+                                        class="btn btn-small btn-outline-danger">Hapus</button></td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td colspan="4" align="center">Belum Ada Fasilitas</td>
+                            </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -213,11 +262,49 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Galeri</h4>
+                <h4 class="card-title">Gallery</h4>
             </div>
-            <div class="card-body">
+            <div class="card-body pb-1">
+                <div class="row mb-4">
+                    <form wire:submit.prevent="savePhoto">
+                        <div class="row flex-row-reverse justify-content-between px-2">
+                            <div class="col-md-6">
+                                Foto Preview:
+                                @if ($photo)
+                                <img src="{{$photo->temporaryUrl()}}" class="img-thumbnail" alt="" srcset="">
+                                @else
+                                <img src="{{url('backpage/images/big/img1.jpg')}}" class="img-thumbnail" alt=""
+                                    srcset="">
+                                @endif
+                                @error('photo') <span class="error">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Foto</label>
+                                    <div class="col-sm-9">
+                                        <input type="file" wire:model="photo" class="form-control" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-small btn-primary">Simpan Foto</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="lightgallery" class="row">
+                    @forelse ($wisata->media as $item)
+                    <a href="{{Storage::url($item->media_url)}}" data-exthumbimage="{{Storage::url($item->media_url)}}"
+                        data-src="{{Storage::url($item->media_url)}}" class="col-lg-3 col-md-6 mb-4">
+                        <img src="{{Storage::url($item->media_url)}}" style="width:100%;">
+                    </a>
+                    @empty
+                    <div class="col-md-12">
+                        <p class="text-center">Belum ada Foto</p>
+                    </div>
+                    @endforelse
 
+                </div>
             </div>
         </div>
+        <!-- /# card -->
     </div>
 </div>

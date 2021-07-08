@@ -2,20 +2,21 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Facility;
+use App\Models\MediaTempatWisata;
+use App\Models\Produk;
 use Livewire\Component;
 use App\Models\TempatWisata;
 use App\Models\Ticket;
+use Livewire\WithFileUploads;
 
 class FormTempatWisata extends Component
 {
+    use WithFileUploads;
 
     // wisata
-    public $wisata_id;
-    public $name;
-    public $history;
-    public $jam_buka;
-    public $jam_tutup;
-    public $contact;
+    public TempatWisata $tempatWisata;
+
     public $status;
     public $updated_at;
 
@@ -25,59 +26,62 @@ class FormTempatWisata extends Component
     public $price;
 
     // media
-    public $media;
+    public $photo;
 
-    // produks
-    public $produks;
+    // produk
+    public $produk_name;
+    public $produk_description;
 
     // facilities
-    public $facilities;
+    public $facility_name;
 
-    protected $rules = [
-        'name' => 'required',
-        'history' => 'nullable',
-        'jam_buka' => 'nullable',
-        'jam_tutup' => 'nullable',
-        'contact' => 'nullable'
-    ];
 
 
     public function mount($wisata)
     {
-        $this->wisata_id = $wisata->id;
-        $this->name = $wisata->name;
-        $this->history = $wisata->history;
-        $this->jam_buka = $wisata->jam_buka;
-        $this->jam_tutup = $wisata->jam_tutup;
-        $this->contact = $wisata->contact;
+        $this->tempatWisata = $wisata;
         $this->status = $wisata->status;
         $this->updated_at = $wisata->updated_at;
     }
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
 
     public function render()
     {
-        $wisata = TempatWisata::findOrFail($this->wisata_id);
+        $wisata = TempatWisata::findOrFail($this->tempatWisata->id);
 
         return view('livewire.form-tempat-wisata', compact('wisata'));
     }
 
-    public function updateWisata()
+    public function updatedPhoto()
     {
-        $validateData = $this->validate();
+        $this->validate([
+            'photo' => 'image|max:2048'
+        ]);
+    }
 
-        $wisata = TempatWisata::findOrFail($this->wisata_id);
-        $wisata->update($validateData);
+    public function savePhoto()
+    {
+        if ($this->photo) {
+            $path = $this->photo->store('thumbnails', 'public');
+
+            MediaTempatWisata::create([
+                'tempat_wisata_id' => $this->tempatWisata->id,
+                'media_url' => $path
+            ]);
+
+            $this->photo = null;
+        }
+    }
+
+    public function saveStatus()
+    {
+        $this->tempatWisata->update(['status' => $this->status]);
     }
 
     public function addTiket()
     {
         Ticket::create([
-            'tempat_wisata_id' => $this->wisata_id,
+            'tempat_wisata_id' => $this->tempatWisata->id,
             'name' => $this->ticket_name,
             'price' => $this->price,
         ]);
@@ -86,6 +90,38 @@ class FormTempatWisata extends Component
     }
 
     public function deleteTiket(Ticket $id)
+    {
+        $id->delete();
+    }
+
+    public function addProduk()
+    {
+        Produk::create([
+            'tempat_wisata_id' => $this->tempatWisata->id,
+            'name' => $this->produk_name,
+            'description' => $this->produk_description
+        ]);
+
+        $this->produk_name = "";
+        $this->produk_description = "";
+    }
+
+    public function deleteProduk(Produk $id)
+    {
+        $id->delete();
+    }
+
+    public function addFacility()
+    {
+        Facility::create([
+            'tempat_wisata_id' => $this->tempatWisata->id,
+            'name' => $this->facility_name,
+        ]);
+
+        $this->facility_name = "";
+    }
+
+    public function deleteFacility(Facility $id)
     {
         $id->delete();
     }

@@ -13,12 +13,12 @@
         <div class="">
             <a href="wisata.html">Tempat</a>
             &gt;
-            <a href="#">Taman Nasional Bromo Tengger Semeru</a>
+            <a href="#">{{$wisata->name}}</a>
         </div>
         <!-- Breadcrumbs ends -->
         <div class="row">
             <div class="col-md-8">
-                <h1 class="display-4">Taman Nasional Bromo Tengger Semeru</h1>
+                <h1 class="display-4">{{$wisata->name}}</h1>
             </div>
         </div>
         <!-- Content Start-->
@@ -89,22 +89,7 @@
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-bodys text-justify">
-                        Taman Nasional Bromo Tengger Semeru adalah taman nasional di Jawa Timur, Indonesia, yang
-                        terletak di wilayah administratif Kabupaten Pasuruan, Kabupaten Malang, Kabupaten
-                        Lumajang dan Kabupaten Probolinggo. Taman yang bentangan barat-timurnya sekitar 20-30
-                        kilometer dan utara-selatannya sekitar 40 km ini ditetapkan sejak tahun 1982 dengan luas
-                        wilayahnya sekitar 50.276,3 ha. Di kawasan ini terdapat kaldera lautan pasir yang
-                        luasnya ±6290 ha. Batas kaldera lautan pasir itu berupa dinding terjal, yang
-                        ketinggiannya antara 200-700 meter.
-                        <br>
-                        Sebelum ditetapkan sebagai taman nasional, daerah Tengger merupakan kawasan hutan yang
-                        berfungsi sebagai cagar alam dan hutan wisata. Kawasan hutan ini berfungsi sebagai hutan
-                        lindung dan hutan produksi. Melihat berbagai fungsi tersebut, Kongres Taman Nasional
-                        Sedunia mengukuhkan kawasan Bromo Tengger Semeru sebagai taman nasional dalam pertemuan
-                        yang diselenggarakan di Denpasar, Bali, pada tanggal 14 Oktober 1982 atas pertimbangan
-                        alam dan lingkungannya yang perlu dilindungi serta bermacam-macam potensi tradisional
-                        kuno yang perlu terus dikembangkan. Pada tanggal 12 November 1992, pemerintah Indonesia
-                        meresmikan kawasan Bromo Tengger Semeru menjadi taman nasional.
+                        {{$wisata->history}}
                     </div>
                 </div>
             </div>

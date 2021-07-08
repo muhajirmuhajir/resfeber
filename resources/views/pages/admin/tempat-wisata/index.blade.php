@@ -31,7 +31,10 @@
                                 <tr>
                                     <td><strong>{{$wisata->firstItem()+ $key}}</strong></td>
                                     <td>{{$item->name}}</td>
-                                    <td>{{$item->slug}}</td>
+                                    <td>
+                                        <a href="{{route('detailwisata',['slug' => $item->slug])}}"
+                                            target="_blank">{{$item->slug}}</a>
+                                    </td>
                                     <td>Jl. Danau Sentani</td>
                                     <td><span
                                             class="badge light {{$item->status == 'DRAFT'? 'badge-warning': 'badge-success'}}">{{Str::of(Str::lower($item->status))->ucfirst()}}</span>
