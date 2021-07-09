@@ -17,107 +17,40 @@
                                 <thead>
                                     <tr>
                                         <th class="width80">#</th>
-                                        <th>PATIENT</th>
-                                        <th>DR NAME</th>
-                                        <th>DATE</th>
-                                        <th>STATUS</th>
-                                        <th>PRICE</th>
+                                        <th>NAMA TEMPAT WISATA</th>
+                                        <th>TUOUR TRAVEL</th>
+                                        <th>NAMA PAKET</th>
+                                        <th>DESKRIPSI</th>
+                                        <th>HARGA</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($paket as $item)
                                     <tr>
-                                        <td><strong>01</strong></td>
-                                        <td>Mr. Bobby</td>
-                                        <td>Dr. Jackson</td>
-                                        <td>01 August 2020</td>
-                                        <td><span class="badge light badge-success">Successful</span></td>
-                                        <td>$21.56</td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <button type="button" class="btn btn-success light sharp"
-                                                    data-toggle="dropdown">
-                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none"
-                                                            fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24" />
-                                                            <circle fill="#000000" cx="5" cy="12" r="2" />
-                                                            <circle fill="#000000" cx="12" cy="12" r="2" />
-                                                            <circle fill="#000000" cx="19" cy="12" r="2" />
-                                                        </g>
-                                                    </svg>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">Edit</a>
-                                                    <a class="dropdown-item" href="#">Delete</a>
-                                                </div>
-                                            </div>
+                                        <td><strong>{{$paket->firstItem(+ $key)}}</strong></td>
+                                        <td>{{$item->tempat_wisata_id}}</td>
+                                        <td>{{$item->tour_travel_id}}</td>
+                                        <td>{{$item->name}}</td>
+                                        <td>{{$item->description}}</td>
+                                        <td>{{$item->price}}</td>
+                                        
+                                    </tr>
+                                    @empty
+                                    <tr>
+                                        <td colspan="7">
+                                            <p class="text-center">Masih Kosong</p>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><strong>02</strong></td>
-                                        <td>Mr. Bobby</td>
-                                        <td>Dr. Jackson</td>
-                                        <td>01 August 2020</td>
-                                        <td><span class="badge light badge-danger">Canceled</span></td>
-                                        <td>$21.56</td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <button type="button" class="btn btn-danger light sharp"
-                                                    data-toggle="dropdown">
-                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none"
-                                                            fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24" />
-                                                            <circle fill="#000000" cx="5" cy="12" r="2" />
-                                                            <circle fill="#000000" cx="12" cy="12" r="2" />
-                                                            <circle fill="#000000" cx="19" cy="12" r="2" />
-                                                        </g>
-                                                    </svg>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">Edit</a>
-                                                    <a class="dropdown-item" href="#">Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>03</strong></td>
-                                        <td>Mr. Bobby</td>
-                                        <td>Dr. Jackson</td>
-                                        <td>01 August 2020</td>
-                                        <td><span class="badge light badge-warning">Pending</span></td>
-                                        <td>$21.56</td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <button type="button" class="btn btn-warning light sharp"
-                                                    data-toggle="dropdown">
-                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none"
-                                                            fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24" />
-                                                            <circle fill="#000000" cx="5" cy="12" r="2" />
-                                                            <circle fill="#000000" cx="12" cy="12" r="2" />
-                                                            <circle fill="#000000" cx="19" cy="12" r="2" />
-                                                        </g>
-                                                    </svg>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">Edit</a>
-                                                    <a class="dropdown-item" href="#">Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @endforelse
+
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </div>
