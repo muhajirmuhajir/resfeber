@@ -25,8 +25,8 @@
                     <span class="nav-text">Travel</span>
                 </a>
             </li>
-            <li class="{{Str::startsWith(Route::currentRouteName(),'admin.transaksi') ? 'mm-active' : ''}}"><a
-                    href="transaksi.html" class="ai-icon" aria-expanded="false">
+            <li class="{{Str::startsWith(Route::currentRouteName(),'admin.transaction') ? 'mm-active' : ''}}"><a
+                    href="{{route('admin.transaction.index')}}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Transaksi</span>
                 </a>

@@ -58,6 +58,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('paket-wisata', App\Http\Controllers\Admin\PaketWisataController::class);
 
+    Route::resource('transaction', App\Http\Controllers\Admin\TransactionController::class);
+
 });
 
 require __DIR__.'/auth.php';
