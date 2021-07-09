@@ -24,9 +24,9 @@
             <div class="col-md-6">
                 <div class="card-container border-box px-4 pt-5">
                     <h1 class="h1">Masuk</h1>
-                    @if ($errors->any())
-                    {{$errors}}
-                    @endif
+                    @error('email')
+                    {{$message}}
+                    @enderror
                     <form method="post" action="{{route('login')}}">
                         @csrf
                         <div class="form-group">

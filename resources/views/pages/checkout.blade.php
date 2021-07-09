@@ -12,7 +12,7 @@
         <div class="d-flex align-items-center bg-white rounded p-3">
             <img src="{{url('frontpage/assets/images/ic-profile.png')}}" alt="" class="ml-3 img-fluid">
             <p class="ml-3 mb-0">Anda login sebagai</p>
-            <p class="ml-3 h3">MOH. IZZA AULADINA L.</p>
+            <p class="ml-3 h3">{{auth()->user()->name}}</p>
         </div>
         <!-- trip information -->
         <div class="mt-3 row">

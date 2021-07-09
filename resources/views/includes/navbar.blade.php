@@ -41,19 +41,19 @@
         <div class="dtr-header-right ml-auto d-flex flex-row-reverse align-items-center">
 
             <!-- contact starts -->
-            <div class="dtr-header-contact dtr-ml-50 position-relative">
+            <div class="dtr-header-contact dtr-ml-50 position-relative" x-data="{ open: false }">
                 @if (Route::has('login'))
                 @auth
-                <a href="{{route('dashboard')}}" class="menu-dropdown">
+                <a @click.prevent="open = true">
                     <img style="width: 50%; height: auto;" src="{{url('frontpage/assets/images/ic-profile.png')}}"
                         alt="" srcset="">
                 </a>
-                <div class="bg-white rounded p-3 pop-up-menu">
+                <div class="bg-white rounded p-3 mt-2 pop-up-menu" x-show="open" @click.away="open=false">
                     <a href="{{route('profile')}}" class="d-block">Profile</a>
                     <a href="{{route('transaksi')}}" class="d-block">Transaksi</a>
                     <form action="{{route('logout')}}" method="post">
                         @csrf
-                        <button type="submit" class="d-block">Logout</button>
+                        <button type="submit" class="btn btn-link d-block w-100">Logout</button>
                     </form>
                 </div>
                 @else
@@ -75,6 +75,7 @@
             <!-- menu starts-->
             <div class="main-navigation dtr-menu-light">
                 <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
+                    @if (Route::currentRouteName() != 'checkout')
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'home'? 'ctm-active': ''}}"
                             href="{{route('home')}}">Beranda</a> </li>
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'wisata'? 'ctm-active': ''}}"
@@ -105,6 +106,7 @@
                     </li>
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'paket'? 'ctm-active': ''}}"
                             href="{{route('paket')}}">Paket</a> </li>
+                    @endif
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'about'? 'ctm-active': ''}}"
                             href="{{route('about')}}">Tentang</a> </li>
                 </ul>

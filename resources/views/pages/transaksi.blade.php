@@ -23,18 +23,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @forelse ($transaksi as $key => $item)
                     <tr>
                         <td>1</td>
                         <td>01 / 02 / 2021</td>
                         <td>Bromo</td>
                         <td>Berhasil</td>
                     </tr>
+                    @empty
                     <tr>
-                        <td>2</td>
-                        <td>01 / 02 / 2021</td>
-                        <td>Bromo</td>
-                        <td>Berhasil</td>
+                        <td colspan="4">
+                            <p class="text-center">Belum ada transaksi</p>
+                        </td>
                     </tr>
+                    @endforelse
+
                 </tbody>
             </table>
         </div>

@@ -199,7 +199,6 @@
 }
 
 .pop-up-menu {
-    visibility: hidden;
     position: absolute;
     right: 0;
     transition: 500ms;
