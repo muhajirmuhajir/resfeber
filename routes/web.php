@@ -61,7 +61,7 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
     })->name('dashboard');
 
     Route::resource('tempat-wisata', App\Http\Controllers\Admin\TempatWisataController::class);
-
+        
     Route::resource('paket-wisata', App\Http\Controllers\Admin\PaketWisataController::class);
 
     Route::resource('transaction', App\Http\Controllers\Admin\TransactionController::class);

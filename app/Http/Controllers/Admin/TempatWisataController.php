@@ -16,7 +16,7 @@ class TempatWisataController extends Controller
      */
     public function index()
     {
-        $wisata = TempatWisata::paginate(2);
+        $wisata = TempatWisata::paginate(7);
 
         return view('pages.admin.tempat-wisata.index', compact('wisata'));
     }

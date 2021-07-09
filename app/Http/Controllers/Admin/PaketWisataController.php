@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Paket;
 use Illuminate\Http\Request;
+
 
 class PaketWisataController extends Controller
 {
@@ -14,7 +16,9 @@ class PaketWisataController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.paket-wisata.index');
+        $paket = Paket::paginate(2);
+
+        return view('pages.admin.paket-wisata.index', compact('paket'));
     }
 
     /**
@@ -24,7 +28,7 @@ class PaketWisataController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.paket.update');
     }
 
     /**
@@ -35,7 +39,16 @@ class PaketWisataController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fields = $request->validate([
+            'tempat_wisata_id' => 'required',
+            'tour_travel_id'  => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required'
+        ]);
+
+        return back();
+        
     }
 
     /**
@@ -46,7 +59,9 @@ class PaketWisataController extends Controller
      */
     public function show($id)
     {
-        //
+        $paket = Paket::findOrFail($id);
+
+        return view('pages.admin.paket.update', compact('paket'));
     }
 
     /**
@@ -57,7 +72,9 @@ class PaketWisataController extends Controller
      */
     public function edit($id)
     {
-        //
+        $paket = Paket::findOrFail($id);
+
+        return view('pages.admin.paket.update', compact(('paket')));
     }
 
     /**
@@ -69,7 +86,13 @@ class PaketWisataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $fields = $request->validate([
+            'tempat_wisata_id' => 'required',
+            'tour_travel_id'  => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required'
+        ]);
     }
 
     /**
@@ -80,6 +103,8 @@ class PaketWisataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Paket::destroy($id);
+
+        return back();
     }
 }
