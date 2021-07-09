@@ -65,6 +65,8 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
     Route::resource('paket-wisata', App\Http\Controllers\Admin\PaketWisataController::class);
 
     Route::resource('transaction', App\Http\Controllers\Admin\TransactionController::class);
+
+    Route::resource('travel', App\Http\Controllers\Admin\TravelController::class);
 });
 
 require __DIR__ . '/auth.php';

@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="{{Str::startsWith(Route::currentRouteName(),'admin.travel') ? 'mm-active' : ''}}"><a
-                    href="travel.html" class="ai-icon" aria-expanded="false">
+                    href="{{route('admin.travel.index')}}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Travel</span>
                 </a>
