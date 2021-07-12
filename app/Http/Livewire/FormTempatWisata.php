@@ -2,9 +2,11 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\City;
 use App\Models\Facility;
 use App\Models\MediaTempatWisata;
 use App\Models\Produk;
+use App\Models\Province;
 use Livewire\Component;
 use App\Models\TempatWisata;
 use App\Models\Ticket;
@@ -35,19 +37,35 @@ class FormTempatWisata extends Component
     // facilities
     public $facility_name;
 
+    public $cities = null;
+    public $provinces = null;
 
+    public $selectedProvince;
+    public $selectedCity;
 
     public function mount($wisata)
     {
         $this->tempatWisata = $wisata;
         $this->status = $wisata->status;
         $this->updated_at = $wisata->updated_at;
+        $this->provinces = Province::all();
+        $this->cities = collect();
+
+        if($this->tempatWisata->city){
+            $city = City::with('province')->find($this->tempatWisata->city->id);
+            $this->selectedProvince = $city->province->id;
+            $this->selectedCity =$city->id;
+            $this->cities = City::where('province_id', $city->province->id)->get();
+        }
     }
 
-
+    public function updatedSelectedProvince($province)
+    {
+        $this->cities = City::where('province_id', $province)->get();
+    }
     public function render()
     {
-        $wisata = TempatWisata::findOrFail($this->tempatWisata->id);
+        $wisata = TempatWisata::with('city')->findOrFail($this->tempatWisata->id);
 
         return view('livewire.form-tempat-wisata', compact('wisata'));
     }

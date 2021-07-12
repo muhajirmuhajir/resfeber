@@ -54,6 +54,26 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <div class="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                                <label>Provinsi</label>
+                                <select wire:model="selectedProvince" class="form-control">
+                                    <option value="" selected>Pilih Provinsi</option>
+                                    @foreach ($provinces as $province)
+                                    <option value="{{$province->id}}">{{$province->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                                <label>Kota</label>
+                                <select name="city_id" wire:model="selectedCity" class="form-control">
+                                    <option value="" selected>Pilih Kota</option>
+                                    @foreach ($cities as $citiy)
+                                    <option value="{{$citiy->id}}">{{$citiy->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <div class="col">
                                 <button type="submit" class="btn btn-primary ml-auto d-block">Simpan</button>
                             </div>

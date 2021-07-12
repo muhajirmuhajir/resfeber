@@ -26,6 +26,12 @@ class TempatWisata extends Model
         return $this->hasOne(Location::class);
     }
 
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
+
+
     public function tickets()
     {
         return $this->hasMany(Ticket::class);
