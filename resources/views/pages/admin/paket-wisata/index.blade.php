@@ -18,7 +18,7 @@
                                     <tr>
                                         <th class="width80">#</th>
                                         <th>NAMA TEMPAT WISATA</th>
-                                        <th>TUOUR TRAVEL</th>
+                                        <th>TOUR TRAVEL</th>
                                         <th>NAMA PAKET</th>
                                         <th>DESKRIPSI</th>
                                         <th>HARGA</th>
@@ -29,12 +29,12 @@
                                     @forelse ($paket as $item)
                                     <tr>
                                         <td><strong>{{$paket->firstItem(+ $key)}}</strong></td>
-                                        <td>{{$item->tempat_wisata_id}}</td>
-                                        <td>{{$item->tour_travel_id}}</td>
+                                        <td>{{$item->tempatWisata->name}}</td>
+                                        <td>{{$item->tourTravel->name}}</td>
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->description}}</td>
                                         <td>{{$item->price}}</td>
-                                        
+
                                     </tr>
                                     @empty
                                     <tr>

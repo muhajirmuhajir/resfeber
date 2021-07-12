@@ -55,13 +55,13 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () {
+Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(function () {
     Route::get('/', function () {
         return view('pages.admin.dashboard');
     })->name('dashboard');
 
     Route::resource('tempat-wisata', App\Http\Controllers\Admin\TempatWisataController::class);
-        
+
     Route::resource('paket-wisata', App\Http\Controllers\Admin\PaketWisataController::class);
 
     Route::resource('transaction', App\Http\Controllers\Admin\TransactionController::class);

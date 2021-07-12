@@ -89,7 +89,8 @@ class TempatWisataController extends Controller
             'history' => 'nullable',
             'jam_buka' => 'nullable',
             'jam_tutup' => 'nullable',
-            'contact' => 'nullable'
+            'contact' => 'nullable',
+            'city_id' => 'nullable',
         ]);
 
         $wisata = TempatWisata::findOrFail($id);

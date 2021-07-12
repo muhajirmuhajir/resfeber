@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Province;
 use App\Models\TempatWisata;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,8 @@ class TempatWisataController extends Controller
 {
     public function index()
     {
-        return view('pages.wisata');
+        $provinces = Province::all();
+        return view('pages.wisata', compact('provinces'));
     }
 
     public function show($slug)

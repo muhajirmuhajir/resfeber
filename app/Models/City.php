@@ -16,4 +16,9 @@ class City extends Model
     {
         return $this->belongsTo(Province::class);
     }
+
+    public function tempatWIsata()
+    {
+        return $this->hasMany(TempatWisata::class, 'city_id');
+    }
 }

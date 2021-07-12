@@ -14,18 +14,14 @@
                 <h5>Filter</h5>
                 <p>Saring berdasarkan</p>
                 <p>Provinsi</p>
+                @foreach ($provinces as $province)
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Default checkbox
+                    <input class="form-check-input" type="checkbox" value="" id="{{$province->id}}">
+                    <label class="form-check-label" for="{{$province->id}}">
+                        {{$province->name}}
                     </label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
-                        Checked checkbox
-                    </label>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="col-lg-9">

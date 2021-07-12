@@ -51,6 +51,9 @@
                 <div class="bg-white rounded p-3 mt-2 pop-up-menu" x-show="open" @click.away="open=false">
                     <a href="{{route('profile')}}" class="d-block">Profile</a>
                     <a href="{{route('transaksi')}}" class="d-block">Transaksi</a>
+                    @if (auth()->user()->role === 3)
+                    <a href="{{route('admin.dashboard')}}" class="d-block">Dashboard</a>
+                    @endif
                     <form action="{{route('logout')}}" method="post">
                         @csrf
                         <button type="submit" class="btn btn-link d-block w-100">Logout</button>

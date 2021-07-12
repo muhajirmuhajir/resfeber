@@ -46,9 +46,9 @@
                         <button type="submit" class="dtr-btn btn-dark-blue d-block w-100">Masuk</button>
                     </form>
                     <p class="text-center mt-5">Tidak punya akun?
-                        <a href="register.html">Daftar</a>
+                        <a href="{{route('register')}}">Daftar</a>
                         <br>
-                        <a href="#">Saya lupa password</a>
+                        <a href="{{route('password.request')}}">Saya lupa password</a>
                     </p>
                 </div>
             </div>

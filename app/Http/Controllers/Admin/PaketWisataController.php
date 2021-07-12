@@ -16,7 +16,7 @@ class PaketWisataController extends Controller
      */
     public function index()
     {
-        $paket = Paket::paginate(2);
+        $paket = Paket::with(['tempatWisata', 'tourTravel'])->paginate(10);
 
         return view('pages.admin.paket-wisata.index', compact('paket'));
     }
@@ -48,7 +48,7 @@ class PaketWisataController extends Controller
         ]);
 
         return back();
-        
+
     }
 
     /**
