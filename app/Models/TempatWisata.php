@@ -42,6 +42,11 @@ class TempatWisata extends Model
         return $this->hasMany(MediaTempatWisata::class);
     }
 
+    public function mediaTempatWisatas()
+    {
+        return $this->hasMany(MediaTempatWisata::class);
+    }
+
     public function ulasan()
     {
         return $this->hasMany(Ulasan::class);
