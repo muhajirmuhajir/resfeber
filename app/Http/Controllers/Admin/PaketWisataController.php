@@ -47,6 +47,8 @@ class PaketWisataController extends Controller
             'price' => 'required'
         ]);
 
+        Paket::create($fields);
+
         return back();
 
     }

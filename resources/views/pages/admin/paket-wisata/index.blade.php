@@ -9,8 +9,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">List Paket Wisata</h4>
-                        <a class="btn btn-primary">Tambah Paket Wisata</a>
+                        <x-modal-paket />
                     </div>
+                </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-responsive-md">
