@@ -40,11 +40,11 @@ class PaketWisataController extends Controller
     public function store(Request $request)
     {
         $fields = $request->validate([
-            'tempat_wisata_id' => 'required',
-            'tour_travel_id'  => 'required',
+            'tempat_wisata_id' => 'required|exists:tempat_wisatas,id',
+            'tour_travel_id'  => 'required|exists:tour_travel,id',
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required'
+            'price' => 'required|numeric'
         ]);
 
         Paket::create($fields);

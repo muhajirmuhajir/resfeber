@@ -4,6 +4,7 @@
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <form action="{{route('admin.paket-wisata.store')}}" method="post">
+                @csrf
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Tambah Paket</h5>
@@ -15,31 +16,42 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Nama Tempat Wisata</label>
                             <div class="col-sm-9">
-                                <input type="text" name="name" class="form-control" placeholder="Nama Tempat Wisata" required>
+                                <select name="tempat_wisata_id" id="" class="form-control" required>
+                                    <option value="" selected>Nama Tempat Wisata</option>
+                                    @foreach (\App\Models\TempatWisata::all() as $item)
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Tour Travel</label>
                             <div class="col-sm-9">
-                                <input type="email" name="email" class="form-control" placeholder="Tour Travel" required>
+                                <select name="tour_travel_id" id="" class="form-control" required>
+                                    <option value="" selected>Nama Travel</option>
+                                    @foreach (\App\Models\TourTravel::all() as $item)
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Nama Paket</label>
                             <div class="col-sm-9">
-                                <input type="text" name="phone_number" class="form-control" placeholder="Nama Paket" required>
+                                <input type="text" name="name" class="form-control" placeholder="Nama Paket" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Deskripsi</label>
                             <div class="col-sm-9">
-                                <input type="text" name="address" class="form-control" placeholder="Deskripsi" required>
+                                <input type="text" name="description" class="form-control" placeholder="Deskripsi"
+                                    required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Harga</label>
                             <div class="col-sm-9">
-                                <input type="text" name="address" class="form-control" placeholder="Harga" required>
+                                <input type="text" name="price" class="form-control" placeholder="Harga" required>
                             </div>
                         </div>
                     </div>
