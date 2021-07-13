@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PaketController;
+use App\Http\Controllers\TravelController;
 use App\Http\Controllers\TempatWisataController;
 
 /*
@@ -27,8 +28,8 @@ Route::get('/dashboard', function () {
 Route::get('wisata', [TempatWisataController::class, 'index'])->name('wisata');
 Route::get('wisata/{slug}', [TempatWisataController::class, 'show'])->name('detailwisata');
 
-Route::get('paket', [PaketController::class, 'index'])->name('paket');
-Route::get('paket/{slug}', [paketController::class, 'show'])->name('detailpaket');
+Route::get('travel', [TravelController::class, 'index'])->name('travel');
+Route::get('travel/{id}', [TravelController::class, 'show'])->name('detailTravel');
 
 
 Route::get('about', function () {
@@ -49,9 +50,10 @@ Route::middleware('auth')->group(function () {
         return view('pages.information-complete');
     })->name('information-complete');
 
-    Route::get('checkout', function () {
-        return view('pages.checkout');
-    })->name('checkout');
+    Route::get('checkout/{id}', [CheckoutController::class, 'index'])->name('checkout');
+    Route::post('checkout/{id}', [CheckoutController::class, 'process'])->name('checkout_process');
+    Route::post('checkout/create/{id}', [CheckoutController::class, 'create'])->name('checkout_create');
+    Route::post('checkout/remove/{id}', [CheckoutController::class, 'remove'])->name('checkout_remove');
 });
 
 

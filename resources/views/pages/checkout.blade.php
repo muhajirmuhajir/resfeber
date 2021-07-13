@@ -25,13 +25,10 @@
                 </p>
             </div>
             <div class="col-9">
-                <p class="px-3 py-2 bg-white rounded ml-2">Taman Nasional Bromo Tengger
-                    Semeru
-                </p>
-                <p class="px-3 py-2 bg-white rounded ml-2">Wonokitiri
-                </p>
+                <p class="px-3 py-2 bg-white rounded ml-2">{{$transaction->tempatWisata->name}}</p>
+                <p class="px-3 py-2 bg-white rounded ml-2">{{$transaction->paket->description}}</p>
                 <div class="form-group ml-2">
-                    <input type="datetime" class="form-control" />
+                    <input type="datetime" class="form-control" value="{{$transaction->booking_date}}" />
                 </div>
             </div>
 
@@ -56,39 +53,53 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($transaction->travelers as $key =>$traveler)
                                     <tr>
                                         <td>
-                                            Moh. Izza Auladina L.
+                                            {{$traveler->name}}
                                         </td>
                                         <td>
-                                            23 Tahun
+                                            {{$traveler->age}} Tahun
                                         </td>
                                         <td>
-                                            082333118866
+                                            {{$traveler->phone_number}}
                                         </td>
                                         <td>
-                                            Hapus
+                                            @if ($key != 0)
+                                            <form action="{{route('checkout_remove', $traveler->id)}}" method="post">
+                                                @csrf
+                                                <button class="btn btn-small btn-danger" type="submit">Hapus</button>
+                                            </form>
+                                            @endif
                                         </td>
                                     </tr>
+                                    @empty
+
+                                    @endforelse
+
                                 </tbody>
                             </table>
                         </div>
 
                         <div class="p-4 border rounded">
                             <p class="h3">Tambah Wisatawan</p>
-                            <form>
+                            <form action="{{route('checkout_create', $transaction->id)}}" method="post">
+                                @csrf
                                 <div class="form-row align-items-end">
                                     <div class="col-5">
                                         <label for="nama">Nama</label>
-                                        <input type="text" id="nama" class="form-control-sm" placeholder="Nama">
+                                        <input type="text" id="nama" name="name" class="form-control-sm"
+                                            placeholder="Nama">
                                     </div>
                                     <div class="col">
                                         <label for="telepon">Telepon</label>
-                                        <input type="text" id="telepon" class="form-control-sm" placeholder="Telepon">
+                                        <input type="text" id="telepon" name="phone_number" class="form-control-sm"
+                                            placeholder="Telepon">
                                     </div>
                                     <div class="col">
                                         <label for="umur">Umur</label>
-                                        <input type="number" id="umur" class="form-control-sm" placeholder="Umur">
+                                        <input type="number" id="umur" name="age" class="form-control-sm"
+                                            placeholder="Umur">
                                     </div>
                                     <div class="col">
                                         <button type="submit" class="btn  btn-dark-blue w-100 mb-1">Tambah</button>
@@ -117,24 +128,28 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        1x orang <br>
+                                        {{$transaction->travelers->count()}}x orang <br>
                                         PPn 10%
                                     </td>
                                     <td>
-                                        Rp. 650.000 <br>
+                                        Rp. {{$transaction->price_total}} <br>
                                         Rp. 6.500
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Total Pembayaran</th>
-                                    <th>Rp. 656.500</th>
+                                    <th>Rp. {{$transaction->price_total + 6500}}</th>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <button class="btn btn-dark-blue d-block w-100">Bayar Sekarang</button>
+                        <form action="" method="post">
+                            @csrf
+                            <button class="btn btn-dark-blue d-block w-100">Bayar Sekarang</button>
+                        </form>
 
-                        <a href="#" class="btn btn-outline-primary w-100 mt-2">Batalkan Pesanan</a>
+                        <a href="{{route('detailTravel', $transaction->paket->tour_travel_id )}}"
+                            class="btn btn-outline-primary w-100 mt-2">Batalkan Pesanan</a>
                     </div>
                 </div>
             </div>

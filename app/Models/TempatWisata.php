@@ -11,6 +11,8 @@ class TempatWisata extends Model
 
     protected $guarded = [];
 
+    protected $with = ['thumbnail'];
+
     public function facilities()
     {
         return $this->hasMany(Facility::class);
@@ -40,6 +42,11 @@ class TempatWisata extends Model
     public function media()
     {
         return $this->hasMany(MediaTempatWisata::class);
+    }
+
+    public function thumbnail()
+    {
+        return $this->hasOne(MediaTempatWisata::class);
     }
 
     public function mediaTempatWisatas()

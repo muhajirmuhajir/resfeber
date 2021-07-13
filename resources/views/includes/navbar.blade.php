@@ -107,8 +107,8 @@
 
                         </ul>
                     </li>
-                    <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'paket'? 'ctm-active': ''}}"
-                            href="{{route('paket')}}">Paket</a> </li>
+                    <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'travel'? 'ctm-active': ''}}"
+                            href="{{route('travel')}}">Paket</a> </li>
                     @endif
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'about'? 'ctm-active': ''}}"
                             href="{{route('about')}}">Tentang</a> </li>

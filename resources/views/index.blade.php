@@ -84,16 +84,6 @@
                         <h5><a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}">Ranu Kumbolo</a></h5>
                         <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional
                             Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
-                        <!-- meta -->
-                        <div class="dtr-blog-meta clearfix">
-                            <div class="dtr-meta-author-img"><img src="assets/images/izza.png" alt="image">
-                            </div>
-                            <div class="dtr-meta-text">
-                                <h6 class="dtr-meta-author">oleh Mohammad Izza</h6>
-                                <span class="dtr-meta-date">25 January 2021</span>
-                            </div>
-                        </div>
-                        <!-- meta ends -->
                     </div>
                     <!-- content ends -->
                 </div>
@@ -110,16 +100,6 @@
                         <h5><a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}">Ranu Kumbolo</a></h5>
                         <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional
                             Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
-                        <!-- meta -->
-                        <div class="dtr-blog-meta clearfix">
-                            <div class="dtr-meta-author-img"><img src="assets/images/hana.png" alt="image">
-                            </div>
-                            <div class="dtr-meta-text">
-                                <h6 class="dtr-meta-author">oleh Qonita Farhana</h6>
-                                <span class="dtr-meta-date">12 February 2021</span>
-                            </div>
-                        </div>
-                        <!-- meta ends -->
                     </div>
                     <!-- content ends -->
                 </div>
@@ -136,16 +116,6 @@
                         <h5><a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}">Ranu Kumbolo</a></h5>
                         <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional
                             Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
-                        <!-- meta -->
-                        <div class="dtr-blog-meta clearfix">
-                            <div class="dtr-meta-author-img"><img src="assets/images/muhajir.png" alt="image">
-                            </div>
-                            <div class="dtr-meta-text">
-                                <h6 class="dtr-meta-author">oleh Muhajir</h6>
-                                <span class="dtr-meta-date">13 March 2021</span>
-                            </div>
-                        </div>
-                        <!-- meta ends -->
                     </div>
                     <!-- content ends -->
                 </div>

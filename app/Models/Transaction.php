@@ -25,4 +25,9 @@ class Transaction extends Model
     {
         return $this->belongsTo(TempatWisata::class, 'tempat_wisata_id');
     }
+
+    public function travelers()
+    {
+        return $this->hasMany(TransactionTraveler::class);
+    }
 }

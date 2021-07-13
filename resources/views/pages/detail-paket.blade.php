@@ -65,60 +65,33 @@
             </p>
 
             <h2 class="h2 my-4">Paket yang tersedia</h2>
+            @forelse ($travel->pakets as $paket)
             <div class="mb-4 bg-white rounded">
                 <div class="d-flex p-4">
                     <img src="{{url('frontpage/assets/images/img-paket.png')}}" alt="" class="img-fluid">
                     <div class="ml-4 d-flex flex-column" style="flex-grow: 1;">
                         <div class="mb-auto">
-                            <h3 class="h3">Paket 1</h3>
-                            <p>Wonokitri Pasuruan ke Bromo Penanjakan 1, kawah gunung bromo</p>
+                            <h3 class="h3">{{$paket->name}}</h3>
+                            <p>{{$paket->description}}</p>
                         </div>
                         <div class="d-md-flex  justify-content-between align-items-end">
                             <div>
                                 <p>Harga</p>
-                                <p class="h4 text-dark">Rp. 600.000/orang</p>
+                                <p class="h4 text-dark">Rp. {{$paket->price}}/orang</p>
                             </div>
-                            <a href="{{route('checkout')}}" class="btn btn-dark-blue btn-small">PESAN PAKET</a>
+                            <form action="{{route('checkout_process', $paket->id)}}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-dark-blue btn-small">PESAN</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mb-4 bg-white rounded">
-                <div class="d-flex p-4">
-                    <img src="{{url('frontpage/assets/images/img-paket.png')}}" alt="" class="img-fluid">
-                    <div class="ml-4 d-flex flex-column" style="flex-grow: 1;">
-                        <div class="mb-auto">
-                            <h3 class="h3">Paket 2</h3>
-                            <p>Wonokitri Pasuruan ke Bromo Penanjakan 1, kawah gunung bromo</p>
-                        </div>
-                        <div class="d-md-flex  justify-content-between align-items-end">
-                            <div>
-                                <p>Harga</p>
-                                <p class="h4 text-dark">Rp. 600.000/orang</p>
-                            </div>
-                            <a href="{{route('checkout')}}" class="btn btn-dark-blue btn-small">PESAN PAKET</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-4 bg-white rounded">
-                <div class="d-flex p-4">
-                    <img src="{{url('frontpage/assets/images/img-paket.png')}}" alt="" class="img-fluid">
-                    <div class="ml-4 d-flex flex-column" style="flex-grow: 1;">
-                        <div class="mb-auto">
-                            <h3 class="h3">Paket 3</h3>
-                            <p>Wonokitri Pasuruan ke Bromo Penanjakan 1, kawah gunung bromo</p>
-                        </div>
-                        <div class="d-md-flex  justify-content-between align-items-end">
-                            <div>
-                                <p>Harga</p>
-                                <p class="h4 text-dark">Rp. 600.000/orang</p>
-                            </div>
-                            <a href="{{route('checkout')}}" class="btn btn-dark-blue btn-small">PESAN PAKET</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @empty
+
+            @endforelse
+
+
     </section>
 
 </div>

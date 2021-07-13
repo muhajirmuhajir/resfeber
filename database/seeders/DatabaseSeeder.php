@@ -11,6 +11,8 @@ use App\Models\Location;
 use App\Models\TempatWisata;
 use Illuminate\Database\Seeder;
 use App\Models\MediaTempatWisata;
+use App\Models\Paket;
+use App\Models\TourTravel;
 use Illuminate\Support\Facades\App;
 
 class DatabaseSeeder extends Seeder
@@ -37,6 +39,9 @@ class DatabaseSeeder extends Seeder
 
             // ulasan
             User::factory()->has(Ulasan::factory())->count(20)->create();
+
+            // Travel
+            TourTravel::factory()->has(Paket::factory()->count(5))->count(5)->create();
         }
     }
 }
