@@ -26,9 +26,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($paket as $item)
+                                    @forelse ($paket as $key=> $item)
                                     <tr>
-                                        <td><strong>{{$paket->firstItem(+ $key)}}</strong></td>
+                                        <td><strong>{{$paket->firstItem()+$key}}</strong></td>
                                         <td>{{$item->tempatWisata->name}}</td>
                                         <td>{{$item->tourTravel->name}}</td>
                                         <td>{{$item->name}}</td>

@@ -34,7 +34,7 @@
                                         <td>{{$item->tempatWisata->name}}</td>
                                         <td><span class="badge light badge-success">{{$item->transaction_status}}</span>
                                         </td>
-                                        <td>$21.56</td>
+                                        <td>{{$item->price_total}}</td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn btn-success light sharp"

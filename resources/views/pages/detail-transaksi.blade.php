@@ -9,15 +9,8 @@
 <div id="dtr-main-content">
     <!-- wisata section starts -->
     <section id="detail-wisata" class="dtr-section dtr-box-layout dtr-hero-section-top-padding ">
-        <!-- Breadcrumbs start -->
-        <div class="">
-            <a href="wisata.html">Tempat</a>
-            &gt;
-            <a href="#">NO 2021 0102 0624</a>
-        </div>
-        <!-- Breadcrumbs ends -->
         <h1 class="h1">Detail Transaksi</h1>
-        <p class="text-muted">#NO 2021 0102 0624</p>
+        <p class="text-muted">#NO {{$transaksi->id}}</p>
 
 
         <div class="row mb-4">
@@ -29,20 +22,20 @@
                         <small>
                             Tujuan
                         </small>
-                        <p class="text-blue">Taman Nasional Bromo Tengger Semeru</p>
+                        <p class="text-blue">{{$transaksi->tempatWisata->name}}</p>
                     </div>
 
                     <div class="mb-2">
                         <small>
                             Tanggal Berangkat
                         </small>
-                        <p class="text-blue">Kamis, 01 Juli 2021 04:00 AM</p>
+                        <p class="text-blue">{{$transaksi->booking_date}}</p>
                     </div>
                     <div class="mb-2">
                         <small>
                             Lokasi Penjemputan
                         </small>
-                        <p class="text-blue">Wonokitri</p>
+                        <p class="text-blue">{{$transaksi->paket->description}}</p>
                     </div>
                 </div>
             </div>
@@ -50,21 +43,26 @@
                 <div class="bg-white p-4 rounded">
                     <h3 class="h3">Pembayaran</h3>
                     <div class="d-flex justify-content-between mb-2">
-                        <p class="text-blue">2 Tiket</>
-                            <p class="font-weight-bold text-blue">Rp. 650.000,00</p>
+                        <p class="text-blue">{{$transaksi->travelers->count()}} Tiket</p>
+                        <p class="font-weight-bold text-blue">
+                            Rp. {{$transaksi->paket->price * $transaksi->travelers->count()}},00</p>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
                         <p class="text-blue">Ppn 10%</>
-                            <p class="font-weight-bold text-blue">Rp. 6.000,00</p>
+                            <p class="font-weight-bold text-blue">Rp. 6.500,00</p>
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between mb-2">
                         <p class="text-blue h5">Total</>
-                            <p class="font-weight-bold text-blue h5">Rp. 656.000,00</p>
+                            <p class="font-weight-bold text-blue h5">Rp.
+                                {{$transaksi->paket->price * $transaksi->travelers->count() + 6500}},00</p>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
                         <p class="text-blue">Status Pembayaran</>
-                            <p class="text-white bg-success px-4" style="border-radius: 50px;">Lunas</p>
+                            <p class="text-white {{$transaksi->transaction_status == 'SUCCESS' ? 'bg-success' : 'bg-warning'}}  px-4"
+                                style="border-radius: 50px;">
+                                {{$transaksi->transaction_status}}
+                            </p>
                     </div>
                 </div>
             </div>
@@ -81,18 +79,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($transaksi->travelers as $key=> $travel)
                     <tr>
-                        <td>1</td>
-                        <td>Muhajir</td>
-                        <td>+6281234690</td>
-                        <td>21</td>
+                        <td><strong>{{$key+1}}</strong></td>
+                        <td>{{$travel->name}}</td>
+                        <td>{{$travel->phone_number}}</td>
+                        <td>{{$travel->age}}</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Qounita Nur Farhana</td>
-                        <td>+6281234690</td>
-                        <td>21</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

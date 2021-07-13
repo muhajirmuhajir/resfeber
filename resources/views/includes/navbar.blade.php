@@ -56,7 +56,7 @@
                     @endif
                     <form action="{{route('logout')}}" method="post">
                         @csrf
-                        <button type="submit" class="btn btn-link d-block w-100">Logout</button>
+                        <button type="submit" class="btn btn-link d-block w-100 px-0 text-left">Logout</button>
                     </form>
                 </div>
                 @else
@@ -108,7 +108,7 @@
                         </ul>
                     </li>
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'travel'? 'ctm-active': ''}}"
-                            href="{{route('travel')}}">Paket</a> </li>
+                            href="{{route('travel')}}">Travel</a> </li>
                     @endif
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'about'? 'ctm-active': ''}}"
                             href="{{route('about')}}">Tentang</a> </li>

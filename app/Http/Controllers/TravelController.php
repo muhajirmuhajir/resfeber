@@ -10,12 +10,12 @@ class TravelController extends Controller
     public function index()
     {
         $travels = TourTravel::all();
-        return view('pages.paket', compact('travels'));
+        return view('pages.travel', compact('travels'));
     }
 
     public function show($id)
     {
         $travel = TourTravel::findOrFail($id);
-        return view('pages.detail-paket', compact('travel'));
+        return view('pages.detail-travel', compact('travel'));
     }
 }

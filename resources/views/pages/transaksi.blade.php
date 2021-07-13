@@ -30,7 +30,8 @@
                         <td>{{$item->booking_date}}</td>
                         <td>{{$item->tempatWisata->name}}</td>
                         <td>{{$item->transaction_status}}</td>
-                        <td><a href="{{route('checkout', $item->id)}}" class="btn btn-info btn-small">Detail</a></td>
+                        <td><a href="{{route('detailTransaksi', $item->id)}}" class="btn btn-info btn-small">Detail</a>
+                        </td>
                     </tr>
                     @empty
                     <tr>

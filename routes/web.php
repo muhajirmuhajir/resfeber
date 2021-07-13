@@ -46,6 +46,11 @@ Route::middleware('auth')->group(function () {
         return view('pages.transaksi', compact('transaksi'));
     })->name('transaksi');
 
+    Route::get('transaksi/{id}', function ($id) {
+        $transaksi = Transaction::with(['tempatWisata', 'paket', 'travelers'])->findOrFail($id);
+        return view('pages.detail-transaksi', compact('transaksi'));
+    })->name('detailTransaksi');
+
     Route::get('information-complete', function () {
         return view('pages.information-complete');
     })->name('information-complete');
