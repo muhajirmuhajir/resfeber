@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
     })->name('profile');
 
     Route::get('transaksi', function () {
-        $transaksi = Transaction::where('user_id', auth()->user()->id)->paginate(5);
+        $transaksi = Transaction::with('tempatWisata')->where('user_id', auth()->user()->id)->paginate(5);
         return view('pages.transaksi', compact('transaksi'));
     })->name('transaksi');
 

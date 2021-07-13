@@ -20,15 +20,17 @@
                         <th>Tanggal Transaksi</th>
                         <th>Tempat Wisata</th>
                         <th>Status</th>
+                        <th>Detail</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($transaksi as $key => $item)
                     <tr>
-                        <td>1</td>
-                        <td>01 / 02 / 2021</td>
-                        <td>Bromo</td>
-                        <td>Berhasil</td>
+                        <td><strong>{{$transaksi->firstItem()+ $key}}</strong></td>
+                        <td>{{$item->booking_date}}</td>
+                        <td>{{$item->tempatWisata->name}}</td>
+                        <td>{{$item->transaction_status}}</td>
+                        <td><a href="{{route('checkout', $item->id)}}" class="btn btn-info btn-small">Detail</a></td>
                     </tr>
                     @empty
                     <tr>
