@@ -56,13 +56,12 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item"
                                                     href="{{route('admin.tempat-wisata.edit', ['tempat_wisatum' => $item->id])}}">Edit</a>
-                                                <form
-                                                    action="{{route('admin.tempat-wisata.destroy', ['tempat_wisatum' => $item->id])}}"
-                                                    method="post">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button type="submit" class="dropdown-item">Delete</button>
-                                                </form>
+                                                <button type="button" class="dropdown-item" data-toggle="modal"
+                                                    data-target="#modalWisata{{$item->id}}">
+                                                    Hapus
+                                                </button>
+
+
                                             </div>
                                         </div>
                                     </td>
@@ -86,4 +85,31 @@
     </div>
 </div>
 </div>
+<!-- Modal -->
+@foreach ($wisata as $item)
+<div class="modal fade" id="modalWisata{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hapus Tempat Wisata</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('admin.tempat-wisata.destroy', $item->id)}}" method="post">
+                @csrf
+                @method('delete')
+                <div class="modal-body">
+                    Hapus Tempat wisata {{$item->name}} ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
 @endsection
