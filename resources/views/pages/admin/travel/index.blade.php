@@ -50,13 +50,10 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item"
                                                     href="{{route('admin.travel.edit', ['travel' => $item->id])}}">Edit</a>
-                                                <form
-                                                    action="{{route('admin.travel.destroy', ['travel' => $item->id])}}"
-                                                    method="post">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button type="submit" class="dropdown-item">Delete</button>
-                                                </form>
+                                                <button type="button" class="dropdown-item" data-toggle="modal"
+                                                    data-target="#modalTravel{{$item->id}}">
+                                                    Hapus
+                                                </button>
                                             </div>
                                         </div>
                                     </td>
@@ -82,4 +79,33 @@
     </div>
 </div>
 </div>
+
+<!-- Modal -->
+@foreach ($travel as $item)
+<div class="modal fade" id="modalTravel{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hapus Tempat Wisata</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('admin.travel.destroy', $item->id)}}" method="post">
+                @csrf
+                @method('delete')
+                <div class="modal-body">
+                    Hapus Travel {{$item->name}} ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
+
 @endsection
