@@ -21,15 +21,16 @@ class TempatWisataFactory extends Factory
      */
     public function definition()
     {
-
+        $status = ['PUBLISH', 'DRAFT'];
         return [
             'name' => $this->faker->streetName(),
             'slug' => $this->faker->slug(),
+            'city_id'=> $this->faker->numberBetween(0, 488),
             'contact' => $this->faker->phoneNumber(),
             'history' => $this->faker->paragraph(6, false),
-            'jam_buka' => '06:00',
-            'jam_tutup' => '18:00',
-            'status' => 'PUBLISH'
+            'jam_buka' => $this->faker->time(),
+            'jam_tutup' => $this->faker->time(),
+            'status' => $status[$this->faker->numberBetween(0,1)],
         ];
     }
 }

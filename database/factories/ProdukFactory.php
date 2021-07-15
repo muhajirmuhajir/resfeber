@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Produk;
+use App\Models\TempatWisata;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProdukFactory extends Factory
@@ -22,6 +23,9 @@ class ProdukFactory extends Factory
     public function definition()
     {
         return [
+            'tempat_wisata_id' => function(){
+                return TempatWisata::factory()->create()->id;
+            },
             'name' => $this->faker->lexify('Produk ??'),
             'description' => $this->faker->sentence(),
         ];

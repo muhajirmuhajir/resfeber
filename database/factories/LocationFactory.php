@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Location;
+use App\Models\TempatWisata;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LocationFactory extends Factory
@@ -23,6 +24,9 @@ class LocationFactory extends Factory
     {
         return [
             'name' => $this->faker->address(),
+            'tempat_wisata_id' => function(){
+                return TempatWisata::factory()->create()->id;
+            },
             'latitude' => $this->faker->latitude(),
             'longitude' => $this->faker->longitude(),
             'city' => $this->faker->city(),

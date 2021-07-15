@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\TempatWisata;
 use App\Models\MediaTempatWisata;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,6 +23,9 @@ class MediaTempatWisataFactory extends Factory
     public function definition()
     {
         return [
+            'tempat_wisata_id' => function(){
+                return TempatWisata::factory()->create()->id;
+            },
             'media_url' =>'thumbnails/default.jpg'
         ];
     }
