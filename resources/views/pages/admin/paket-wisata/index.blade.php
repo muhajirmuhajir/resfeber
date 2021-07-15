@@ -30,7 +30,7 @@
                                 @forelse ($paket as $key=> $item)
                                 <tr>
                                     <td><strong>{{$paket->firstItem()+$key}}</strong></td>
-                                    <td>{{$item->tempatWisata->name}}</td>
+                                    <td>{{$item->tempatWisata->name ?? "-"}}</td>
                                     <td>{{$item->tourTravel->name ?? "-"}}</td>
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->description}}</td>
@@ -52,12 +52,10 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item"
                                                     href="{{route('admin.paket-wisata.edit',  $item->id)}}">Edit</a>
-                                                <form action="{{route('admin.paket-wisata.destroy',$item->id)}}"
-                                                    method="post">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button type="submit" class="dropdown-item">Delete</button>
-                                                </form>
+                                                <button type="button" class="dropdown-item" data-toggle="modal"
+                                                    data-target="#modalPaket{{$item->id}}">
+                                                    Hapus
+                                                </button>
                                             </div>
                                         </div>
                                     </td>
@@ -81,4 +79,31 @@
     </div>
 </div>
 </div>
+
+@foreach ($paket as $item)
+<div class="modal fade" id="modalPaket{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hapus Tempat Wisata</h5>
+                <button type="button" class="batal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('admin.paket-wisata.destroy', $item->id)}}" method="post">
+                @csrf
+                @method('delete')
+                <div class="modal-body">
+                    Hapus Paket Wisata {{$item->name}} ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
 @endsection
