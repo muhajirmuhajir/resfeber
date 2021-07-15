@@ -27,8 +27,8 @@
                                         </svg>
                                     </span>
                                     <div class="media-body">
-                                        <p class="fs-14 mb-2">Weekly Progress</p>
-                                        <span class="title text-black font-w600">42%</span>
+                                        <p class="fs-14 mb-2">User Terdaftar</p>
+                                        <span class="title text-black font-w600">{{$user_count}}</span>
                                     </div>
                                 </div>
                                 <div class="progress" style="height:5px;">
@@ -60,8 +60,8 @@
                                         </svg>
                                     </span>
                                     <div class="media-body">
-                                        <p class="fs-14 mb-2">Weekly Progress</p>
-                                        <span class="title text-black font-w600">42km</span>
+                                        <p class="fs-14 mb-2">Tempat Wisata</p>
+                                        <span class="title text-black font-w600">{{$tempat_wisata_count}}</span>
                                     </div>
                                 </div>
                                 <div class="progress" style="height:5px;">
@@ -96,8 +96,8 @@
                                         </svg>
                                     </span>
                                     <div class="media-body">
-                                        <p class="fs-14 mb-2">Daily Cycling</p>
-                                        <span class="title text-black font-w600">230 Km</span>
+                                        <p class="fs-14 mb-2">Travel</p>
+                                        <span class="title text-black font-w600">{{$travel_count}}</span>
                                     </div>
                                 </div>
                                 <div class="progress" style="height:5px;">
@@ -135,8 +135,8 @@
                                         </svg>
                                     </span>
                                     <div class="media-body">
-                                        <p class="fs-14 mb-2">Morning Yoga</p>
-                                        <span class="title text-black font-w600">18:34:21”</span>
+                                        <p class="fs-14 mb-2">Total Transaksi</p>
+                                        <span class="title text-black font-w600">{{$transaction_count}}</span>
                                     </div>
                                 </div>
                                 <div class="progress" style="height:5px;">

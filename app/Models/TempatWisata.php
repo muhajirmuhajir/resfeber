@@ -11,7 +11,7 @@ class TempatWisata extends Model
 
     protected $guarded = [];
 
-    protected $with = ['thumbnail'];
+    protected $with = ['thumbnail', 'city'];
 
     public function facilities()
     {
