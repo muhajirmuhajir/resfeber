@@ -11,7 +11,7 @@ class TempatWisataController extends Controller
     public function index()
     {
         $provinces = Province::all();
-        $tempatWisata = TempatWisata::paginate(5);
+        $tempatWisata = TempatWisata::paginate(10);
         return view('pages.wisata', compact('provinces', 'tempatWisata'));
     }
 

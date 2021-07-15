@@ -17,9 +17,9 @@
                 @foreach ($provinces as $province)
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="{{$province->id}}">
-                    <label class="form-check-label" for="{{$province->id}}">
-                        {{$province->name}}
-                    </label>
+                    <small class="form-check-label" for="{{$province->id}}">
+                        {{Str::lower(Str::ucfirst($province->name))}}
+                    </small>
                 </div>
                 @endforeach
             </div>
@@ -72,7 +72,7 @@
                                     </defs>
                                 </svg>
                                 <h6 class="h6 d-inline-block ml-1">
-                                    Probolinggo</h6>
+                                    {{$wisata->city->name??"-"}}</h6>
                             </div>
                             <hr>
                             <div class="facility-container">
