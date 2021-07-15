@@ -26,13 +26,13 @@
 
             <!-- logo -->
 
-            <a class="logo-default dtr-scroll-link" href="{{route('home')}}"><img
+            <a class="logo-defaults dtr-scroll-links" href="{{route('home')}}"><img
                     src="{{url('frontpage/assets/images/logo-dark.png')}}" alt="logo"></a>
 
-            <!-- logo on scroll -->
-            <a class="logo-alt dtr-scroll-link" href="{{route('home')}}"><img
-                    src="{{url('frontpage/assets/images/logo-dark.png')}}" alt="logo"></a>
-            <!-- logo on scroll ends -->
+            {{-- <!-- logo on scroll -->
+            <a class="logo-alts dtr-scroll-links" href="{{route('home')}}"><img
+                src="{{url('frontpage/assets/images/logo-dark.png')}}" alt="logo"></a>
+            <!-- logo on scroll ends --> --}}
 
         </div>
         <!-- header left ends -->

@@ -1,10 +1,14 @@
 <?php
 
-use App\Http\Controllers\CheckoutController;
+use App\Models\User;
+use App\Models\TourTravel;
 use App\Models\Transaction;
+use App\Models\TempatWisata;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TravelController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\TempatWisataController;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,9 +67,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(function () {
-    Route::get('/', function () {
-        return view('pages.admin.dashboard');
-    })->name('dashboard');
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('tempat-wisata', App\Http\Controllers\Admin\TempatWisataController::class);
 

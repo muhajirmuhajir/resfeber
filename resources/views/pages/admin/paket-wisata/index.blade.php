@@ -31,7 +31,7 @@
                                 <tr>
                                     <td><strong>{{$paket->firstItem()+$key}}</strong></td>
                                     <td>{{$item->tempatWisata->name}}</td>
-                                    <td>{{$item->tourTravel->name}}</td>
+                                    <td>{{$item->tourTravel->name ?? "-"}}</td>
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->description}}</td>
                                     <td>{{$item->price}}</td>
