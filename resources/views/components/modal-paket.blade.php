@@ -44,14 +44,13 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Deskripsi</label>
                             <div class="col-sm-9">
-                                <input type="text" name="description" class="form-control" placeholder="Deskripsi"
-                                    required>
+                                <textarea name="description" class="form-control" rows="5" required></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Harga</label>
                             <div class="col-sm-9">
-                                <input type="text" name="price" class="form-control" placeholder="Harga" required>
+                                <input type="number" name="price" class="form-control" placeholder="Harga" required>
                             </div>
                         </div>
                     </div>

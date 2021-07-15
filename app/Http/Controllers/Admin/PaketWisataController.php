@@ -28,7 +28,7 @@ class PaketWisataController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.paket.update');
+        // return view('pages.admin.paket-wisata.update');
     }
 
     /**
@@ -63,7 +63,7 @@ class PaketWisataController extends Controller
     {
         $paket = Paket::findOrFail($id);
 
-        return view('pages.admin.paket.update', compact('paket'));
+        return view('pages.admin.paket-wisata.update', compact('paket'));
     }
 
     /**
@@ -76,7 +76,7 @@ class PaketWisataController extends Controller
     {
         $paket = Paket::findOrFail($id);
 
-        return view('pages.admin.paket.update', compact(('paket')));
+        return view('pages.admin.paket-wisata.update', compact(('paket')));
     }
 
     /**
@@ -95,6 +95,11 @@ class PaketWisataController extends Controller
             'description' => 'required',
             'price' => 'required'
         ]);
+
+        $paket = Paket::findOrFail($id);
+        $paket->update($fields);
+
+        return back();
     }
 
     /**
