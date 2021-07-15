@@ -1,14 +1,13 @@
 <?php
 
-use App\Models\User;
-use App\Models\TourTravel;
 use App\Models\Transaction;
-use App\Models\TempatWisata;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TravelController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\TempatWisataController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +40,7 @@ Route::get('about', function () {
 })->name('about');
 
 Route::middleware('auth')->group(function () {
-    Route::get('profile', function () {
-        return view('pages.profile');
-    })->name('profile');
+    Route::get('profile', [UserController::class, 'index'])->name('profile');
 
     Route::get('transaksi', function () {
         $transaksi = Transaction::with('tempatWisata')->where('user_id', auth()->user()->id)->paginate(5);

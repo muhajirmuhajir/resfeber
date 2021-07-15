@@ -12,7 +12,11 @@
     <section id="home" class="dtr-section dtr-box-layout dtr-hero-section-top-padding">
         <div class="position-relative bg-white rounded px-4 pb-4 profile-section">
             <div class="profile-container text-center">
+                @if (false)
                 <img class="img-fluid" src="{{url('frontpage/assets/images/user-1.jpg')}}" alt="">
+                @else
+                <img src="https://ui-avatars.com/api/?name={{auth()->user()->name}}" alt="" srcset="">
+                @endif
                 <p class="h5 mt-2">{{auth()->user()->name}}</p>
             </div>
             <div class="row">
@@ -35,13 +39,13 @@
                 <div class="col-md-6">
                     <div class="pink-card rounded overflow-hidden d-flex mb-3 align-items-center">
                         <div class="p-4 bg-dark text-white">
-                            10
+                            {{$success_count}}
                         </div>
                         <p class="ml-4 h5">Transaksi Berhasil</p>
                     </div>
                     <div class="pink-card rounded overflow-hidden d-flex mb-3 align-items-center">
                         <div class="p-4 bg-dark text-white">
-                            10
+                            {{$pending_count}}
                         </div>
                         <p class="ml-4 h5">Transaksi Tertunda</p>
                     </div>
