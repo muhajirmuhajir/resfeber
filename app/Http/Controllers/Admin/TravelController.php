@@ -40,6 +40,7 @@ class TravelController extends Controller
     {
         $fields = $request->validate([
             'name' => 'required',
+            'description' => 'required',
             'email' => 'required|email',
             'phone_number' => 'required',
             'address' => 'required'
