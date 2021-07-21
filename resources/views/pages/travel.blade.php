@@ -9,7 +9,7 @@
 
     <!-- hero section starts -->
     <section id="home" class="dtr-section dtr-box-layout dtr-hero-section-top-padding">
-        <h1 class="h1">Paket Wisata</h1>
+        <h1 class="h1">Paket Travel</h1>
         @forelse ($travels as $travel)
         <div class="paket-container mb-4"
             style="background-image: url('{{url('frontpage/assets/images/paket1.png')}}');">
