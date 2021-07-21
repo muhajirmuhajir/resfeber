@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Paket;
 use App\Models\TourTravel;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,7 @@ class TravelController extends Controller
 {
     public function index()
     {
+
         $travels = TourTravel::all();
         return view('pages.travel', compact('travels'));
     }
