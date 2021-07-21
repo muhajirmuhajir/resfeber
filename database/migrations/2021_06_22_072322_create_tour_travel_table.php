@@ -16,9 +16,9 @@ class CreateTourTravelTable extends Migration
         Schema::create('tour_travel', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->longText('description');
             $table->string('email');
             $table->longText('address');
-            $table->longText('description');
             $table->string('phone_number');
             $table->timestamps();
         });

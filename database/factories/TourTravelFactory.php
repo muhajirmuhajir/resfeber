@@ -23,6 +23,7 @@ class TourTravelFactory extends Factory
     {
         return [
             'name' => $this->faker->lexify('Travel ???'),
+            'description' => $this->faker->sentence(),
             'email' => $this->faker->safeEmail(),
             'address' => $this->faker->address(),
             'phone_number' => $this->faker->phoneNumber()
