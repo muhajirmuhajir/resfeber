@@ -8,8 +8,7 @@
 <div id="dtr-main-content">
     <!-- wisata section starts -->
     <section id="detail-wisata" class="dtr-section dtr-box-layout dtr-hero-section-top-padding ">
-        <h1 class="h1">Sewa Jeep Sunrise Bromo Terbaik</h1>
-        <p class="h3">Nahwa Tour and Travel</>
+        <h1 class="h1">Nahwa Tour and Travel </h1>
             <div class="row">
                 <div class="col-md-7">
                     <img src="{{url('frontpage/assets/images/blogpost-img1.jpg')}}" alt="" class="img-fluid">
