@@ -24,6 +24,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Deskripsi</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="description" value="{{$travel->description}}" class="form-control"
+                                        placeholder="Deskripsi" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Email</label>
                                 <div class="col-sm-9">
                                     <input type="email" name="email" value="{{$travel->email}}" class="form-control"

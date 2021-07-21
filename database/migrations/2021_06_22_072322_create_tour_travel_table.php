@@ -18,6 +18,7 @@ class CreateTourTravelTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->longText('address');
+            $table->longText('description');
             $table->string('phone_number');
             $table->timestamps();
         });

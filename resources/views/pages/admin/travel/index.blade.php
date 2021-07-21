@@ -20,6 +20,7 @@
                                 <tr>
                                     <th class="width80">#</th>
                                     <th>NAMA</th>
+                                    <th>DESKRIPSI</th>
                                     <th>EMAIL</th>
                                     <th>ALAMAT</th>
                                     <th>NOMOR HP</th>
@@ -31,6 +32,7 @@
                                 <tr>
                                     <td><strong>{{$travel->firstItem()+$key}}</strong></td>
                                     <td>{{$item->name}}</td>
+                                    <td>{{$item->description}}</td>
                                     <td>{{$item->email}}</td>
                                     <td>{{$item->address}}</td>
                                     <td>{{$item->phone_number}}</td>
