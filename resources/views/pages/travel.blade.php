@@ -17,16 +17,13 @@
                 <div class="row flex-row-reverse">
                     <div class="col-md-5">
                         <div class="card-paket p-4">
-                            <h2 class="h2">Open Trip Bromo via Malang</h2>
                             <p>{{$travel->name}}</p>
-                            <p class="text-justify text-dark">Nahwa Tour menyediakan jasa sewa / rental jeep hardtop
-                                bromo
-                                dengan harga yang
-                                lebih murah. Dapat dijemput di Tumpang / Poncokusumo / Gubugklakah – Malang,
-                                Tosari / Wonokitri – Pasuruan, Sukapura / Cemorolawang / Ngadisari –
-                                Probolinggo. Dengan jalur yang aman berkapasitas max 6 penumpang.</p>
+                            @foreach ($travel->pakets as $paket)
+                            <h2 class="h2">{{$paket->name}}</h2>
+                            <p class="text-justify text-dark">{{$paket->description}}</p>
+                            @endforeach
                             <p class="text-dark">Harga mulai</p>
-                            <h3 class="h3 text-danger">Rp. 650.000 - Rp 1.250.000</h3>
+                            <h3 class="h3 text-danger">Rp. {{$paket->price}}</h3>
                             <a href="{{route('detailTravel',['id'=> $travel->id])}}"
                                 class="dtr-btn btn-dark-blue d-block mt-4">Lihat
                                 Paket</a>

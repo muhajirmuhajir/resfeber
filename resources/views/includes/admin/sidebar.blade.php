@@ -13,16 +13,16 @@
                     <span class="nav-text">Tempat Wisata</span>
                 </a>
             </li>
+            <li class="{{Str::startsWith(Route::currentRouteName(),'admin.travel') ? 'mm-active' : ''}}"><a
+                href="{{route('admin.travel.index')}}" class="ai-icon" aria-expanded="false">
+                <i class="flaticon-381-layer-1"></i>
+                <span class="nav-text">Travel</span>
+            </a>
+            </li>
             <li class="{{Str::startsWith(Route::currentRouteName(),'admin.paket-wisata') ? 'mm-active' : ''}}"><a
                     href="{{route('admin.paket-wisata.index')}}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Paket Wisata</span>
-                </a>
-            </li>
-            <li class="{{Str::startsWith(Route::currentRouteName(),'admin.travel') ? 'mm-active' : ''}}"><a
-                    href="{{route('admin.travel.index')}}" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-layer-1"></i>
-                    <span class="nav-text">Travel</span>
                 </a>
             </li>
             <li class="{{Str::startsWith(Route::currentRouteName(),'admin.transaction') ? 'mm-active' : ''}}"><a
