@@ -96,7 +96,7 @@ class TempatWisataController extends Controller
         $wisata = TempatWisata::findOrFail($id);
         $wisata->update($fields);
 
-        return back();
+        return back()->withSuccess('Data Berhasil di Simpan');
     }
 
     /**

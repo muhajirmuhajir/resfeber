@@ -5,6 +5,14 @@
                 <h4 class="card-title">Info Umum</h4>
             </div>
             <div class="card-body">
+                @if (Session::has('success'))
+                <div class="alert alert-success d-flex align-items-center" x-data="{show: true}" x-show="show"
+                    x-init="()=>{setTimeOut(()=>{show=false;}, 2000)}">
+                    <div>
+                        {{Session::get('success')}}
+                    </div>
+                </div>
+                @endif
                 <div class="basic-form">
                     <form action="{{route('admin.tempat-wisata.update',['tempat_wisatum' => $tempatWisata->id])}}"
                         method="post">
@@ -163,6 +171,13 @@
                         <button type="submit" class="btn btn-primary w-100">Simpan</button>
                     </div>
                 </form>
+                <div class="alert alert-success  align-items-center" style="display: none;" x-data="{show: false}"
+                    x-show="show"
+                    x-init="@this.on('savedStatus', ()=>{show = true; setTimeout(()=>{show=false;}, 2000)})">
+                    <div>
+                        Data Tersimpan
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -94,6 +94,7 @@ class FormTempatWisata extends Component
     public function saveStatus()
     {
         $this->tempatWisata->update(['status' => $this->status]);
+        $this->emit('savedStatus');
     }
 
     public function addTiket()
