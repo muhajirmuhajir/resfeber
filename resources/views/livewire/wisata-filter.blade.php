@@ -22,11 +22,12 @@
         <p>Daftar destinasi wisata sekitar Jawa Timur.</p>
         <div class="row">
             @foreach ($tempatWisata as $wisata)
-            <div class="col-lg-4 mb-3" wire:key="{{$wisata->id}}">
+            <div class="col-lg-4 mb-3">
 
                 <div class="card-box">
-                    <img src="{{Storage::url($wisata->thumbnail->media_url)}}" alt="" srcset=""
-                        class="d-block img-fluid">
+                    <img @if($wisata->thumbnail)src="{{Storage::url($wisata->thumbnail->media_url)}}" @endif alt=""
+                    srcset=""
+                    class="d-block img-fluid">
                     <div class="card-content">
                         <div class="d-flex align-items-center">
                             <span class="location">Jawa Timur</span>
