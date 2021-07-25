@@ -35,6 +35,11 @@ class AuthenticatedSessionController extends Controller
         if(auth()->user()->role === 3){
             return redirect()->route('admin.dashboard');
         }
+
+        if(!Auth::user()->phone_number || !Auth::user()->address){
+            return redirect()->route('information-complete');
+        }
+
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 

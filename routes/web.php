@@ -39,7 +39,7 @@ Route::get('about', function () {
     return view('pages.about');
 })->name('about');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'information_complete'])->group(function () {
     Route::get('profile', [UserController::class, 'index'])->name('profile');
 
     Route::get('transaksi', function () {
@@ -52,16 +52,14 @@ Route::middleware('auth')->group(function () {
         return view('pages.detail-transaksi', compact('transaksi'));
     })->name('detailTransaksi');
 
-    Route::get('information-complete', function () {
-        return view('pages.information-complete');
-    })->name('information-complete');
-
     Route::get('checkout/{id}', [CheckoutController::class, 'index'])->name('checkout');
     Route::post('checkout/{id}', [CheckoutController::class, 'process'])->name('checkout_process');
     Route::post('checkout/create/{id}', [CheckoutController::class, 'create'])->name('checkout_create');
     Route::post('checkout/remove/{id}', [CheckoutController::class, 'remove'])->name('checkout_remove');
 });
 
+Route::get('information-complete', [UserController::class, 'informationComplete'])->name('information-complete')->middleware('auth');
+Route::post('information-complete', [UserController::class, 'informationStore'])->name('information-store')->middleware('auth');
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');

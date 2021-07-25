@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,5 +24,23 @@ class UserController extends Controller
         $pending_count = $pending_count->count();
 
         return view('pages.profile', compact('success_count', 'pending_count'));
+    }
+
+    public function informationComplete()
+    {
+        return view('pages.information-complete');
+    }
+
+    public function informationStore(Request $request)
+    {
+        $fields = $request->validate([
+            'address' => 'required',
+            'phone_number' => 'required',
+        ]);
+
+        $user = User::findOrFail(Auth::user()->id);
+        $user->update($fields);
+
+        return redirect()->route('home');
     }
 }

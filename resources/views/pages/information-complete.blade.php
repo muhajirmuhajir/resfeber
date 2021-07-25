@@ -32,16 +32,17 @@
                             Kebijakan Privasi kami
                         </a>
                     </p>
-                    <form>
+                    <form action="{{route('information-store')}}" method="post">
+                        @csrf
                         <div class="form-group">
-                            <label for="exampleInputEmail1">No. HP</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="No. HP">
+                            <label for="phone_number">No. HP</label>
+                            <input type="text" name="phone_number" class="form-control" id="phone_number"
+                                value="{{auth()->user()->phone_number}}" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Alamat</label>
-                            <textarea type="text" class="form-control" id="exampleInputEmail1"
-                                placeholder="Alamat"> </textarea>
+                            <label for="address">Alamat</label>
+                            <textarea type="text" name="address" class="form-control" id="address"
+                                required>{{auth()->user()->address}}</textarea>
                         </div>
 
                         <button type="submit" class="dtr-btn btn-dark-blue d-block w-100 mt-5">Simpan dan
