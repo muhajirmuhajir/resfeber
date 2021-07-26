@@ -6,6 +6,7 @@ use App\Http\Controllers\TravelController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\TempatWisataController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,13 +21,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 Route::get('wisata', [TempatWisataController::class, 'index'])->name('wisata');
 Route::get('wisata/{slug}', [TempatWisataController::class, 'show'])->name('detailwisata');

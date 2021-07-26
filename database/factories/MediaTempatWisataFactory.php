@@ -26,7 +26,7 @@ class MediaTempatWisataFactory extends Factory
             'tempat_wisata_id' => function(){
                 return TempatWisata::factory()->create()->id;
             },
-            'media_url' =>'thumbnails/default.jpg'
+            'media_url' => $this->faker->image('public/storage',360, 160, null, false),
         ];
     }
 }

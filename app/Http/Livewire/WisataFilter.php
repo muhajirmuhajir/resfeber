@@ -29,9 +29,9 @@ class WisataFilter extends Component
             foreach ($cities as $city){
                 array_push($city_ids, $city->id);
             }
-            $tempatWisata = TempatWisata::whereIn('city_id', $city_ids)->paginate(10);
+            $tempatWisata = TempatWisata::with(['thumbnail', 'city.province'])->whereIn('city_id', $city_ids)->where('status', 'PUBLISH')->paginate(10);
         } else {
-            $tempatWisata = TempatWisata::paginate(10);
+            $tempatWisata = TempatWisata::with(['thumbnail', 'city.province'])->where('status', 'PUBLISH')->paginate(10);
         }
         return view('livewire.wisata-filter', compact('tempatWisata'));
     }

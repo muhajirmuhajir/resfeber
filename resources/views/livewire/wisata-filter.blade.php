@@ -18,8 +18,8 @@
         </div>
     </div>
     <div class="col-lg-9">
-        <h2>Jawa Timur</h2>
-        <p>Daftar destinasi wisata sekitar Jawa Timur.</p>
+        <h2>Tempat Wisata</h2>
+        <p>Daftar destinasi wisata </p>
         <div class="row">
             @foreach ($tempatWisata as $wisata)
             <div class="col-lg-4 mb-3">
@@ -30,7 +30,7 @@
                     class="d-block img-fluid">
                     <div class="card-content">
                         <div class="d-flex align-items-center">
-                            <span class="location">Jawa Timur</span>
+                            <span class="location">{{$wisata->city->province->name}}</span>
                             <svg class="mx-1" width="13" height="11" viewBox="0 0 13 11" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <rect x="0.612061" y="0.12265" width="11.6436" height="10.7765" fill="url(#pattern0)" />

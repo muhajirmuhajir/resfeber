@@ -72,55 +72,26 @@
 
         <!--== row starts ==-->
         <div class="row">
-
-            <!-- blog item 1 starts -->
+            @foreach ($wisataPopuler as $wisata)
             <div class="col-12 col-md-4">
                 <div class="dtr-blog-item">
                     <!-- image -->
-                    <div class="dtr-post-img"> <img src="{{url('assets/images/ranu.png')}}" alt="image">
+                    <div class="dtr-post-img"> <img @if ($wisata->thumbnail)
+                        src="{{Storage::url($wisata->thumbnail->media_url)}}"
+                        @else
+                        src="{{url('assets/images/ranu.png')}}"
+                        @endif alt="image">
                     </div>
                     <!-- content -->
-                    <div class="dtr-post-content"> <span class="dtr-blog-cat">Jawa Timur</span>
-                        <h5><a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}">Ranu Kumbolo</a></h5>
-                        <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional
-                            Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
+                    <div class="dtr-post-content"> <span class="dtr-blog-cat">{{$wisata->city->province->name}}</span>
+                        <h5><a href="{{route('detailwisata', ['slug' => $wisata->slug])}}">{{$wisata->name}}</a></h5>
+                        <p class="text-justify">{{$wisata->history}}</p>
                     </div>
                     <!-- content ends -->
                 </div>
             </div>
-            <!-- blog item 1 ends -->
+            @endforeach
 
-            <!-- blog item 2 starts -->
-            <div class="col-12 col-md-4">
-                <div class="dtr-blog-item">
-                    <!-- image -->
-                    <div class="dtr-post-img"> <img src="assets/images/ranu.png" alt="image"> </div>
-                    <!-- content -->
-                    <div class="dtr-post-content"> <span class="dtr-blog-cat">Jawa Timur</span>
-                        <h5><a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}">Ranu Kumbolo</a></h5>
-                        <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional
-                            Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
-                    </div>
-                    <!-- content ends -->
-                </div>
-            </div>
-            <!-- blog item 2 ends -->
-
-            <!-- blog item 3 starts -->
-            <div class="col-12 col-md-4">
-                <div class="dtr-blog-item">
-                    <!-- image -->
-                    <div class="dtr-post-img"> <img src="assets/images/ranu.png" alt="image"> </div>
-                    <!-- content -->
-                    <div class="dtr-post-content"> <span class="dtr-blog-cat">Jawa Timur</span>
-                        <h5><a href="{{route('detailwisata', ['slug' => 'ranu-kumbolo'])}}">Ranu Kumbolo</a></h5>
-                        <p class="text-justify">Ranu Kumbolo adalah sebuah danau yang terletak di dalam Taman Nasional
-                            Bromo Tengger Semeru, Jawa Timur, Indonesia.</p>
-                    </div>
-                    <!-- content ends -->
-                </div>
-            </div>
-            <!-- blog item 3 ends -->
 
         </div>
         <!--== row ends ==-->

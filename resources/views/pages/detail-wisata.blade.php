@@ -25,8 +25,11 @@
         <div class="row">
             <div class="col-md-8">
 
-                <img id="main-image" class="img-fluid" src="{{Storage::url($wisata->thumbnail->media_url)}}"
-                    xoriginal="{{Storage::url($wisata->thumbnail->media_url)}}" alt="">
+                <img id="main-image" class="img-fluid" @if ($wisata->thumbnail)
+                src="{{Storage::url($wisata->thumbnail->media_url)}}"
+                xoriginal="{{Storage::url($wisata->thumbnail->media_url)}}"
+                @endif
+                alt="">
                 <!-- Images -->
                 <div class="row mt-4">
                     @foreach ($wisata->media as $item)
