@@ -134,7 +134,8 @@
                                 <td>{{$i+1}}</td>
                                 <td>{{$tiket->name}}</td>
                                 <td>{{$tiket->price}}</td>
-                                <td><button wire:click="deleteTiket({{$tiket->id}})"
+                                <td><button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
+                                        wire:click="deleteTiket({{$tiket->id}})"
                                         class="btn btn-small btn-outline-danger">Hapus</button></td>
                             </tr>
                             @empty
@@ -226,7 +227,8 @@
                                 <td>{{$i+1}}</td>
                                 <td>{{$produk->name}}</td>
                                 <td>{{$produk->description}}</td>
-                                <td><button wire:click="deleteProduk({{$produk->id}})"
+                                <td><button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
+                                        wire:click="deleteProduk({{$produk->id}})"
                                         class="btn btn-small btn-outline-danger">Hapus</button></td>
                             </tr>
                             @empty
@@ -279,7 +281,8 @@
                             <tr>
                                 <td>{{$i+1}}</td>
                                 <td>{{$facility->name}}</td>
-                                <td><button wire:click="deleteFacility({{$facility->id}})"
+                                <td><button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
+                                        wire:click="deleteFacility({{$facility->id}})"
                                         class="btn btn-small btn-outline-danger">Hapus</button></td>
                             </tr>
                             @empty
