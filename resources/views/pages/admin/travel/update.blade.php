@@ -13,7 +13,8 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="{{route('admin.travel.update', $travel->id)}}" method="post">
+                        <form action="{{route('admin.travel.update', $travel->id)}}" method="post"
+                            enctype="multipart/form-data">
                             @method('put')
                             @csrf
                             <div class="form-group row">
@@ -26,8 +27,8 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Deskripsi</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="description" value="{{$travel->description}}" class="form-control"
-                                        placeholder="Deskripsi" required>
+                                    <input type="text" name="description" value="{{$travel->description}}"
+                                        class="form-control" placeholder="Deskripsi" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -50,6 +51,17 @@
                                     <input type="text" name="address" value="{{$travel->address}}" class="form-control"
                                         placeholder="Alamat" required>
                                 </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="file" class="col-sm-3 col-form-label">Thumbnail</label>
+                                <div class="col-sm-9">
+                                    <input type="file" name="thumbnail" id="file" class="form-control"
+                                        placeholder="Thumbnail" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <img src="{{Storage::url($travel->thumbnail)}}" class="w-50 img-thumbnail" alt=""
+                                    srcset="">
                             </div>
                             <a href="{{route('admin.travel.index')}}" class="btn btn-outline-primary">Batal</a>
                             <button type="submit" class="btn btn-primary">Save changes</button>

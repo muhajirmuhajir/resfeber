@@ -44,8 +44,15 @@ class PaketWisataController extends Controller
             'tour_travel_id'  => 'required|exists:tour_travel,id',
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required|numeric'
+            'price' => 'required|numeric',
+            'thumbnail' => 'required|image|max:2048'
         ]);
+
+        if($request->file('thumbnail')){
+            $thumbnail = $request->thumbnail->store('paket', 'public');
+            $fields['thumbnail'] = $thumbnail;
+        }
+
 
         Paket::create($fields);
 
@@ -93,10 +100,17 @@ class PaketWisataController extends Controller
             'tour_travel_id'  => 'required',
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required'
+            'price' => 'required',
+            'thumbnail' => 'required|image|max:2048'
         ]);
 
         $paket = Paket::findOrFail($id);
+
+        if($request->file('thumbnail')){
+            $thumbnail = $request->thumbnail->store('paket', 'public');
+            $fields['thumbnail'] = $thumbnail;
+        }
+
         $paket->update($fields);
 
         return back();

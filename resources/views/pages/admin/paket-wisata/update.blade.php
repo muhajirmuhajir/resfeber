@@ -12,7 +12,8 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="{{route('admin.paket-wisata.update', $paket->id)}}" method="post">
+                        <form action="{{route('admin.paket-wisata.update', $paket->id)}}" method="post"
+                            enctype="multipart/form-data">
                             @method('put')
                             @csrf
                             <div class="form-group row">
@@ -60,7 +61,17 @@
                                         value="{{$paket->price}}" required>
                                 </div>
                             </div>
-
+                            <div class="form-group row">
+                                <label for="file" class="col-sm-3 col-form-label">Thumbnail</label>
+                                <div class="col-sm-9">
+                                    <input type="file" name="thumbnail" id="file" class="form-control"
+                                        placeholder="Thumbnail" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <img src="{{Storage::url($paket->thumbnail)}}" class="w-50 img-thumbnail" alt=""
+                                    srcset="">
+                            </div>
                             <a href="{{route('admin.paket-wisata.index')}}" class="btn btn-outline-primary">Batal</a>
                             <button type="submit" class="btn btn-primary">Save changes</button>
 

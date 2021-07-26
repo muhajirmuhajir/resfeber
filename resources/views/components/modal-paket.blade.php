@@ -3,7 +3,7 @@
         Paket</button>
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <form action="{{route('admin.paket-wisata.store')}}" method="post">
+            <form action="{{route('admin.paket-wisata.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header">
@@ -51,6 +51,13 @@
                             <label class="col-sm-3 col-form-label">Harga</label>
                             <div class="col-sm-9">
                                 <input type="number" name="price" class="form-control" placeholder="Harga" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="file" class="col-sm-3 col-form-label">Thumbnail</label>
+                            <div class="col-sm-9">
+                                <input type="file" name="thumbnail" id="file" class="form-control"
+                                    placeholder="Thumbnail" required>
                             </div>
                         </div>
                     </div>

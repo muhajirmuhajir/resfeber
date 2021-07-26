@@ -43,8 +43,14 @@ class TravelController extends Controller
             'description' => 'required',
             'email' => 'required|email',
             'phone_number' => 'required',
-            'address' => 'required'
+            'address' => 'required',
+            'thumbnail' => 'required|image|max:2048',
         ]);
+
+        if($request->file('thumbnail')){
+            $thumbnail = $request->thumbnail->store('travel', 'public');
+            $fields['thumbnail'] = $thumbnail;
+        }
 
         TourTravel::create($fields);
 
@@ -86,6 +92,11 @@ class TravelController extends Controller
         $fields = $request->all();
 
         $travel = TourTravel::findOrFail($id);
+
+        if($request->file('thumbnail')){
+            $thumbnail = $request->thumbnail->store('travel', 'public');
+            $fields['thumbnail'] = $thumbnail;
+        }
 
         $travel->update($fields);
 
