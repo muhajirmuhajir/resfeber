@@ -26,7 +26,8 @@ class TourTravelFactory extends Factory
             'description' => $this->faker->sentence(),
             'email' => $this->faker->safeEmail(),
             'address' => $this->faker->address(),
-            'phone_number' => $this->faker->phoneNumber()
+            'phone_number' => $this->faker->phoneNumber(),
+            'thumbnail' => 'empty',
         ];
     }
 }

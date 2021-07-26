@@ -32,7 +32,8 @@ class PaketFactory extends Factory
             },
             'name' => $this->faker->lexify('Paket ?'),
             'description' => $this->faker->text(),
-            'price' => $this->faker->numberBetween(150000, 500000)
+            'price' => $this->faker->numberBetween(150000, 500000),
+            'thumbnail' => 'empty',
         ];
     }
 }
