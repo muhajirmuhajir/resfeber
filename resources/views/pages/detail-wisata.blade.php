@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-md-8">
 
-                <img id="main-image" class="img-fluid" @if ($wisata->thumbnail)
+                <img id="main-image" class="img-fluid w-100" @if ($wisata->thumbnail)
                 src="{{Storage::url($wisata->thumbnail->media_url)}}"
                 xoriginal="{{Storage::url($wisata->thumbnail->media_url)}}"
                 @endif

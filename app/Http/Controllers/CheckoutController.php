@@ -41,7 +41,7 @@ class CheckoutController extends Controller
         TransactionTraveler::create([
             'transaction_id' => $transaction->id,
             'name' => Auth::user()->name,
-            'phone_number' => "234567",
+            'phone_number' => Auth::user()->phone_number,
             'age' => 20
         ]);
 
@@ -98,8 +98,7 @@ class CheckoutController extends Controller
 
         $traveler->delete();
 
-         // return to index
-         return redirect()->route('checkout', $transaction->id);
-
+        // return to index
+        return redirect()->route('checkout', $transaction->id);
     }
 }

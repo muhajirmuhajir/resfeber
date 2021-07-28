@@ -83,29 +83,6 @@
                             href="{{route('home')}}">Beranda</a> </li>
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'wisata'? 'ctm-active': ''}}"
                             href="{{route('wisata')}}">Lokasi</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="index.html">Jawa Timur</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="#">Malang</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Surabaya</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Probolinggo</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="index02.html">Jawa Tengah</a>
-                            </li>
-                            <li>
-                                <a href="index02.html">Jawa Barat</a>
-                            </li>
-
-                        </ul>
                     </li>
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'travel'? 'ctm-active': ''}}"
                             href="{{route('travel')}}">Travel</a> </li>
