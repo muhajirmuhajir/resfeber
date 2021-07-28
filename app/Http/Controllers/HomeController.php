@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
         $wisataPopuler = TempatWisata::withCount(['transactions' => function ($query){
             $query->where('transaction_status', 'SUCCESS');
-        }])->orderBy('transactions_count', 'desc')->limit(3)->get();
+        }])->where('status', 'PUBLISH')->orderBy('transactions_count', 'desc')->limit(3)->get();
 
 
         return view('index', compact('wisataPopuler'));
