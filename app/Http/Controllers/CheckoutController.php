@@ -37,9 +37,7 @@ class CheckoutController extends Controller
 
         ]);
 
-        // tambahkan orang kedalam transaction travel
-        TransactionTraveler::create([
-            'transaction_id' => $transaction->id,
+        $transaction->travelers()->create([
             'name' => Auth::user()->name,
             'phone_number' => Auth::user()->phone_number,
             'age' => 20
@@ -65,9 +63,9 @@ class CheckoutController extends Controller
             return abort('403');
         }
 
+
         // create new transaction traveler
-        TransactionTraveler::create([
-            'transaction_id' => $transaction->id,
+        $transaction->travelers()->create([
             'name' => $fields['name'],
             'phone_number' => $fields['phone_number'],
             'age' => $fields['age']
