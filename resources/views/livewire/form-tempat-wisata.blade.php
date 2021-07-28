@@ -328,12 +328,13 @@
                         </div>
                     </form>
                 </div>
-                <div id="lightgallery" class="row">
+                <div class="row">
                     @forelse ($wisata->media as $item)
-                    <a href="{{Storage::url($item->media_url)}}" data-exthumbimage="{{Storage::url($item->media_url)}}"
-                        data-src="{{Storage::url($item->media_url)}}" class="col-lg-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <img src="{{Storage::url($item->media_url)}}" style="width:100%;">
-                    </a>
+                        <button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
+                            wire:click="deleteMedia({{$item->id}})" class="btn btn-small btn-link">Hapus</button>
+                    </div>
                     @empty
                     <div class="col-md-12">
                         <p class="text-center">Belum ada Foto</p>

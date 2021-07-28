@@ -51,10 +51,10 @@ class FormTempatWisata extends Component
         $this->provinces = Province::all();
         $this->cities = collect();
 
-        if($this->tempatWisata->city){
+        if ($this->tempatWisata->city) {
             $city = City::with('province')->find($this->tempatWisata->city->id);
             $this->selectedProvince = $city->province->id;
-            $this->selectedCity =$city->id;
+            $this->selectedCity = $city->id;
             $this->cities = City::where('province_id', $city->province->id)->get();
         }
     }
@@ -141,6 +141,11 @@ class FormTempatWisata extends Component
     }
 
     public function deleteFacility(Facility $id)
+    {
+        $id->delete();
+    }
+
+    public function deleteMedia(MediaTempatWisata $id)
     {
         $id->delete();
     }
