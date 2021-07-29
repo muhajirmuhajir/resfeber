@@ -328,18 +328,14 @@
                         </div>
                     </form>
                 </div>
-                <div class="row">
-                    @forelse ($wisata->media as $item)
-                    <div class="col-lg-3 col-md-6 mb-4">
+                <div class="row" wire:sortable="updateMediaOrder">
+                    @foreach ($wisata->media as $item)
+                    <div class="col-lg-3 col-md-6 mb-4" wire:sortable.item="{{$item->id}}" wire:key="{{$item->id}}">
                         <img src="{{Storage::url($item->media_url)}}" style="width:100%;">
                         <button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
                             wire:click="deleteMedia({{$item->id}})" class="btn btn-small btn-link">Hapus</button>
                     </div>
-                    @empty
-                    <div class="col-md-12">
-                        <p class="text-center">Belum ada Foto</p>
-                    </div>
-                    @endforelse
+                    @endforeach
 
                 </div>
             </div>

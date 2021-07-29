@@ -46,7 +46,7 @@ class TempatWisata extends Model
 
     public function thumbnail()
     {
-        return $this->hasOne(MediaTempatWisata::class);
+        return $this->hasOne(MediaTempatWisata::class)->orderBy('position');
     }
 
     public function mediaTempatWisatas()

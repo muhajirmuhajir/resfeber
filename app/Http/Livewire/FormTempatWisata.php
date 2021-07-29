@@ -3,14 +3,15 @@
 namespace App\Http\Livewire;
 
 use App\Models\City;
-use App\Models\Facility;
-use App\Models\MediaTempatWisata;
 use App\Models\Produk;
-use App\Models\Province;
-use Livewire\Component;
-use App\Models\TempatWisata;
 use App\Models\Ticket;
+use Livewire\Component;
+use App\Models\Facility;
+use App\Models\Province;
+use App\Models\TempatWisata;
 use Livewire\WithFileUploads;
+use App\Models\MediaTempatWisata;
+use Illuminate\Support\Facades\DB;
 
 class FormTempatWisata extends Component
 {
@@ -65,7 +66,9 @@ class FormTempatWisata extends Component
     }
     public function render()
     {
-        $wisata = TempatWisata::with('city')->findOrFail($this->tempatWisata->id);
+        $wisata = TempatWisata::with(['city', 'media' => function ($query){
+            $query->orderBy('position');
+        }])->findOrFail($this->tempatWisata->id);
 
         return view('livewire.form-tempat-wisata', compact('wisata'));
     }
@@ -81,10 +84,11 @@ class FormTempatWisata extends Component
     {
         if ($this->photo) {
             $path = $this->photo->store('thumbnails', 'public');
-
+            $position = MediaTempatWisata::max('position') + 1;
             MediaTempatWisata::create([
                 'tempat_wisata_id' => $this->tempatWisata->id,
-                'media_url' => $path
+                'media_url' => $path,
+                'position' => $position,
             ]);
 
             $this->photo = null;
@@ -147,6 +151,16 @@ class FormTempatWisata extends Component
 
     public function deleteMedia(MediaTempatWisata $id)
     {
+        MediaTempatWisata::where('position', '>', $id->position)->update([
+            'position' => DB::raw('position - 1')
+        ]);
         $id->delete();
+    }
+
+    public function updateMediaOrder($media)
+    {
+        foreach ($media as $item) {
+            MediaTempatWisata::find($item['value'])->update(['position' => $item['order']]);
+        }
     }
 }
