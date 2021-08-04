@@ -11,6 +11,7 @@
     <meta name="keywords" content="real estate, agency, business, one page">
 
     <!-- FAVICON FILES -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url('backpage/images/favicon.png')}}">
     <link href="{{url('frontpage/assets/images/icons/apple-touch-icon-144-precomposed.png')}}" rel="apple-touch-icon"
         sizes="144x144">
     <link href="{{url('frontpage/assets/images/icons/apple-touch-icon-120-precomposed.png')}}" rel="apple-touch-icon"
