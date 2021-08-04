@@ -39,6 +39,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /var/www/resfeber
-          sudo git pull origin main
+          git pull
           composer install
-          sudo php artisan migrate
+          php artisan migrate
