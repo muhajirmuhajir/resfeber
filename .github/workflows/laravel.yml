@@ -8,9 +8,7 @@ on:
 
 jobs:
   laravel-tests:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
@@ -26,8 +24,10 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
+
   deploy:
     name: deploy to sever
+    needs : laravel-tests
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
@@ -39,6 +39,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /var/www/resfeber
-          git pull origin main
+          sudo git pull origin main
           composer install
-          php artisan migrate
+          sudo php artisan migrate
