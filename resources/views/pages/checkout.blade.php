@@ -143,7 +143,7 @@
                             </tbody>
                         </table>
 
-                        <form action="" method="post">
+                        <form action="{{route('checkout_pay', $transaction)}}" method="post">
                             @csrf
                             <button class="btn btn-dark-blue d-block w-100">Bayar Sekarang</button>
                         </form>

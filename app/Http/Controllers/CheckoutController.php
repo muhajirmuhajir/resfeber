@@ -7,7 +7,11 @@ use App\Models\Paket;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\TransactionTraveler;
+use Exception;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Midtrans\Config;
+use Midtrans\Snap;
 
 class CheckoutController extends Controller
 {
@@ -98,5 +102,44 @@ class CheckoutController extends Controller
 
         // return to index
         return redirect()->route('checkout', $transaction->id);
+    }
+
+    public function checkout(Request $request, Transaction $transaction)
+    {
+        $transaction->load('user');
+
+        // Set midtrans configuration
+        Config::$serverKey = config('midtrans.serverKey');
+        Config::$isProduction = config('midtrans.isProduction');
+        Config::$isSanitized = config('midtrans.isSanitized');
+        Config::$is3ds = config('midtrans.is3ds');
+
+        // create params
+        $midtrans_params = [
+            'transaction_details' =>[
+                'order_id' => $transaction->id,
+                'gross_amount' => (int) $transaction->price_total,
+            ],
+            'customer_details' => [
+                'first_name' => $transaction->user->name,
+                'email' => $transaction->user->email,
+            ],
+            'enabled_payments' => ['gopay'],
+            'vtweb' => []
+        ];
+
+
+        try {
+            // get payment url
+            $paymentUrl = Snap::createTransaction($midtrans_params)->redirect_url;
+
+            $transaction->update(['payment_id' => $transaction->id, 'transaction_status' => 'PENDING']);
+            $transaction->save();
+
+            // redirect to url
+            return Redirect::to($paymentUrl);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 }

@@ -1,14 +1,15 @@
 <?php
 
 use App\Models\Transaction;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TravelController;
-use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\TempatWisataController;
-use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\TravelController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\MidtransController;
+use App\Http\Controllers\TempatWisataController;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +56,15 @@ Route::middleware(['auth', 'information_complete'])->group(function () {
     Route::post('checkout/{id}', [CheckoutController::class, 'process'])->name('checkout_process');
     Route::post('checkout/create/{id}', [CheckoutController::class, 'create'])->name('checkout_create');
     Route::post('checkout/remove/{id}', [CheckoutController::class, 'remove'])->name('checkout_remove');
+    Route::post('checkout/confirm/{transaction}', [CheckoutController::class, 'checkout'])->name('checkout_pay');
+
+});
+
+Route::group(['prefix' => 'midtrans'], function (){
+    Route::post('callback', [MidtransController::class, 'notificationHandler']);
+    Route::get('finish', [MidtransController::class, 'finishRedirect']);
+    Route::get('unfinish', [MidtransController::class, 'unfinishRedirect']);
+    Route::get('error', [MidtransController::class, 'errorRedirect']);
 });
 
 Route::get('information-complete', [UserController::class, 'informationComplete'])->name('information-complete')->middleware('auth');
