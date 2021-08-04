@@ -41,7 +41,7 @@
                         Kabupaten Lumajang dan Kabupaten Probolinggo. </p>
                     <!-- button 1 -->
                     <a href="{{route('detailwisata', ['slug' => 'hai'])}}"
-                        class="dtr-btn dtr-btn-right-icon dtr-mt-30 dtr-mr-5 btn-blue">Kunjungi halaman<span
+                        class="dtr-btn dtr-btn-right-icon dtr-mt-30 dtr-mr-5 btn-blue">Detail Wisata<span
                             class="btn-span bg-blue color-white"><i class="icon-arrow-right"></i></span></a>
                     <!-- buttons end -->
                     {{--
