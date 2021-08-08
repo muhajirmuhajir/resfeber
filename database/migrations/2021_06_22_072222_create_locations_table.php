@@ -15,7 +15,7 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->integer('tempat_wisata_id');
+            $table->foreignId('tempat_wisata_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->longText('address');
             $table->string('city');

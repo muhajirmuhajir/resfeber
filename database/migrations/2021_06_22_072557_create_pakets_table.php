@@ -15,8 +15,8 @@ class CreatePaketsTable extends Migration
     {
         Schema::create('pakets', function (Blueprint $table) {
             $table->id();
-            $table->integer('tempat_wisata_id');
-            $table->integer('tour_travel_id');
+            $table->foreignId('tempat_wisata_id')->constrained()->onDelete('cascade');
+            $table->foreignId('tour_travel_id')->constrained()->on('tour_travel')->onDelete('cascade');
             $table->string('name');
             $table->longText('description');
             $table->integer('price');

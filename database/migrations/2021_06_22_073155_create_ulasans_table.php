@@ -15,8 +15,8 @@ class CreateUlasansTable extends Migration
     {
         Schema::create('ulasans', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('tempat_wisata_id');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('tempat_wisata_id')->constrained()->onDelete('cascade');
             $table->double('star_count');
             $table->longText('comment');
             $table->timestamps();

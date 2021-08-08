@@ -15,7 +15,7 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->integer('tempat_wisata_id');
+            $table->foreignId('tempat_wisata_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->integer('price');
             $table->timestamps();

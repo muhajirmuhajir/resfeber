@@ -15,7 +15,7 @@ class CreateMediaTempatWisatasTable extends Migration
     {
         Schema::create('media_tempat_wisatas', function (Blueprint $table) {
             $table->id();
-            $table->integer('tempat_wisata_id');
+            $table->foreignId('tempat_wisata_id')->constrained()->onDelete('cascade');
             $table->longText('media_url');
             $table->timestamps();
         });

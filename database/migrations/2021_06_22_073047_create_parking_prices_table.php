@@ -15,7 +15,7 @@ class CreateParkingPricesTable extends Migration
     {
         Schema::create('parking_prices', function (Blueprint $table) {
             $table->id();
-            $table->integer('tempat_wisata_id');
+            $table->foreignId('tempat_wisata_id')->constrained()->onDelete('cascade');
             $table->string('jenis');
             $table->integer('price');
             $table->timestamps();

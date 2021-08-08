@@ -15,7 +15,7 @@ class CreateAdditionalNeedsTable extends Migration
     {
         Schema::create('additional_needs', function (Blueprint $table) {
             $table->id();
-            $table->integer('tempat_wisata_id');
+            $table->foreignId('tempat_wisata_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->longText('description');
             $table->timestamps();

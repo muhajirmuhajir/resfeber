@@ -15,9 +15,9 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('paket_id');
-            $table->integer('tempat_wisata_id');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('paket_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('tempat_wisata_id')->nullable()->constrained()->onDelete('set null');
             $table->integer('payment_id');
             $table->date('transaction_date');
             $table->date('booking_date');
