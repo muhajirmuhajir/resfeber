@@ -41,6 +41,6 @@ jobs:
           cd /var/www/resfeber
           git pull
           composer install
-          php artisan migrate
+          php artisan migrate --force
           php artisan config:cache
           php artisan view:cache

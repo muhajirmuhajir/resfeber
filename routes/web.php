@@ -30,6 +30,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('wisata', [TempatWisataController::class, 'index'])->name('wisata');
 Route::get('wisata/{slug}', [TempatWisataController::class, 'show'])->name('detailwisata');
+Route::post('wisata/{wisata}', [TempatWisataController::class, 'postComment'])->name('detailwisata.postcomment');
+Route::delete('wisata/{comment}', [TempatWisataController::class, 'deleteComment'])->name('detailwisata.deletecomment');
 
 Route::get('travel', [TravelController::class, 'index'])->name('travel');
 Route::get('travel/{id}', [TravelController::class, 'show'])->name('detailTravel');

@@ -135,12 +135,52 @@
                     </h5>
                 </div>
                 <div id="ulasan" class="collapse show mt-4" aria-labelledby="headingOne" data-parent="#accordion">
+                    @auth
+                    <div class="row">
+                        <div class="col-12">
+                            @if ($errors->any())
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error}}</li>
+                            @endforeach
+                            @endif
+                            <form action="{{route('detailwisata.postcomment', $wisata)}}" method="post">
+                                @csrf
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <small>Komentar sebagai ({{Auth::user()->name }})</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <textarea id="" rows="3" placeholder="Tulis komentar" name="comment"
+                                                required></textarea>
+                                        </div>
+                                        <input type="hidden" name="star_count" value="10">
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-small btn-primary">Posting</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    @endauth
                     <div class="row">
                         @forelse ($wisata->ulasan as $item)
                         <div class="col-12">
                             <div class="card mb-4">
-                                <div class="card-header">
+                                <div class="card-header d-flex justify-content-between">
                                     <small>{{$item->user->name}}</small>
+                                    @auth
+                                    @if ($item->user_id == Auth::user()->id)
+                                    <form action="{{route('detailwisata.deletecomment', $item)}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button onclick="confirm('Hapus Komentar?')"
+                                            class="btn btn-small btn-danger">Hapus</button>
+                                    </form>
+                                    @endif
+                                    @endauth
                                 </div>
                                 <div class="card-body">
                                     <p>{{$item->comment}}</p>
