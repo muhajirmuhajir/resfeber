@@ -51,7 +51,7 @@
                     <p>{{$wisata->location->address ?? ""}}</p>
                     <div class="maps mt-3" style="height:300px">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31612.360111840386!2d112.9355026!3d-7.9424931!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd637aaab794a41%3A0xada40d36ecd2a5dd!2sGn.%20Bromo!5e0!3m2!1sid!2sid!4v1624936350673!5m2!1sid!2sid"
+                            src="https://www.google.com/maps/embed/v1/place?q={{$wisata->location->latitude ?? ""}},{{$wisata->location->longitude ?? ""}}&key=AIzaSyBiyqU8Lxfv-ZOvnLwAH3NcbLj9R2-RjHU"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>

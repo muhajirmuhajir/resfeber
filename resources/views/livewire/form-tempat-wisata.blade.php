@@ -1,3 +1,27 @@
+@section('script')
+<script
+    src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBiyqU8Lxfv-ZOvnLwAH3NcbLj9R2-RjHU">
+</script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+function initialize() {
+    var autocomplete = new google.maps.places.Autocomplete(document.getElementById('input-address'));
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+
+        var place = autocomplete.getPlace();
+
+        console.log(place.formatted_address);
+        document.getElementById('input-latitude').value = place.geometry.location.lat();
+        document.getElementById('input-longitude').value = place.geometry.location.lng();
+        console.log('Latitude', place.geometry.location.lat());
+        console.log('Longitude', place.geometry.location.lng());
+
+    });
+}
+</script>
+@endsection
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
@@ -14,8 +38,7 @@
                 </div>
                 @endif
                 <div class="basic-form">
-                    <form action="{{route('admin.tempat-wisata.update',['tempat_wisatum' => $tempatWisata->id])}}"
-                        method="post">
+                    <form action="{{route('admin.tempat-wisata.update',$tempatWisata->id)}}" method="post">
                         @csrf
                         @method('put')
                         @error('name') <span class="error">{{ $message }}</span> @enderror
@@ -79,6 +102,17 @@
                                     <option value="{{$citiy->id}}">{{$citiy->name}}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Alamat Maps</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" value="{{$wisata->location->address}}" type="text"
+                                    id="input-address" name="address" placeholder="Address" required>
+                                <input type="hidden" id="input-latitude" value="{{$wisata->location->latitude}}"
+                                    name="latitude" required>
+                                <input type="hidden" id="input-longitude" value="{{$wisata->location->longitude}}"
+                                    name="longitude" required>
                             </div>
                         </div>
                         <div class="form-group row">

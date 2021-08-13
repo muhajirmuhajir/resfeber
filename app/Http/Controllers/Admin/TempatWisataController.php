@@ -57,7 +57,7 @@ class TempatWisataController extends Controller
      */
     public function show($id)
     {
-        $wisata = TempatWisata::findOrFail($id);
+        $wisata = TempatWisata::with('location')->findOrFail($id);
 
         return view('pages.admin.tempat-wisata.update', compact('wisata'));
     }
@@ -86,14 +86,32 @@ class TempatWisataController extends Controller
     {
         $fields = $request->validate([
             'name' => 'required',
-            'history' => 'nullable',
-            'jam_buka' => 'nullable',
-            'jam_tutup' => 'nullable',
-            'contact' => 'nullable',
-            'city_id' => 'nullable',
+            'history' => 'required',
+            'jam_buka' => 'required',
+            'jam_tutup' => 'required',
+            'contact' => 'required',
+            'city_id' => 'required',
         ]);
 
-        $wisata = TempatWisata::findOrFail($id);
+        $wisata = TempatWisata::with('location')->findOrFail($id);
+        if ($wisata->location) {
+            $wisata->location()->update([
+                'name' => $request->address,
+                'address' => $request->address,
+                'city' => $request->city_id,
+                'latitude' => $request->latitude,
+                'longitude' => $request->longitude,
+            ]);
+        } else {
+            $wisata->location()->create([
+                'name' => $request->address,
+                'address' => $request->address,
+                'city' => $request->city_id,
+                'latitude' => $request->latitude,
+                'longitude' => $request->longitude,
+            ]);
+        }
+
         $wisata->update($fields);
 
         return back()->withSuccess('Data Berhasil di Simpan');
