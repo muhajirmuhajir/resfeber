@@ -51,7 +51,7 @@
                     <p>{{$wisata->location->address ?? ""}}</p>
                     <div class="maps mt-3" style="height:300px">
                         <iframe
-                            src="https://www.google.com/maps/embed/v1/place?q={{$wisata->location->latitude ?? ""}},{{$wisata->location->longitude ?? ""}}&key=AIzaSyBiyqU8Lxfv-ZOvnLwAH3NcbLj9R2-RjHU"
+                            src="https://www.google.com/maps/embed/v1/place?q={{$wisata->location->latitude ?? ""}},{{$wisata->location->longitude ?? ""}}&key={{config('maps.key')}}"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>

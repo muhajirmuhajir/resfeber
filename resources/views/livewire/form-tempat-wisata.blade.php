@@ -1,6 +1,5 @@
 @section('script')
-<script
-    src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBiyqU8Lxfv-ZOvnLwAH3NcbLj9R2-RjHU">
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key={{config('maps.key')}}">
 </script>
 <script type="text/javascript">
     google.maps.event.addDomListener(window, 'load', initialize);
