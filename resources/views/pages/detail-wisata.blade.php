@@ -111,8 +111,12 @@
                         @forelse ($wisata->produks as $item)
                         <div class="col-3 mb-4">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg"
-                                    alt="">
+                                <img class="img-fluid" @if ($item->image_url)
+                                src="{{Storage::url($item->image_url)}}"
+                                @else
+                                src="{{url('frontpage')}}/assets/images/blogpost-img1.jpg"
+                                @endif
+                                alt="">
                                 <div class="position-absolute produk-text">
                                     {{$item->name}}
                                 </div>

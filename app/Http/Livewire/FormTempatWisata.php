@@ -34,6 +34,7 @@ class FormTempatWisata extends Component
     // produk
     public $produk_name;
     public $produk_description;
+    public $produk_image;
 
     // facilities
     public $facility_name;
@@ -119,14 +120,20 @@ class FormTempatWisata extends Component
 
     public function addProduk()
     {
-        Produk::create([
-            'tempat_wisata_id' => $this->tempatWisata->id,
-            'name' => $this->produk_name,
-            'description' => $this->produk_description
-        ]);
+        // validasi foto
+        if ($this->produk_image) {
+            $path = $this->produk_image->store('thumbnails', 'public');
+            Produk::create([
+                'tempat_wisata_id' => $this->tempatWisata->id,
+                'name' => $this->produk_name,
+                'description' => "-",
+                'image_url' => $path
+            ]);
+            $this->produk_image = null;
+            $this->produk_name = "";
+            $this->produk_description = "";
+        }
 
-        $this->produk_name = "";
-        $this->produk_description = "";
     }
 
     public function deleteProduk(Produk $id)

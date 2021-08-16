@@ -231,10 +231,10 @@ function initialize() {
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-3 col-form-label">Deskripsi</label>
+                        <label class="col-sm-3 col-form-label">Foto Produk</label>
                         <div class="col-sm-9">
-                            <input type="text" name="produk_description" class="form-control"
-                                wire:model="produk_description" required>
+                            <input type="file" name="produk_image" class="form-control" wire:model="produk_image"
+                                required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -248,9 +248,9 @@ function initialize() {
                     <table class="table">
                         <thead>
                             <tr>
-                                <th class="width80">No</th>
-                                <th>Nama</th>
-                                <th>Deskripsi</th>
+                                <th class="width80" style="width:10%">No</th>
+                                <th style="width:45%">Nama</th>
+                                <th style="width:45%">Foto</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -259,7 +259,9 @@ function initialize() {
                             <tr>
                                 <td>{{$i+1}}</td>
                                 <td>{{$produk->name}}</td>
-                                <td>{{$produk->description}}</td>
+                                <td>@if ($produk->image_url)
+                                    <img src="{{Storage::url($produk->image_url)}}" class="img-fluid w-50" alt="">
+                                    @endif</td>
                                 <td><button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
                                         wire:click="deleteProduk({{$produk->id}})"
                                         class="btn btn-small btn-outline-danger">Hapus</button></td>
