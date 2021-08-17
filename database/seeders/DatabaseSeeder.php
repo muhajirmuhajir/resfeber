@@ -31,9 +31,10 @@ class DatabaseSeeder extends Seeder
             CitiesTableSeeder::class
         ]);
 
+        // admin
+        User::factory()->admin()->create(['name' => 'Admin', 'email' => 'admin@resfeber.com']);
+
         if (App::environment('local')) {
-            // admin
-            User::factory()->admin()->create(['name' => 'Admin', 'email' => 'admin@resfeber.com']);
             //tempat wisata
             TempatWisata::factory()->has(Location::factory())->has(Produk::factory()->count(5))->has(Facility::factory()->count(5))->has(Ticket::factory()->count(4))->has(MediaTempatWisata::factory()->count(5))->count(10)->create();
 

@@ -1,4 +1,4 @@
-@section('script')
+@push('head-script')
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key={{config('maps.key')}}">
 </script>
 <script type="text/javascript">
@@ -20,7 +20,7 @@ function initialize() {
     });
 }
 </script>
-@endsection
+@endpush
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
@@ -106,11 +106,11 @@ function initialize() {
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Alamat Maps</label>
                             <div class="col-sm-9">
-                                <input class="form-control" value="{{$wisata->location->address}}" type="text"
+                                <input class="form-control" value="{{$wisata->location->address ?? ""}}" type="text"
                                     id="input-address" name="address" placeholder="Address" required>
-                                <input type="hidden" id="input-latitude" value="{{$wisata->location->latitude}}"
+                                <input type="hidden" id="input-latitude" value="{{$wisata->location->latitude ?? ""}}"
                                     name="latitude" required>
-                                <input type="hidden" id="input-longitude" value="{{$wisata->location->longitude}}"
+                                <input type="hidden" id="input-longitude" value="{{$wisata->location->longitude ?? ""}}"
                                     name="longitude" required>
                             </div>
                         </div>
