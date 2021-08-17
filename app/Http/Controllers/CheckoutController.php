@@ -114,10 +114,11 @@ class CheckoutController extends Controller
         Config::$isSanitized = config('midtrans.isSanitized');
         Config::$is3ds = config('midtrans.is3ds');
 
+        $order_id = config('app.name').'-'.$transaction->id . "-". time();
         // create params
         $midtrans_params = [
             'transaction_details' =>[
-                'order_id' => $transaction->id,
+                'order_id' => $order_id,
                 'gross_amount' => (int) $transaction->price_total,
             ],
             'customer_details' => [
@@ -133,7 +134,7 @@ class CheckoutController extends Controller
             // get payment url
             $paymentUrl = Snap::createTransaction($midtrans_params)->redirect_url;
 
-            $transaction->update(['payment_id' => $transaction->id, 'transaction_status' => 'PENDING']);
+            $transaction->update(['payment_id' => $order_id, 'transaction_status' => 'PENDING']);
             $transaction->save();
 
             // redirect to url

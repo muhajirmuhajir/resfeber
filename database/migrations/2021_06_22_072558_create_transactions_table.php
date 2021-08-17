@@ -18,7 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('paket_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('tempat_wisata_id')->nullable()->constrained()->onDelete('set null');
-            $table->integer('payment_id');
+            $table->string('payment_id')->nullable();
             $table->date('transaction_date');
             $table->date('booking_date');
             $table->string('transaction_status');
