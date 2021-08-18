@@ -2,6 +2,19 @@
 
 @section('style')
 <link rel="stylesheet" href="{{url('frontpage/assets/css/custom.css')}}">
+<link rel="stylesheet" href="{{url('frontpage/gjigo/css/gijgo.min.css')}}">
+@endsection
+
+@section('script')
+<script src="{{url('frontpage/gjigo/js/gijgo.min.js')}}"></script>
+<script>
+    $(document).ready(function() {
+        $('.datepicker').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: 'yyyy-mm-dd'
+        })
+    })
+</script>
 @endsection
 
 @section('content')
@@ -28,7 +41,8 @@
                 <p class="px-3 py-2 bg-white rounded ml-2">{{$transaction->tempatWisata->name}}</p>
                 <p class="px-3 py-2 bg-white rounded ml-2">{{$transaction->paket->description}}</p>
                 <div class="form-group ml-2">
-                    <input type="datetime" class="form-control" value="{{$transaction->booking_date}}" />
+                    <input type="datetime" id="datepicker" class="form-control datepicker"
+                        value="{{$transaction->booking_date}}" />
                 </div>
             </div>
 

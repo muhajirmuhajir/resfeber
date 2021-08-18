@@ -10,7 +10,7 @@
     <!-- wisata section starts -->
     <section id="detail-wisata" class="dtr-section dtr-box-layout dtr-hero-section-top-padding ">
         <h1 class="h1">Detail Transaksi</h1>
-        <p class="text-muted">#NO {{$transaksi->id}}</p>
+        <p class="text-muted">#ID {{$transaksi->payment_id}}</p>
 
 
         <div class="row mb-4">
@@ -64,6 +64,9 @@
                                 {{$transaksi->transaction_status}}
                             </p>
                     </div>
+                    @if ($transaksi->transaction_status == 'PENDING')
+                    <a href="{{$transaksi->payment_url}}" class="btn btn-outline-primary w-100">Bayar Sekarang</a>
+                    @endif
                 </div>
             </div>
         </div>

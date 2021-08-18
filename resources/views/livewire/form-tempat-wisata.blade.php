@@ -61,8 +61,9 @@ function initialize() {
                                 <div class="input-group clockpicker" data-placement="bottom" data-align="top"
                                     data-autoclose="true">
                                     <input type="text" class="form-control" name="jam_buka"
-                                        value="{{$tempatWisata->jam_buka}}"> <span class="input-group-append"><span
-                                            class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
+                                        value="{{\Carbon\Carbon::createFromFormat('H:i:s',$tempatWisata->jam_buka)->format('H:i')}}">
+                                    <span class="input-group-append"><span class="input-group-text"><i
+                                                class="fa fa-clock-o"></i></span></span>
                                 </div>
                             </div>
                             <div class="col-md-6 col-xl-3 col-xxl-6 mb-3">
@@ -70,7 +71,7 @@ function initialize() {
                                 <div class="input-group clockpicker" data-placement="bottom" data-align="top"
                                     data-autoclose="true">
                                     <input type="text" class="form-control" name="jam_tutup"
-                                        value="{{$tempatWisata->jam_tutup}}">
+                                        value="{{\Carbon\Carbon::createFromFormat('H:i:s',$tempatWisata->jam_tutup)->format('H:i')}}">
                                     <span class="input-group-append"><span class="input-group-text"><i
                                                 class="fa fa-clock-o"></i></span></span>
                                 </div>
