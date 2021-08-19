@@ -2,63 +2,334 @@
 
 @section('style')
 <link rel="stylesheet" href="{{url('frontpage/assets/css/custom.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{url('frontpage/plugins/revslider/css/settings.css')}}">
+
+<!-- Owl Carousel Assets -->
+<link href="{{url('frontpage/css/owl.carousel.css')}}" rel="stylesheet">
+<link href="{{url('frontpage/css/owl.theme.css')}}" rel="stylesheet">
+<script src="{{url('frontpage/assets/js/jquery.min.js')}}"></script>
+<!-- REVOLUTION JS FILES -->
+<script type="text/javascript" src="{{url('frontpage/plugins/revslider/js/jquery.themepunch.tools.min.js')}}"></script>
+<script type="text/javascript" src="{{url('frontpage/plugins/revslider/js/jquery.themepunch.revolution.min.js')}}">
+</script>
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.actions.min.js')}}"></script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.layeranimation.min.js')}}">
+</script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.migration.min.js')}}"></script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+<script type="text/javascript"
+    src="{{url('frontpage/plugins/revslider/js/extensions/revolution.extension.video.min.js')}}"></script>
+<style type="text/css">
+    #rev_slider_3_1_wrapper .tp-loader.spinner4 {
+        background-color: #ffffff !important;
+    }
+
+    .hephaistos .tp-bullet {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        background: rgba(153, 153, 153, 0);
+        border: 3px solid rgba(29, 184, 193, 0.9);
+        border-radius: 50%;
+        cursor: pointer;
+        box-sizing: content-box;
+        box-shadow: 0px 0px 2px 1px rgba(130, 130, 130, 0.3)
+    }
+
+    .hephaistos .tp-bullet:hover,
+    .hephaistos .tp-bullet.selected {
+        background: rgba(255, 255, 255, 0);
+        border-color: rgba(220, 36, 38, 1)
+    }
+</style>
 @endsection
 
+@section('script')
+<script src="{{url('frontpage/js/owl.carousel.min.js')}}"></script>
+
+@endsection
 
 @section('content')
 
 <div id="dtr-main-content">
+    <section class="dtr-section dtr-hero-section-top-padding">
+        <div id="rev_slider_3_1_wrapper"
+            class="rev_slider_wrapper fullwidthbanner-container dtr-hero-section-top-padding"
+            data-alias="travel-home-new" data-source="gallery"
+            style="margin:0px auto;background:rgba(211,211,211,0);padding:0px;margin-top:0px;margin-bottom:0px;">
+            <!-- START REVOLUTION SLIDER 5.4.1 auto mode -->
+            <div id="rev_slider_3_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+                <ul>
+                    <!-- SLIDE  -->
+                    <li data-index="rs-8" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+                        data-thumb="assets/100x50_d0c75-ba_1.jpg" data-delay="9000" data-rotate="0"
+                        data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3=""
+                        data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
+                        data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="http://placehold.it/1600x555" alt="" data-bgposition="center center"
+                            data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
 
-    <!-- hero section starts
-================================================== -->
-    <section id="home" class="dtr-section dtr-box-layout dtr-hero-section-top-padding">
-        {{-- Search components --}}
-        {{-- <div class="mt-4">
-            <form class="d-flex">
-                <input class="form-control me-2 shadow-none" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-        </div> --}}
-        <!-- dtr-bg-shapes-type-1 : Class for shapes to background. Easy to change image color, refer local help doc -->
-        <div class="dtr-box-wrapper-round dtr-bg-shapes-type-1 bg-white">
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-8-layer-1"
+                            data-x="['left','left','center','center']" data-hoffset="['806','608','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['146','150','150','165']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"delay":10,"speed":810,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7610","speed":560,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 5; white-space: nowrap; font-size: 40px; line-height: 22px; font-weight: 400; color: #1db8c1;text-transform:uppercase;">
+                            Travel Website </div>
 
-            <!--===== row 1 starts =====-->
-            <div class="row">
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-8-layer-2"
+                            data-x="['left','left','center','center']" data-hoffset="['808','608','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['199','206','206','201']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"delay":510,"speed":720,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6840","speed":580,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 6; white-space: nowrap; font-size: 13px; line-height: 22px; font-weight: 400; color: #000000;text-transform:uppercase;">
+                            Html & Css / jquery / javascript </div>
 
-                <!-- column 1 starts -->
-                <div class="col-12 col-md-6 dtr-box-full-img" style="background-image: url(assets/images/bromo.png);">
-                </div>
-                <!-- column 1 ends -->
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-8-layer-3"
+                            data-x="['left','left','center','center']" data-hoffset="['806','607','1','-1']"
+                            data-y="['top','top','top','top']" data-voffset="['261','265','265','256']"
+                            data-width="['364','364','363','361']" data-height="['50','50','52','69']"
+                            data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":950,"speed":770,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6110","speed":640,"frame":"999","to":"x:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 7; min-width: 364px; max-width: 364px; max-width: 50px; max-width: 50px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #636363;font-family:Open Sans;">
+                            Responsive & Raw Multi-Purpose Multi-Page & One-Page HTML5 Template. </div>
 
-                <!-- column 2 starts -->
-                <div class="col-12 col-md-6 dtr-py-100 dtr-sm-p-50 dtr-px-100">
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption rev-btn " id="slide-8-layer-5" data-x="['left','left','center','center']"
+                            data-hoffset="['804','608','0','2']" data-y="['top','top','top','top']"
+                            data-voffset="['360','355','355','353']" data-width="none" data-height="none"
+                            data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
+                            data-responsive="off"
+                            data-frames='[{"delay":1320,"speed":840,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+5600","speed":410,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
+                            data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
+                            data-paddingleft="[35,35,35,35]"
+                            style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 17px; font-weight: 700; color: #000000;text-transform:uppercase;background-color:rgba(243, 190, 78, 0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                            get started today </div>
 
-                    <!-- intro text -->
-                    <h2>Taman Nasional
-                        Bromo Tengger Semeru</h2>
-                    <p class="text-justify">Taman Nasional Bromo Tengger Semeru adalah taman nasional di Jawa Timur,
-                        Indonesia, yang terletak di wilayah administratif Kabupaten Pasuruan, Kabupaten Malang,
-                        Kabupaten Lumajang dan Kabupaten Probolinggo. </p>
-                    <!-- button 1 -->
-                    <a href="{{route('detailwisata', ['slug' => 'hai'])}}"
-                        class="dtr-btn dtr-btn-right-icon dtr-mt-30 dtr-mr-5 btn-blue">Detail Wisata<span
-                            class="btn-span bg-blue color-white"><i class="icon-arrow-right"></i></span></a>
-                    <!-- buttons end -->
-                    {{--
-                    <div class="spacer-100"></div>
-                    <p class="tagline-style2 dtr-mb-0 color-dark">Price starts at</p>
-                    <p class="text-size-xxl color-green text-shadow-green">$2,50,000</p> --}}
-                </div>
-                <!-- column 2 ends -->
 
+                    </li>
+                    <!-- SLIDE  -->
+                    <li data-index="rs-9" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+                        data-thumb="assets/100x50_a8dd4-ba_2.jpg" data-rotate="0" data-saveperformance="off"
+                        data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
+                        data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="http://placehold.it/1600x555" alt="" data-bgposition="center center"
+                            data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 7 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-1"
+                            data-x="['left','left','center','center']" data-hoffset="['725','586','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['104','101','101','101']" data-width="227"
+                            data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":10,"speed":800,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7870","speed":300,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 5; min-width: 227px; max-width: 227px; white-space: nowrap; font-size: 40px; line-height: 35px; font-weight: 500; color: #2d2d2d;text-transform:uppercase;">
+                            How Does <br> it work </div>
+
+                        <!-- LAYER NR. 8 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-2"
+                            data-x="['left','left','center','center']" data-hoffset="['723','585','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['203','208','208','208']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"delay":560,"speed":740,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7150","speed":300,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #686868;font-family:Open Sans;">
+                            IT'S SO EASY THAT ANYONE CAN DO IT </div>
+
+
+                        <!-- LAYER NR. 10 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-3"
+                            data-x="['left','left','center','center']" data-hoffset="['727','582','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['265','262','262','262']" data-width="440"
+                            data-height="63" data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":910,"speed":730,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6500","speed":300,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 8; min-width: 440px; max-width: 440px; max-width: 63px; max-width: 63px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #7c7c7c;font-family:Open Sans;">
+                            Our coming Visual Editor add-on (Soon on CodeCanyon) will make creating any design an
+                            absolute
+                            breeze. </div>
+
+                        <!-- LAYER NR. 11 -->
+                        <div class="tp-caption rev-btn " id="slide-9-layer-5" data-x="['left','left','center','center']"
+                            data-hoffset="['727','579','0','0']" data-y="['top','top','top','top']"
+                            data-voffset="['362','366','366','366']" data-width="none" data-height="none"
+                            data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
+                            data-responsive="off"
+                            data-frames='[{"delay":1460,"speed":790,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;z:1;","ease":"Power3.easeInOut"},{"delay":"+5780","speed":300,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
+                            data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
+                            data-paddingleft="[35,35,35,35]"
+                            style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                            I WANT A LICENSE </div>
+                    </li>
+                    <!-- SLIDE  -->
+                    <li data-index="rs-10" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+                        data-thumb="assets/100x50_a23f0-ba_3.jpg" data-rotate="0" data-saveperformance="off"
+                        data-mediafilter="lofi" data-title="Slide" data-param1="" data-param2="" data-param3=""
+                        data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
+                        data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="http://placehold.it/1600x555" alt="" data-bgposition="center center"
+                            data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 12 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-10-layer-1"
+                            data-x="['left','left','center','center']" data-hoffset="['843','576','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['79','96','96','96']" data-width="none"
+                            data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":10,"speed":780,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7700","speed":510,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 5; white-space: nowrap; font-size: 50px; line-height: 48px; font-weight: 400; color: #0071a5;text-transform:uppercase;">
+                            This is <br> Variety! </div>
+
+                        <!-- LAYER NR. 13 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-10-layer-2"
+                            data-x="['left','left','center','center']" data-hoffset="['841','573','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['218','231','231','209']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"delay":360,"speed":940,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6880","speed":650,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[10,10,10,10]"
+                            data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
+                            data-paddingleft="[10,10,10,10]"
+                            style="z-index: 6; white-space: nowrap; font-size: 14px; line-height: 22px; font-weight: 600; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
+                            JUST PICK AND CUSTOMIZE </div>
+
+                        <!-- LAYER NR. 14 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-10-layer-3"
+                            data-x="['left','left','center','center']" data-hoffset="['836','573','-1','0']"
+                            data-y="['top','top','top','top']" data-voffset="['303','308','289','278']"
+                            data-width="['331','331','416','416']" data-height="['73','73','none','none']"
+                            data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":820,"speed":880,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6200","speed":650,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[10,10,10,10]"
+                            data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
+                            data-paddingleft="[10,10,10,10]"
+                            style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
+                            We made sure that there are plenty of examples available for you to choose from. </div>
+
+                        <!-- LAYER NR. 15 -->
+                        <div class="tp-caption rev-btn " id="slide-10-layer-4"
+                            data-x="['left','left','center','center']" data-hoffset="['829','571','1','0']"
+                            data-y="['top','top','top','top']" data-voffset="['391','405','380','362']"
+                            data-width="['252','257','254','252']" data-height="['42','43','42','42']"
+                            data-whitespace="normal" data-type="button" data-responsive_offset="on"
+                            data-responsive="off"
+                            data-frames='[{"delay":1160,"speed":850,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+5450","speed":760,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
+                            data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
+                            data-paddingleft="[35,35,35,35]"
+                            style="z-index: 8; min-width: 252px; max-width: 252px; max-width: 42px; max-width: 42px; white-space: normal; font-size: 17px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                            HOW DOES IT WORK? </div>
+
+                    </li>
+                </ul>
+                <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
             </div>
-            <!--===== row 1 ends =====-->
-
         </div>
     </section>
-    <!-- hero section ends
-================================================== -->
+    <script type="text/javascript">
+        var tpj = jQuery;
 
+        var revapi3;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_3_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_3_1");
+            } else {
+                revapi3 = tpj("#rev_slider_3_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "//localhost/revslider-standalone/revslider/public/assets/js/",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        bullets: {
+                            enable: true,
+                            hide_onmobile: false,
+                            style: "hephaistos",
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 0,
+                            v_offset: 20,
+                            space: 5,
+                            tmp: ''
+                        }
+                    },
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: [1170, 1024, 778, 480],
+                    gridheight: [555, 555, 500, 500],
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner4",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        }); /*ready*/
+
+    </script>
     <!-- wisata section starts -->
     <section id="wisata" class="dtr-section dtr-box-layout dtr-py-100">
 
