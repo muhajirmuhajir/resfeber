@@ -43,6 +43,8 @@ class TempatWisataController extends Controller
             'name' => 'required'
         ]);
         $fields['slug'] = Str::slug($fields['name']);
+        $fields['jam_buka'] = now();
+        $fields['jam_tutup'] = now();
 
         TempatWisata::create($fields);
 
