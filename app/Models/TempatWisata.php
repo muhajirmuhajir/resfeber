@@ -39,6 +39,11 @@ class TempatWisata extends Model
         return $this->hasMany(Ticket::class);
     }
 
+    public function parkingPrices()
+    {
+        return $this->hasMany(ParkingPrice::class);
+    }
+
     public function media()
     {
         return $this->hasMany(MediaTempatWisata::class);
@@ -67,6 +72,11 @@ class TempatWisata extends Model
     public function pakets()
     {
         return $this->hasMany(Paket::class);
+    }
+
+    public function additionalNeeds()
+    {
+        return $this->hasMany(AdditionalNeed::class);
     }
 
 }

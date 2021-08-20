@@ -21,10 +21,7 @@ class TempatWisataController extends Controller
         $wisata = TempatWisata::with([ 'ulasan' => function ($ulasan) {
             $ulasan->with('user');
             $ulasan->latest();
-        }])->where('slug', $slug)->first();
-        if (!$wisata) {
-            return abort('404');
-        }
+        }, 'facilities', 'pakets', 'tickets'])->where('slug', $slug)->firstOrFail();
         return view('pages.detail-wisata', compact('wisata'));
     }
 
