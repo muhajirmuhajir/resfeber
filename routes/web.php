@@ -43,6 +43,8 @@ Route::get('about', function () {
 
 Route::middleware(['auth', 'information_complete'])->group(function () {
     Route::get('profile', [UserController::class, 'index'])->name('profile');
+    Route::post('profile/update',[UserController::class, 'update'])->name('profile.update');
+    Route::post('profile/password',[UserController::class, 'updatePassword'])->name('profile.password');
 
     Route::get('transaksi', function () {
         $transaksi = Transaction::with('tempatWisata')->where('user_id', auth()->user()->id)->paginate(5);
