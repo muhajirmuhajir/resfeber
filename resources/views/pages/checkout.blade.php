@@ -162,8 +162,10 @@
                             <button class="btn btn-dark-blue d-block w-100">Bayar Sekarang</button>
                         </form>
 
-                        <a href="{{route('detailTravel', $transaction->paket->tour_travel_id )}}"
-                            class="btn btn-outline-primary w-100 mt-2">Batalkan Pesanan</a>
+                        <form action="{{route('checkout_cancel', $transaction->id)}}" method="post">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-primary w-100 mt-2">Batalkan Pesanan</button>
+                        </form>
                     </div>
                 </div>
             </div>

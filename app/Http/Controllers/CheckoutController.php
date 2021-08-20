@@ -147,4 +147,10 @@ class CheckoutController extends Controller
             echo $e->getMessage();
         }
     }
+
+    public function cancel($id)
+    {
+        Transaction::destroy($id);
+        return redirect()->route('transaksi');
+    }
 }

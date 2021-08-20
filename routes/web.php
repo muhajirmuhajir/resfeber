@@ -57,6 +57,7 @@ Route::middleware(['auth', 'information_complete'])->group(function () {
     })->name('detailTransaksi');
 
     Route::get('checkout/{id}', [CheckoutController::class, 'index'])->name('checkout');
+    Route::post('checkout/cancel/{id}', [CheckoutController::class, 'cancel'])->name('checkout_cancel');
     Route::post('checkout/{id}', [CheckoutController::class, 'process'])->name('checkout_process');
     Route::post('checkout/create/{id}', [CheckoutController::class, 'create'])->name('checkout_create');
     Route::post('checkout/remove/{id}', [CheckoutController::class, 'remove'])->name('checkout_remove');

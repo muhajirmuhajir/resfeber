@@ -30,7 +30,12 @@
                         <td>{{$item->booking_date}}</td>
                         <td>{{$item->tempatWisata->name}}</td>
                         <td>{{$item->transaction_status}}</td>
-                        <td><a href="{{route('detailTransaksi', $item->id)}}" class="btn btn-info btn-small">Detail</a>
+                        <td>
+                            @if ($item->transaction_status == 'IN_CART')
+                            <a href="{{route('checkout', $item->id)}}" class="btn btn-info btn-small">Edit</a>
+                            @else
+                            <a href="{{route('detailTransaksi', $item->id)}}" class="btn btn-info btn-small">Detail</a>
+                            @endif
                         </td>
                     </tr>
                     @empty
