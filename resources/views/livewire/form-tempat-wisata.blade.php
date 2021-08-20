@@ -281,7 +281,7 @@ function initialize() {
 
 
 
-    <div class="col-lg-12">
+    <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Info Fasilitas</h4>
@@ -290,15 +290,15 @@ function initialize() {
                 <form wire:submit.prevent="addFacility">
                     @error('name') <span class="error">{{ $message }}</span> @enderror
                     <div class="row align-items-end">
-                        <div class="form-group col-md-10">
+                        <div class="form-group col-md-8">
                             <label class="col-form-label">Nama Fasilitas</label>
-                            <input type="text" name="facility_name" class="form-control" wire:model="facility_name"
-                                required>
+                            <input type="text" name="facility_name" class="form-control w-100"
+                                wire:model="facility_name" required>
                         </div>
-                        <div class="form-group row col-md-2">
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary ml-auto d-block">Simpan</button>
-                            </div>
+                        <div class="form-group col">
+
+                            <button type="submit" class="btn btn-primary ml-auto d-block">Simpan</button>
+
                         </div>
                     </div>
                 </form>
@@ -326,6 +326,126 @@ function initialize() {
                                 <td colspan="4" align="center">Belum Ada Fasilitas</td>
                             </tr>
                             @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Harga Parkir Kendaraan</h4>
+            </div>
+            <div class="card-body">
+                <form wire:submit.prevent="addParkingPrice">
+                    @error('name') <span class="error">{{ $message }}</span> @enderror
+                    <div class="row align-items-end">
+                        <div class="form-group col">
+                            <label class="form-label">Jenis Kendaraan</label>
+                            <input type="text" name="parking_jenis" class="form-control" wire:model="parking_jenis"
+                                required>
+
+                        </div>
+                        <div class="form-group col">
+                            <label class="form-label">Harga</label>
+                            <input type="text" name="parking_price" class="form-control" wire:model="parking_price"
+                                required>
+
+                        </div>
+                        <div class="form-group col">
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="width80">No</th>
+                                <th>Nama</th>
+                                <th>Harga</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($wisata->parkingPrices as $i => $parkingPrice)
+                            <tr>
+                                <td>{{$i+1}}</td>
+                                <td>{{$parkingPrice->jenis}}</td>
+                                <td>{{$parkingPrice->price}}</td>
+                                <td><button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
+                                        wire:click="deleteParkingPrice({{$parkingPrice->id}})"
+                                        class="btn btn-small btn-outline-danger">Hapus</button></td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td colspan="4" align="center">Belum Ada Biaya Parkir</td>
+                            </tr>
+                            @endforelse
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Hal yang harus dipersiapkan</h4>
+            </div>
+            <div class="card-body">
+                <form wire:submit.prevent="addAdditionalNeed">
+                    @error('name') <span class="error">{{ $message }}</span> @enderror
+
+                    <div class="form-group ">
+                        <label class="form-label">Nama</label>
+                        <input type="text" name="additionalNeed_name" class="form-control"
+                            wire:model="additionalNeed_name" required>
+
+                    </div>
+                    <div class="form-group ">
+                        <label class="form-label">Keterangan</label>
+                        <textarea name="additionalNeed_description" class="form-control" id="additionalNeed_description"
+                            wire:model="additionalNeed_description" rows="5" required></textarea>
+
+                    </div>
+                    <div class="form-group d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Tambah</button>
+                    </div>
+
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="width80">No</th>
+                                <th>Nama</th>
+                                <th>Keterangan</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($wisata->additionalNeeds as $i => $item)
+                            <tr>
+                                <td>{{$i+1}}</td>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->description}}</td>
+                                <td><button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
+                                        wire:click="deleteAdditionalNeed({{$item->id}})"
+                                        class="btn btn-small btn-outline-danger">Hapus</button></td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td colspan="4" align="center">Belum Ada Biaya Parkir</td>
+                            </tr>
+                            @endforelse
+
                         </tbody>
                     </table>
                 </div>

@@ -9,6 +9,8 @@ class AdditionalNeed extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function tempatWisata()
     {
         return $this->belongsTo(TempatWisata::class, 'tempat_wisata_id');

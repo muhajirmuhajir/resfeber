@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\AdditionalNeed;
 use App\Models\City;
 use App\Models\Produk;
 use App\Models\Ticket;
@@ -11,6 +12,7 @@ use App\Models\Province;
 use App\Models\TempatWisata;
 use Livewire\WithFileUploads;
 use App\Models\MediaTempatWisata;
+use App\Models\ParkingPrice;
 use Illuminate\Support\Facades\DB;
 
 class FormTempatWisata extends Component
@@ -38,6 +40,14 @@ class FormTempatWisata extends Component
 
     // facilities
     public $facility_name;
+
+    // ParkingPrice
+    public $parking_jenis;
+    public $parking_price;
+
+    // AdditionalNeeds
+    public $additionalNeed_name;
+    public $additionalNeed_description;
 
     public $cities = null;
     public $provinces = null;
@@ -169,5 +179,39 @@ class FormTempatWisata extends Component
         foreach ($media as $item) {
             MediaTempatWisata::find($item['value'])->update(['position' => $item['order']]);
         }
+    }
+
+    public function addParkingPrice()
+    {
+        ParkingPrice::create([
+            'tempat_wisata_id' => $this->tempatWisata->id,
+            'jenis' => $this->parking_jenis,
+            'price' => $this->parking_price
+        ]);
+
+        $this->parking_jenis = "";
+        $this->parking_price = "";
+    }
+
+    public function deleteParkingPrice(ParkingPrice $id)
+    {
+        $id->delete();
+    }
+
+    public function addAdditionalNeed()
+    {
+        AdditionalNeed::create([
+            'tempat_wisata_id' => $this->tempatWisata->id,
+            'name' => $this->additionalNeed_name,
+            'description' => $this->additionalNeed_description,
+        ]);
+
+        $this->additionalNeed_name = "";
+        $this->additionalNeed_description = "";
+    }
+
+    public function deleteAdditionalNeed(AdditionalNeed $id)
+    {
+        $id->delete();
     }
 }
