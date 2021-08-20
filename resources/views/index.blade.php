@@ -149,8 +149,8 @@
 
 
                     </li>
-                   
-                   
+
+
                     <!-- SLIDE  -->
                     <li data-index="rs-10" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
                         data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
@@ -217,65 +217,67 @@
 
                     <!-- SLIDE  -->
                     <li data-index="rs-9" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                    data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
-                    data-thumb="assets/100x50_a8dd4-ba_2.jpg" data-rotate="0" data-saveperformance="off"
-                    data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
-                    data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src='backpage/images/image 23.png' alt="" data-bgposition="center center"
-                        data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
+                        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+                        data-thumb="assets/100x50_a8dd4-ba_2.jpg" data-rotate="0" data-saveperformance="off"
+                        data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
+                        data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src='backpage/images/image 23.png' alt="" data-bgposition="center center"
+                            data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
 
-                    <!-- LAYER NR. 7 -->
-                    <div class="tp-caption   tp-resizeme" id="slide-9-layer-1"
-                        data-x="['left','left','center','center']" data-hoffset="['725','586','0','0']"
-                        data-y="['top','top','top','top']" data-voffset="['104','101','101','101']" data-width="227"
-                        data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                        data-frames='[{"delay":10,"speed":800,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7870","speed":300,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
-                        data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                        style="z-index: 5; min-width: 227px; max-width: 227px; white-space: nowrap; font-size: 40px; line-height: 35px; font-weight: 500; color: #FFFFFF;text-transform:uppercase;">
-                        Bagaimana <br> Website kami bekerja? </div>
+                        <!-- LAYER NR. 7 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-1"
+                            data-x="['left','left','center','center']" data-hoffset="['725','586','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['104','101','101','101']" data-width="227"
+                            data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":10,"speed":800,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7870","speed":300,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 5; min-width: 227px; max-width: 227px; white-space: nowrap; font-size: 40px; line-height: 35px; font-weight: 500; color: #FFFFFF;text-transform:uppercase;">
+                            Bagaimana <br> Website kami bekerja? </div>
 
-                    <!-- LAYER NR. 8 -->
-                    <div class="tp-caption   tp-resizeme" id="slide-9-layer-2"
-                        data-x="['left','left','center','center']" data-hoffset="['723','585','0','0']"
-                        data-y="['top','top','top','top']" data-voffset="['203','208','208','208']"
-                        data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                        data-responsive_offset="on"
-                        data-frames='[{"delay":560,"speed":740,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7150","speed":300,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeInOut"}]'
-                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                        style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #FFFFFF;font-family:Open Sans;">
-                        Kalian bisa mengunjungi kami dimanapun! </div>
+                        <!-- LAYER NR. 8 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-2"
+                            data-x="['left','left','center','center']" data-hoffset="['723','585','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['203','208','208','208']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"delay":560,"speed":740,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7150","speed":300,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                            style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #FFFFFF;font-family:Open Sans;">
+                            Kalian bisa mengunjungi kami dimanapun! </div>
 
 
-                    <!-- LAYER NR. 10 -->
-                    <div class="tp-caption   tp-resizeme" id="slide-8-layer-3"
-                        data-x="['left','left','center','center']" data-hoffset="['725','573','-1','0']"
-                        data-y="['top','top','top','top']" data-voffset="['250','308','289','278']"
-                        data-width="['331','331','416','416']" data-height="['130','130','none','none']"
-                        data-whitespace="normal" data-type="text" data-responsive_offset="on"
-                        data-frames='[{"delay":820,"speed":880,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6200","speed":650,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
-                        data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[10,10,10,10]"
-                        data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
-                        data-paddingleft="[10,10,10,10]"
-                        style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
-                        <strong>Resfeber</strong> adalah sebuah website yang membantu para traveller untuk menjelajahi wisata di seluruh Indonesia dengan memberikan informasi, harga tiket, serta travel terbaik. </div>
+                        <!-- LAYER NR. 10 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-8-layer-3"
+                            data-x="['left','left','center','center']" data-hoffset="['725','573','-1','0']"
+                            data-y="['top','top','top','top']" data-voffset="['250','308','289','278']"
+                            data-width="['331','331','416','416']" data-height="['130','130','none','none']"
+                            data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":820,"speed":880,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6200","speed":650,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[10,10,10,10]"
+                            data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
+                            data-paddingleft="[10,10,10,10]"
+                            style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
+                            <strong>Resfeber</strong> adalah sebuah website yang membantu para traveller untuk
+                            menjelajahi wisata di seluruh Indonesia dengan memberikan informasi, harga tiket, serta
+                            travel terbaik. </div>
 
-                    <!-- LAYER NR. 11 -->
-                    <a href="{{route('register')}}" class="tp-caption rev-btn " id="slide-9-layer-4" data-x="['left','left','center','center']"
-                        data-hoffset="['724','579','0','0']" data-y="['top','top','top','top']"
-                        data-voffset="['390','366','366','366']" data-width="none" data-height="none"
-                        data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
-                        data-responsive="off"
-                        data-frames='[{"delay":1460,"speed":790,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;z:1;","ease":"Power3.easeInOut"},{"delay":"+5780","speed":300,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
-                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
-                        data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
-                        data-paddingleft="[35,35,35,35]"
-                        style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;font-family:Lexend Deca;">
-                        Daftar Sekarang </a>
-                </li>
+                        <!-- LAYER NR. 11 -->
+                        <a href="{{route('register')}}" class="tp-caption rev-btn " id="slide-9-layer-4"
+                            data-x="['left','left','center','center']" data-hoffset="['724','579','0','0']"
+                            data-y="['top','top','top','top']" data-voffset="['390','366','366','366']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
+                            data-responsive_offset="on" data-responsive="off"
+                            data-frames='[{"delay":1460,"speed":790,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;z:1;","ease":"Power3.easeInOut"},{"delay":"+5780","speed":300,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
+                            data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
+                            data-paddingleft="[35,35,35,35]"
+                            style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;font-family:Lexend Deca;">
+                            Daftar Sekarang </a>
+                    </li>
                 </ul>
                 <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
             </div>
@@ -369,7 +371,7 @@
                     <!-- content -->
                     <div class="dtr-post-content"> <span class="dtr-blog-cat">{{$wisata->city->province->name}}</span>
                         <h5><a href="{{route('detailwisata', ['slug' => $wisata->slug])}}">{{$wisata->name}}</a></h5>
-                        <p class="text-justify">{{$wisata->history}}</p>
+                        <p class="text-justify text">{{$wisata->history}}</p>
                     </div>
                     <!-- content ends -->
                 </div>
