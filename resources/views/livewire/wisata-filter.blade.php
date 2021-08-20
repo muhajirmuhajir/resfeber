@@ -18,7 +18,9 @@
         </div>
     </div>
     <div class="col-lg-9">
-        <h2>Tempat Wisata</h2>
+        <h2>Tempat Wisata @if ($city)
+            di {{$city}}
+            @endif</h2>
         <p>Daftar destinasi wisata </p>
         <div class="row">
             @foreach ($tempatWisata as $wisata)
