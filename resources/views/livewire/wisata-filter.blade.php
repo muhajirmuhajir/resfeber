@@ -55,8 +55,11 @@
                         </div>
                         <hr>
                         <div class="facility-container">
-                            @foreach ($wisata->facilities as $item)
+                            @foreach ($wisata->facilities as $i => $item)
                             <span class="badge badge-pink">{{$item->name}}</span>
+                            @if ($i == 4)
+                            @break
+                            @endif
                             @endforeach
                         </div>
                     </div>
