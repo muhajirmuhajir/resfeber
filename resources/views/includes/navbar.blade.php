@@ -82,7 +82,7 @@
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'home'? 'ctm-active': ''}}"
                             href="{{route('home')}}">Beranda</a> </li>
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'wisata'? 'ctm-active': ''}}"
-                            href="{{route('wisata')}}">Lokasi</a>
+                            href="{{route('wisata')}}">Wisata</a>
                     </li>
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'travel'? 'ctm-active': ''}}"
                             href="{{route('travel')}}">Travel</a> </li>

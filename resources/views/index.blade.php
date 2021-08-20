@@ -83,7 +83,7 @@
                         data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                         data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="http://placehold.it/1600x555" alt="" data-bgposition="center center"
+                        <img src='backpage/images/image 18.png' alt="" data-bgposition="center center"
                             data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
@@ -96,8 +96,8 @@
                             data-frames='[{"delay":10,"speed":810,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7610","speed":560,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                            style="z-index: 5; white-space: nowrap; font-size: 40px; line-height: 22px; font-weight: 400; color: #1db8c1;text-transform:uppercase;">
-                            Travel Website </div>
+                            style="z-index: 5; white-space: nowrap; font-size: 60px; line-height: 22px; font-weight: 400; color: #1E247E;text-transform:uppercase;">
+                            Resfeber </div>
 
                         <!-- LAYER NR. 2 -->
                         <div class="tp-caption   tp-resizeme" id="slide-8-layer-2"
@@ -108,21 +108,32 @@
                             data-frames='[{"delay":510,"speed":720,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6840","speed":580,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                            style="z-index: 6; white-space: nowrap; font-size: 13px; line-height: 22px; font-weight: 400; color: #000000;text-transform:uppercase;">
-                            Html & Css / jquery / javascript </div>
+                            style="z-index: 6; white-space: nowrap; font-size: 22px; line-height: 11px; font-weight: 400; color: #F4974E;text-transform:uppercase;">
+                            Explore the globe with us! </div>
 
                         <!-- LAYER NR. 3 -->
                         <div class="tp-caption   tp-resizeme" id="slide-8-layer-3"
                             data-x="['left','left','center','center']" data-hoffset="['806','607','1','-1']"
-                            data-y="['top','top','top','top']" data-voffset="['261','265','265','256']"
+                            data-y="['top','top','top','top']" data-voffset="['250','265','265','256']"
                             data-width="['364','364','363','361']" data-height="['50','50','52','69']"
                             data-whitespace="normal" data-type="text" data-responsive_offset="on"
                             data-frames='[{"delay":950,"speed":770,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6110","speed":640,"frame":"999","to":"x:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                            style="z-index: 7; min-width: 364px; max-width: 364px; max-width: 50px; max-width: 50px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #636363;font-family:Open Sans;">
-                            Responsive & Raw Multi-Purpose Multi-Page & One-Page HTML5 Template. </div>
+                            style="z-index: 7; min-width: 364px; max-width: 364px; max-width: 50px; max-width: 50px; white-space: normal; font-size: 15px; line-height: 5px; font-weight: 400; color: #000000;font-family:Lexend Deca;">
+                            Kawan setiamu ketika liburan.. </div>
 
+                        <div class="tp-caption   tp-resizeme" id="slide-8-layer-4"
+                            data-x="['left','left','center','center']" data-hoffset="['805','573','-1','0']"
+                            data-y="['top','top','top','top']" data-voffset="['275','308','289','278']"
+                            data-width="['331','331','416','416']" data-height="['73','73','none','none']"
+                            data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                            data-frames='[{"delay":820,"speed":880,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6200","speed":650,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[10,10,10,10]"
+                            data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
+                            data-paddingleft="[10,10,10,10]"
+                            style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
+                            Kami akan membantumu menemukan penawaran serta rute terbaik untuk liburan. </div>
                         <!-- LAYER NR. 4 -->
                         <div class="tp-caption rev-btn " id="slide-8-layer-5" data-x="['left','left','center','center']"
                             data-hoffset="['804','608','0','2']" data-y="['top','top','top','top']"
@@ -133,72 +144,13 @@
                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
                             data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
                             data-paddingleft="[35,35,35,35]"
-                            style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 17px; font-weight: 700; color: #000000;text-transform:uppercase;background-color:rgba(243, 190, 78, 0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                            get started today </div>
+                            style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 10px; font-weight: 700; color: #000000;text-transform:uppercase;background-color:rgba(243, 190, 78, 0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                            Mulai seakarang </div>
 
 
                     </li>
-                    <!-- SLIDE  -->
-                    <li data-index="rs-9" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
-                        data-thumb="assets/100x50_a8dd4-ba_2.jpg" data-rotate="0" data-saveperformance="off"
-                        data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
-                        data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                        <!-- MAIN IMAGE -->
-                        <img src="http://placehold.it/1600x555" alt="" data-bgposition="center center"
-                            data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                        <!-- LAYERS -->
-
-                        <!-- LAYER NR. 7 -->
-                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-1"
-                            data-x="['left','left','center','center']" data-hoffset="['725','586','0','0']"
-                            data-y="['top','top','top','top']" data-voffset="['104','101','101','101']" data-width="227"
-                            data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                            data-frames='[{"delay":10,"speed":800,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7870","speed":300,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                            style="z-index: 5; min-width: 227px; max-width: 227px; white-space: nowrap; font-size: 40px; line-height: 35px; font-weight: 500; color: #2d2d2d;text-transform:uppercase;">
-                            How Does <br> it work </div>
-
-                        <!-- LAYER NR. 8 -->
-                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-2"
-                            data-x="['left','left','center','center']" data-hoffset="['723','585','0','0']"
-                            data-y="['top','top','top','top']" data-voffset="['203','208','208','208']"
-                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                            data-responsive_offset="on"
-                            data-frames='[{"delay":560,"speed":740,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7150","speed":300,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeInOut"}]'
-                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                            style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #686868;font-family:Open Sans;">
-                            IT'S SO EASY THAT ANYONE CAN DO IT </div>
-
-
-                        <!-- LAYER NR. 10 -->
-                        <div class="tp-caption   tp-resizeme" id="slide-9-layer-3"
-                            data-x="['left','left','center','center']" data-hoffset="['727','582','0','0']"
-                            data-y="['top','top','top','top']" data-voffset="['265','262','262','262']" data-width="440"
-                            data-height="63" data-whitespace="normal" data-type="text" data-responsive_offset="on"
-                            data-frames='[{"delay":910,"speed":730,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6500","speed":300,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeInOut"}]'
-                            data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                            style="z-index: 8; min-width: 440px; max-width: 440px; max-width: 63px; max-width: 63px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #7c7c7c;font-family:Open Sans;">
-                            Our coming Visual Editor add-on (Soon on CodeCanyon) will make creating any design an
-                            absolute
-                            breeze. </div>
-
-                        <!-- LAYER NR. 11 -->
-                        <div class="tp-caption rev-btn " id="slide-9-layer-5" data-x="['left','left','center','center']"
-                            data-hoffset="['727','579','0','0']" data-y="['top','top','top','top']"
-                            data-voffset="['362','366','366','366']" data-width="none" data-height="none"
-                            data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
-                            data-responsive="off"
-                            data-frames='[{"delay":1460,"speed":790,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;z:1;","ease":"Power3.easeInOut"},{"delay":"+5780","speed":300,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
-                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
-                            data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
-                            data-paddingleft="[35,35,35,35]"
-                            style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                            I WANT A LICENSE </div>
-                    </li>
+                   
+                   
                     <!-- SLIDE  -->
                     <li data-index="rs-10" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
                         data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
@@ -207,7 +159,7 @@
                         data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                         data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="http://placehold.it/1600x555" alt="" data-bgposition="center center"
+                        <img src='backpage/images/image 22.png' alt="" data-bgposition="center center"
                             data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
@@ -219,8 +171,8 @@
                             data-frames='[{"delay":10,"speed":780,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7700","speed":510,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
                             data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                            style="z-index: 5; white-space: nowrap; font-size: 50px; line-height: 48px; font-weight: 400; color: #0071a5;text-transform:uppercase;">
-                            This is <br> Variety! </div>
+                            style="z-index: 5; white-space: nowrap; font-size: 50px; line-height: 48px; font-weight: 400; color: #FFFFFF;text-transform:uppercase;">
+                            Mulai <br> Perjalananmu! </div>
 
                         <!-- LAYER NR. 13 -->
                         <div class="tp-caption   tp-resizeme" id="slide-10-layer-2"
@@ -233,7 +185,7 @@
                             data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
                             data-paddingleft="[10,10,10,10]"
                             style="z-index: 6; white-space: nowrap; font-size: 14px; line-height: 22px; font-weight: 600; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
-                            JUST PICK AND CUSTOMIZE </div>
+                            "Klik" Travel sekarang! </div>
 
                         <!-- LAYER NR. 14 -->
                         <div class="tp-caption   tp-resizeme" id="slide-10-layer-3"
@@ -246,7 +198,7 @@
                             data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
                             data-paddingleft="[10,10,10,10]"
                             style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
-                            We made sure that there are plenty of examples available for you to choose from. </div>
+                            Kami menyediakan berbagai informasi tempat wisata beserta harga yang spesial. </div>
 
                         <!-- LAYER NR. 15 -->
                         <div class="tp-caption rev-btn " id="slide-10-layer-4"
@@ -259,10 +211,71 @@
                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
                             data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
                             data-paddingleft="[35,35,35,35]"
-                            style="z-index: 8; min-width: 252px; max-width: 252px; max-width: 42px; max-width: 42px; white-space: normal; font-size: 17px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                            HOW DOES IT WORK? </div>
-
+                            style="z-index: 8; min-width: 252px; max-width: 252px; max-width: 42px; max-width: 42px; white-space: normal; font-size: 15px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                            Mulai berwisata sekarang</div>
                     </li>
+
+                    <!-- SLIDE  -->
+                    <li data-index="rs-9" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                    data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+                    data-thumb="assets/100x50_a8dd4-ba_2.jpg" data-rotate="0" data-saveperformance="off"
+                    data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
+                    data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src='backpage/images/image 23.png' alt="" data-bgposition="center center"
+                        data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 7 -->
+                    <div class="tp-caption   tp-resizeme" id="slide-9-layer-1"
+                        data-x="['left','left','center','center']" data-hoffset="['725','586','0','0']"
+                        data-y="['top','top','top','top']" data-voffset="['104','101','101','101']" data-width="227"
+                        data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                        data-frames='[{"delay":10,"speed":800,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7870","speed":300,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                        style="z-index: 5; min-width: 227px; max-width: 227px; white-space: nowrap; font-size: 40px; line-height: 35px; font-weight: 500; color: #FFFFFF;text-transform:uppercase;">
+                        Bagaimana <br> Website kami bekerja? </div>
+
+                    <!-- LAYER NR. 8 -->
+                    <div class="tp-caption   tp-resizeme" id="slide-9-layer-2"
+                        data-x="['left','left','center','center']" data-hoffset="['723','585','0','0']"
+                        data-y="['top','top','top','top']" data-voffset="['203','208','208','208']"
+                        data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+                        data-responsive_offset="on"
+                        data-frames='[{"delay":560,"speed":740,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7150","speed":300,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeInOut"}]'
+                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                        style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #FFFFFF;font-family:Open Sans;">
+                        Kalian bisa mengunjungi kami dimanapun! </div>
+
+
+                    <!-- LAYER NR. 10 -->
+                    <div class="tp-caption   tp-resizeme" id="slide-8-layer-3"
+                        data-x="['left','left','center','center']" data-hoffset="['725','573','-1','0']"
+                        data-y="['top','top','top','top']" data-voffset="['250','308','289','278']"
+                        data-width="['331','331','416','416']" data-height="['130','130','none','none']"
+                        data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                        data-frames='[{"delay":820,"speed":880,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+6200","speed":650,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['inherit','inherit','center','center']" data-paddingtop="[10,10,10,10]"
+                        data-paddingright="[10,10,10,10]" data-paddingbottom="[10,10,10,10]"
+                        data-paddingleft="[10,10,10,10]"
+                        style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
+                        <strong>Resfeber</strong> adalah sebuah website yang membantu para traveller untuk menjelajahi wisata di seluruh Indonesia dengan memberikan informasi, harga tiket, serta travel terbaik. </div>
+
+                    <!-- LAYER NR. 11 -->
+                    <a href="{{route('register')}}" class="tp-caption rev-btn " id="slide-9-layer-4" data-x="['left','left','center','center']"
+                        data-hoffset="['724','579','0','0']" data-y="['top','top','top','top']"
+                        data-voffset="['390','366','366','366']" data-width="none" data-height="none"
+                        data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
+                        data-responsive="off"
+                        data-frames='[{"delay":1460,"speed":790,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;z:1;","ease":"Power3.easeInOut"},{"delay":"+5780","speed":300,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
+                        data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
+                        data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
+                        data-paddingleft="[35,35,35,35]"
+                        style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;font-family:Lexend Deca;">
+                        Daftar Sekarang </a>
+                </li>
                 </ul>
                 <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
             </div>
