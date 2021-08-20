@@ -169,7 +169,7 @@
 
             </div>
             <div class="col-md-4 mt-4 mt-md-0">
-                <div class="card mb-4">
+                <div class="card mb-4 text-white bg-success">
                     <div class="card-header">
                         Harga Tiket Masuk
                     </div>
@@ -177,12 +177,12 @@
                         <table class="table table-striped">
                             <tbody>
                                 @forelse ($wisata->tickets as $ticket)
-                                <tr>
+                                <tr class="text-white">
                                     <td><strong>{{$ticket->name}}</strong></td>
                                     <td>Rp.{{$ticket->price}}</td>
                                 </tr>
                                 @empty
-                                <tr>
+                                <tr class="text-white">
                                     <td>Gratis</td>
                                 </tr>
                                 @endforelse
@@ -190,7 +190,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="card mb-4">
+                <div class="card text-white bg-primary mb-4">
                     <div class="card-header">
                         Harga Parkir Kendaraan
                     </div>
@@ -198,12 +198,12 @@
                         <table class="table table-striped">
                             <tbody>
                                 @forelse ($wisata->parkingPrices as $parking)
-                                <tr>
+                                <tr class=" text-white">
                                     <td><strong>{{$parking->jenis}}</strong></td>
                                     <td>Rp.{{$parking->price}}</td>
                                 </tr>
                                 @empty
-                                <tr>
+                                <tr class="text-white">
                                     <td>Bebas Parkir</td>
                                 </tr>
                                 @endforelse
