@@ -135,11 +135,11 @@
                             style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
                             Kami akan membantumu menemukan penawaran serta rute terbaik untuk liburan. </div>
                         <!-- LAYER NR. 4 -->
-                        <a  href="{{route('wisata')}}" class="tp-caption rev-btn " id="slide-8-layer-5" data-x="['left','left','center','center']"
-                            data-hoffset="['804','608','0','2']" data-y="['top','top','top','top']"
-                            data-voffset="['360','355','355','353']" data-width="none" data-height="none"
-                            data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
-                            data-responsive="off"
+                        <a href="{{route('wisata')}}" class="tp-caption rev-btn " id="slide-8-layer-5"
+                            data-x="['left','left','center','center']" data-hoffset="['804','608','0','2']"
+                            data-y="['top','top','top','top']" data-voffset="['360','355','355','353']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
+                            data-responsive_offset="on" data-responsive="off"
                             data-frames='[{"delay":1320,"speed":840,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+5600","speed":410,"frame":"999","to":"y:50px;opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]"
                             data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
@@ -201,7 +201,7 @@
                             Kami menyediakan berbagai informasi tempat wisata beserta harga yang spesial. </div>
 
                         <!-- LAYER NR. 15 -->
-                        <a  href="{{route('travel')}}" class="tp-caption rev-btn " id="slide-10-layer-4"
+                        <a href="{{route('travel')}}" class="tp-caption rev-btn " id="slide-10-layer-4"
                             data-x="['left','left','center','center']" data-hoffset="['829','571','1','0']"
                             data-y="['top','top','top','top']" data-voffset="['391','405','380','362']"
                             data-width="['252','257','254','252']" data-height="['42','43','42','42']"
@@ -357,12 +357,13 @@
         <!-- heading ends -->
 
         <!--== row starts ==-->
-        <div class="row" data-aos="fade-right" data-aos-offset="400" data-aos-once="true">
-            @foreach ($wisataPopuler as $wisata)
-            <div class="col-12 col-md-4">
+        <div class="row">
+            @foreach ($wisataPopuler as $i => $wisata)
+            <div class="col-12 col-md-4" data-aos="fade-right" data-aos-offset="400" data-aos-once="true"
+                data-aos-delay="{{($i+1)*250}}">
                 <div class="dtr-blog-item">
                     <!-- image -->
-                    <div class="dtr-post-img"> 
+                    <div class="dtr-post-img">
                         <img @if ($wisata->thumbnail)
                         src="{{Storage::url($wisata->thumbnail->media_url)}}"
                         @else
@@ -370,7 +371,8 @@
                         @endif alt="image">
                     </div>
                     <!-- content -->
-                    <div class="dtr-post-content" style="background: #FFFFFF"> <span class="dtr-blog-cat">{{$wisata->city->province->name}}</span>
+                    <div class="dtr-post-content" style="background: #FFFFFF"> <span
+                            class="dtr-blog-cat">{{$wisata->city->province->name}}</span>
                         <h5><a href="{{route('detailwisata', ['slug' => $wisata->slug])}}">{{$wisata->name}}</a></h5>
                         <p class="text-justify text">{{$wisata->history}}</p>
                     </div>
@@ -395,7 +397,8 @@
         </div>
         <!-- heading ends -->
         <div class="row">
-            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="300" data-aos-once="true">
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="300"
+                data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/malang.png')}}" alt="">
 
@@ -404,7 +407,8 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4" class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="600" data-aos-once="true">
+            <div class="col-md-4" class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="600"
+                data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/yogyakarta.png')}}" alt="">
 
@@ -413,7 +417,8 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="900" data-aos-once="true">
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="900"
+                data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/surabaya.png')}}" alt="">
                     <a href="{{route('wisata')}}?city=surabaya" class="position-absolute city-text h1">
@@ -426,13 +431,14 @@
 
     <!-- services section starts
 ================================================== -->
-    <section id="services" class="dtr-section dtr-box-layout dtr-box-wrapper-round dtr-box-padding bg-white" data-aos="fade-right" data-aos-offset="400" data-aos-once="true" data-aos-duration="1000">
+    <section id="services" class="dtr-section dtr-box-layout dtr-box-wrapper-round dtr-box-padding bg-white"
+        data-aos="fade-right" data-aos-offset="400" data-aos-once="true" data-aos-duration="1000">
 
         <!--== row 1 starts ==-->
-        <div class="row" >
+        <div class="row">
 
             <!-- column 1 starts -->
-            <div class="col-12 col-md-6" >
+            <div class="col-12 col-md-6">
 
                 <!-- heading starts -->
                 <div class="dtr-section-heading-wrapper">
