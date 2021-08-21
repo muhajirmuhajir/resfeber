@@ -349,7 +349,7 @@
     <section id="wisata" class="dtr-section dtr-box-layout dtr-py-50">
 
         <!-- heading starts -->
-        <div class="dtr-section-heading-wrapper" data-aos="fade-right" data-aos-offset="400" data-aos-once="true">
+        <div class="dtr-section-heading-wrapper" data-aos="fade-right" data-aos-offset="200" data-aos-once="true">
             <h2>Terpopuler</h2>
             <p>Bingung mau liburan kemana? Berikut ini adalah 3 rekomendasi <br> destinasi wisata terpopuler yang paling
                 sering dikunjungi! </p>
@@ -359,7 +359,7 @@
         <!--== row starts ==-->
         <div class="row">
             @foreach ($wisataPopuler as $i => $wisata)
-            <div class="col-12 col-md-4" data-aos="fade-right" data-aos-offset="400" data-aos-once="true"
+            <div class="col-12 col-md-4" data-aos="fade-right" data-aos-offset="100" data-aos-once="true"
                 data-aos-delay="{{($i+1)*250}}">
                 <div class="dtr-blog-item">
                     <!-- image -->
@@ -390,14 +390,14 @@
 
     <section id="city" class="dtr-section dtr-box-layout dtr-py-50">
         <!-- heading starts -->
-        <div class="dtr-section-heading-wrapper" data-aos="fade-right" data-aos-offset="250" data-aos-once="true">
+        <div class="dtr-section-heading-wrapper" data-aos="fade-right" data-aos-offset="150" data-aos-once="true">
             <h2>Kota Terpopuler</h2>
             <p>Berikut ini adalah 3 kota terpopuler yang sering dicari
             </p>
         </div>
         <!-- heading ends -->
         <div class="row">
-            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="300"
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="220" data-aos-delay="300"
                 data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/malang.png')}}" alt="">
@@ -407,7 +407,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4" class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="600"
+            <div class="col-md-4" class="col-md-4" data-aos="zoom-in-right" data-aos-offset="220" data-aos-delay="600"
                 data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/yogyakarta.png')}}" alt="">
@@ -417,7 +417,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="900"
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="220" data-aos-delay="900"
                 data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/surabaya.png')}}" alt="">
@@ -432,7 +432,7 @@
     <!-- services section starts
 ================================================== -->
     <section id="services" class="dtr-section dtr-box-layout dtr-box-wrapper-round dtr-box-padding bg-white"
-        data-aos="fade-right" data-aos-offset="400" data-aos-once="true" data-aos-duration="1000">
+        data-aos="fade-right" data-aos-offset="220" data-aos-once="true" data-aos-duration="1000">
 
         <!--== row 1 starts ==-->
         <div class="row">
