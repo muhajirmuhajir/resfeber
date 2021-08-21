@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <head>
     <meta charset="utf-8">
@@ -55,6 +56,12 @@
         </div>
     </div>
     <!-- #dtr-wrapper ends -->
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+             AOS.init();
+        </script>
 
     <!-- JS FILES -->
     <script src="{{url('frontpage/assets/js/jquery.min.js')}}"></script>

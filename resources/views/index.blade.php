@@ -346,10 +346,10 @@
 
     </script>
     <!-- wisata section starts -->
-    <section id="wisata" class="dtr-section dtr-box-layout dtr-py-100">
+    <section id="wisata" class="dtr-section dtr-box-layout dtr-py-50">
 
         <!-- heading starts -->
-        <div class="dtr-section-heading-wrapper">
+        <div class="dtr-section-heading-wrapper" data-aos="fade-right" data-aos-offset="400" data-aos-once="true">
             <h2>Terpopuler</h2>
             <p>Bingung mau liburan kemana? Berikut ini adalah 3 rekomendasi <br> destinasi wisata terpopuler yang paling
                 sering dikunjungi! </p>
@@ -357,19 +357,20 @@
         <!-- heading ends -->
 
         <!--== row starts ==-->
-        <div class="row">
+        <div class="row" data-aos="fade-right" data-aos-offset="400" data-aos-once="true">
             @foreach ($wisataPopuler as $wisata)
             <div class="col-12 col-md-4">
                 <div class="dtr-blog-item">
                     <!-- image -->
-                    <div class="dtr-post-img"> <img @if ($wisata->thumbnail)
+                    <div class="dtr-post-img"> 
+                        <img @if ($wisata->thumbnail)
                         src="{{Storage::url($wisata->thumbnail->media_url)}}"
                         @else
                         src="{{url('assets/images/ranu.png')}}"
                         @endif alt="image">
                     </div>
                     <!-- content -->
-                    <div class="dtr-post-content"> <span class="dtr-blog-cat">{{$wisata->city->province->name}}</span>
+                    <div class="dtr-post-content" style="background: #FFFFFF"> <span class="dtr-blog-cat">{{$wisata->city->province->name}}</span>
                         <h5><a href="{{route('detailwisata', ['slug' => $wisata->slug])}}">{{$wisata->name}}</a></h5>
                         <p class="text-justify text">{{$wisata->history}}</p>
                     </div>
@@ -385,16 +386,16 @@
     </section>
     <!-- wisata section ends -->
 
-    <section id="city" class="dtr-section dtr-box-layout dtr-py-100">
+    <section id="city" class="dtr-section dtr-box-layout dtr-py-50">
         <!-- heading starts -->
-        <div class="dtr-section-heading-wrapper">
+        <div class="dtr-section-heading-wrapper" data-aos="fade-right" data-aos-offset="250" data-aos-once="true">
             <h2>Kota Terpopuler</h2>
             <p>Berikut ini adalah 3 kota terpopuler yang sering dicari
             </p>
         </div>
         <!-- heading ends -->
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="300" data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/malang.png')}}" alt="">
 
@@ -403,7 +404,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="600" data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/yogyakarta.png')}}" alt="">
 
@@ -412,7 +413,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="400" data-aos-delay="900" data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/surabaya.png')}}" alt="">
                     <a href="{{route('wisata')}}?city=surabaya" class="position-absolute city-text h1">
@@ -425,13 +426,13 @@
 
     <!-- services section starts
 ================================================== -->
-    <section id="services" class="dtr-section dtr-box-layout dtr-box-wrapper-round dtr-box-padding bg-white">
+    <section id="services" class="dtr-section dtr-box-layout dtr-box-wrapper-round dtr-box-padding bg-white" data-aos="fade-right" data-aos-offset="400" data-aos-once="true" data-aos-duration="1000">
 
         <!--== row 1 starts ==-->
-        <div class="row">
+        <div class="row" >
 
             <!-- column 1 starts -->
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6" >
 
                 <!-- heading starts -->
                 <div class="dtr-section-heading-wrapper">
