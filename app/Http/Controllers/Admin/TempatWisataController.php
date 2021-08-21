@@ -59,7 +59,7 @@ class TempatWisataController extends Controller
      */
     public function show($id)
     {
-        $wisata = TempatWisata::with('location')->findOrFail($id);
+        $wisata = TempatWisata::with('location', 'video')->findOrFail($id);
 
         return view('pages.admin.tempat-wisata.update', compact('wisata'));
     }

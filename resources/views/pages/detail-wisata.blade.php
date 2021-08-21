@@ -3,6 +3,26 @@
 @section('style')
 <link rel="stylesheet" href="{{url('frontpage/assets/css/xzoom.min.css')}}">
 <link rel="stylesheet" href="{{url('frontpage/assets/css/custom.css')}}">
+
+<style>
+    .videowrapper {
+        float: none;
+        clear: both;
+        width: 100%;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+    }
+
+    .videowrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -33,14 +53,15 @@
                 <!-- Images -->
                 <div class="row mt-4">
                     @foreach ($wisata->media as $item)
+                    @if ($item->type == 'image')
                     <div class="col-3">
                         <a href="{{Storage::url($item->media_url)}}">
                             <img class="img-fluid xzoom-gallery" src="{{Storage::url($item->media_url)}}"
                                 xpreview="{{Storage::url($item->media_url)}}" alt="">
                         </a>
                     </div>
+                    @endif
                     @endforeach
-
                 </div>
             </div>
             <div class="col-md-4">
@@ -55,6 +76,15 @@
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
+                @if ($wisata->video)
+                <div class="mt-4 videowrapper">
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/{{explode('/', $wisata->video->media_url)[3]}}"
+                        title="YouTube video player" frameborder="0" autoplay
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                @endif
             </div>
         </div>
         <!-- Content Ends-->

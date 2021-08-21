@@ -486,16 +486,46 @@ function initialize() {
                 </div>
                 <div class="row" wire:sortable="updateMediaOrder">
                     @foreach ($wisata->media as $item)
+                    @if ($item->type == 'image')
                     <div class="col-lg-3 col-md-6 mb-4" wire:sortable.item="{{$item->id}}" wire:key="{{$item->id}}">
                         <img src="{{Storage::url($item->media_url)}}" style="width:100%;">
                         <button onclick="confirm('Apakah anda yakin?') || event.stopImmediatePropagation()"
                             wire:click="deleteMedia({{$item->id}})" class="btn btn-small btn-link">Hapus</button>
                     </div>
+                    @endif
                     @endforeach
 
                 </div>
             </div>
         </div>
         <!-- /# card -->
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Video URL</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-success  align-items-center" style="display: none;" x-data="{show: false}"
+                    x-show="show"
+                    x-init="@this.on('savedVideo', ()=>{show = true; setTimeout(()=>{show=false;}, 2000)})">
+                    <div>
+                        Data Tersimpan
+                    </div>
+                </div>
+                <form wire:submit.prevent="saveVideoEmbed">
+                    <div class="form-group ">
+                        <label class="form-label">URL Youtube</label>
+                        <input type="text" name="additionalNeed_name" class="form-control" wire:model="videoURL"
+                            required>
+
+                    </div>
+                    <div class="form-group d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

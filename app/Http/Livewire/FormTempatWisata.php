@@ -55,9 +55,14 @@ class FormTempatWisata extends Component
     public $selectedProvince;
     public $selectedCity;
 
+    public $videoURL;
+
     public function mount($wisata)
     {
         $this->tempatWisata = $wisata;
+        if( $wisata->video){
+            $this->videoURL = $wisata->video->media_url;
+        }
         $this->status = $wisata->status;
         $this->updated_at = $wisata->updated_at;
         $this->provinces = Province::all();
@@ -213,5 +218,21 @@ class FormTempatWisata extends Component
     public function deleteAdditionalNeed(AdditionalNeed $id)
     {
         $id->delete();
+    }
+
+    public function saveVideoEmbed()
+    {
+        $media = MediaTempatWisata::where('tempat_wisata_id', $this->tempatWisata->id)->where('type', 'video')->first();
+        if($media){
+            $media->update(['media_url' => $this->videoURL]);
+        }
+        else{
+            MediaTempatWisata::create([
+                'tempat_wisata_id' => $this->tempatWisata->id,
+                'type' => 'video',
+                'media_url' => $this->videoURL
+            ]);
+        }
+        $this->emit('savedVideo');
     }
 }

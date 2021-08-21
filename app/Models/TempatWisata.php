@@ -54,6 +54,11 @@ class TempatWisata extends Model
         return $this->hasOne(MediaTempatWisata::class)->orderBy('position');
     }
 
+    public function video()
+    {
+        return $this->hasOne(MediaTempatWisata::class)->where('type', 'video');
+    }
+
     public function mediaTempatWisatas()
     {
         return $this->hasMany(MediaTempatWisata::class);
