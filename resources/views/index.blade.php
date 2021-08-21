@@ -135,7 +135,7 @@
                             style="z-index: 7; min-width: 331px; max-width: 331px; max-width: 73px; max-width: 73px; white-space: normal; font-size: 14px; line-height: 22px; font-weight: 400; color: #000000;background-color:rgba(255, 255, 255, 0.5);">
                             Kami akan membantumu menemukan penawaran serta rute terbaik untuk liburan. </div>
                         <!-- LAYER NR. 4 -->
-                        <div class="tp-caption rev-btn " id="slide-8-layer-5" data-x="['left','left','center','center']"
+                        <a  href="{{route('wisata')}}" class="tp-caption rev-btn " id="slide-8-layer-5" data-x="['left','left','center','center']"
                             data-hoffset="['804','608','0','2']" data-y="['top','top','top','top']"
                             data-voffset="['360','355','355','353']" data-width="none" data-height="none"
                             data-whitespace="nowrap" data-type="button" data-responsive_offset="on"
@@ -145,7 +145,7 @@
                             data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
                             data-paddingleft="[35,35,35,35]"
                             style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 10px; font-weight: 700; color: #000000;text-transform:uppercase;background-color:rgba(243, 190, 78, 0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                            Mulai seakarang </div>
+                            Mulai seakarang </a>
 
 
                     </li>
@@ -201,7 +201,7 @@
                             Kami menyediakan berbagai informasi tempat wisata beserta harga yang spesial. </div>
 
                         <!-- LAYER NR. 15 -->
-                        <div class="tp-caption rev-btn " id="slide-10-layer-4"
+                        <a  href="{{route('travel')}}" class="tp-caption rev-btn " id="slide-10-layer-4"
                             data-x="['left','left','center','center']" data-hoffset="['829','571','1','0']"
                             data-y="['top','top','top','top']" data-voffset="['391','405','380','362']"
                             data-width="['252','257','254','252']" data-height="['42','43','42','42']"
@@ -212,7 +212,7 @@
                             data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]"
                             data-paddingleft="[35,35,35,35]"
                             style="z-index: 8; min-width: 252px; max-width: 252px; max-width: 42px; max-width: 42px; white-space: normal; font-size: 15px; line-height: 17px; font-weight: 500; color: rgba(255,255,255,1);background-color:rgba(0,0,0,0.75);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                            Mulai berwisata sekarang</div>
+                            Pilih Travelmu</a>
                     </li>
 
                     <!-- SLIDE  -->
