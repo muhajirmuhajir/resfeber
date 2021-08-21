@@ -12,16 +12,21 @@
         <div class="row ">
             <div class="col-md-6">
                 <div class="img-container">
-                    <div class="position-relative">
+                    <div class="position-relative sarangan">
                         <img src="{{url('frontpage/assets/images/image-login.png')}}" alt="" srcset=""
                             class="img-fluid">
                         <div class="h2 p-4 px-5 border-box login-text-position">
-                            Magetan
+                            Telaga Sarangan
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+
+            <Script>
+                gsap.from('.sarangan',{duration: 1, x: -100, opacity: 5} );
+            </Script>
+
+            <div class="col-md-6 masuk">
                 <div class="card-container border-box px-4 pt-5">
                     <h1 class="h1">Masuk</h1>
                     @error('email')
@@ -52,6 +57,11 @@
                     </p>
                 </div>
             </div>
+
+            <Script>
+                gsap.from('.masuk',{duration: 1, x: 100, opacity: 5} );
+            </Script>
+
         </div>
     </section>
     <!-- hero section ends -->

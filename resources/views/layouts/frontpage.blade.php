@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 <head>
     <meta charset="utf-8">
@@ -20,6 +20,12 @@
     <link href="{{url('frontpage/assets/images/icons/apple-touch-icon-76-precomposed.png')}}" rel="apple-touch-icon"
         sizes="76x76">
     <link href="{{url('frontpage/assets/images/icons/favicon.png" rel="shortcut icon')}}">
+
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="{{url('frontpage/assets/css/bootstrap.min.css')}}">
