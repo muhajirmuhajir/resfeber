@@ -199,11 +199,11 @@
 
             </div>
             <div class="col-md-4 mt-4 mt-md-0">
-                <div class="card mb-4 text-white bg-success">
+                <div class="card mb-4 text-white" style="background: #28a745">
                     <div class="card-header">
                         Harga Tiket Masuk
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="background: #28a745">
                         <table class="table table-striped">
                             <tbody>
                                 @forelse ($wisata->tickets as $ticket)
@@ -212,7 +212,7 @@
                                     <td>Rp.{{$ticket->price}}</td>
                                 </tr>
                                 @empty
-                                <tr class="text-white">
+                                <tr class="text-black" style="background: #DBFEE7">
                                     <td>Gratis</td>
                                 </tr>
                                 @endforelse
@@ -233,7 +233,7 @@
                                     <td>Rp.{{$parking->price}}</td>
                                 </tr>
                                 @empty
-                                <tr class="text-white">
+                                <tr class="text-black" style="background: #dcedff">
                                     <td>Bebas Parkir</td>
                                 </tr>
                                 @endforelse
