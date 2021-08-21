@@ -44,7 +44,7 @@
         height: 12px;
         position: absolute;
         background: rgba(153, 153, 153, 0);
-        border: 3px solid rgba(29, 184, 193, 0.9);
+        border: 3px solid rgba(250, 250, 250, 0.9);
         border-radius: 50%;
         cursor: pointer;
         box-sizing: content-box;
