@@ -234,8 +234,11 @@ function initialize() {
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Foto Produk</label>
                         <div class="col-sm-9">
-                            <input type="file" name="produk_image" class="form-control" wire:model="produk_image"
-                                required>
+                            <div class="custom-file">
+                                <input type="file" name="produk_image" class="custom-file-input" id="fotoProduk"
+                                    wire:model="produk_image" required>
+                                <label class="custom-file-label" for="fotoProduk">Pilih Foto Produk</label>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -476,7 +479,11 @@ function initialize() {
                                 <div class="row">
                                     <label class="col-sm-3 col-form-label">Foto</label>
                                     <div class="col-sm-9">
-                                        <input type="file" wire:model="photo" class="form-control" required>
+                                        <div class="custom-file">
+                                            <input type="file" name="produk_image" class="custom-file-input"
+                                                id="fotoGallery" wire:model="photo" required>
+                                            <label class="custom-file-label" for="fotoGallery">Pilih Foto Produk</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-small btn-primary">Simpan Foto</button>

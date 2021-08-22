@@ -118,10 +118,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="file" class="col-sm-3 col-form-label">Foto Profile</label>
+                            <label for="customFile" class="col-sm-3 col-form-label">Foto Profile</label>
                             <div class="col-sm-9">
-                                <input type="file" name="image_url" id="file" class="form-control"
-                                    placeholder="Foto Profile">
+                                <div class="custom-file">
+                                    <input type="file" name="image_url" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Pilih Foto Profile</label>
+                                </div>
                             </div>
                         </div>
                     </div>
