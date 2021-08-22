@@ -191,7 +191,7 @@
             </div>
             <div class="col-md-4 mt-4 mt-md-0">
                 @if ($wisata->video)
-                <div class="mt-4 videowrapper">
+                <div class="videowrapper">
                     <iframe width="100%" height="100%"
                         src="https://www.youtube.com/embed/{{explode('/', $wisata->video->media_url)[3]}}"
                         title="YouTube video player" frameborder="0" autoplay
@@ -199,7 +199,7 @@
                         allowfullscreen></iframe>
                 </div>
                 @endif
-                <div class="card mb-4 text-white" style="background: #28a745">
+                <div class="card mb-4 mt-4 text-white" style="background: #28a745">
                     <div class="card-header">
                         Harga Tiket Masuk
                     </div>
