@@ -21,7 +21,7 @@ class WisataFilter extends Component
     public function mount()
     {
         $this->selectedProvinces = [];
-        $this->provinces = Province::all();
+        $this->provinces = Province::whereHas('cities.tempatWIsata')->get();;
     }
     public function render()
     {
