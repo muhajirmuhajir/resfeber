@@ -30,7 +30,7 @@
                 <div class="card-container border-box px-4 pt-5">
                     <h1 class="h1">Daftar akun</h1>
                     @if ($errors->any())
-                    <div class="alert alert-danger my-2">
+                    <div class="alert alert-danger my-2 p-2">
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
                     </div>
                     @endif
