@@ -8,7 +8,12 @@
 <div id="dtr-main-content">
     <!-- wisata section starts -->
     <section id="detail-wisata" class="dtr-section dtr-box-layout dtr-hero-section-top-padding ">
-        <h1 class="h1">Nahwa Tour and Travel </h1>
+        {{-- <h1 class="h1">Nahwa Tour and Travel </h1> --}}
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="display-4">{{$travel->name}}</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-7">
                 <img src="{{Storage::url($travel->thumbnail)}}" alt="" style="max-height: 600px" class="img-fluid">
