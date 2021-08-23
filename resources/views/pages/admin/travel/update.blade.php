@@ -27,7 +27,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Deskripsi</label>
                                 <div class="col-sm-9">
-                                    <textarea name="description" id="description"
+                                    <textarea name="description" id="description" class="form-control"
                                         rows="5">{{$travel->description}}</textarea>
                                 </div>
                             </div>
