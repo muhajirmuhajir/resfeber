@@ -21,7 +21,6 @@
                                     <th>NAMA TEMPAT WISATA</th>
                                     <th>TOUR TRAVEL</th>
                                     <th>NAMA PAKET</th>
-                                    <th>DESKRIPSI</th>
                                     <th>HARGA</th>
                                     <th></th>
                                 </tr>
@@ -33,7 +32,6 @@
                                     <td>{{$item->tempatWisata->name ?? "-"}}</td>
                                     <td>{{$item->tourTravel->name ?? "-"}}</td>
                                     <td>{{$item->name}}</td>
-                                    <td>{{$item->description}}</td>
                                     <td>{{$item->price}}</td>
                                     <td>
                                         <div class="dropdown">

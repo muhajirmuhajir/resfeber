@@ -27,8 +27,8 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Deskripsi</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="description" value="{{$travel->description}}"
-                                        class="form-control" placeholder="Deskripsi" required>
+                                    <textarea name="description" id="description" class="form-control"
+                                        rows="5">{{$travel->description}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -55,8 +55,11 @@
                             <div class="form-group row">
                                 <label for="file" class="col-sm-3 col-form-label">Thumbnail</label>
                                 <div class="col-sm-9">
-                                    <input type="file" name="thumbnail" id="file" class="form-control"
-                                        placeholder="Thumbnail" required>
+                                    <div class="custom-file">
+                                        <input type="file" name="thumbnail" class="custom-file-input" id="fotoGallery"
+                                            required>
+                                        <label class="custom-file-label" for="fotoGallery">Pilih Thumbnail</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
