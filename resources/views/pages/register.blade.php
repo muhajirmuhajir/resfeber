@@ -23,7 +23,7 @@
             </div>
 
             <Script>
-                gsap.from('.semarang',{duration: 1, x: 100, opacity: 5} );
+                gsap.from('.semarang',{duration: 2, x: 100, opacity: 5} );
             </Script>
 
             <div class="col-md-6 daftar">
