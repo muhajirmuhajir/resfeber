@@ -60,7 +60,7 @@
                 <div class="ml-4 d-flex flex-column" style="flex-grow: 1;">
                     <div class="mb-auto">
                         <h3 class="h3">{{$paket->name}}</h3>
-                        <p>{{$paket->description}}</p>
+                        <p class="text-paket">{{$paket->description}}</p>
                     </div>
                     <div class="d-md-flex  justify-content-between align-items-end">
                         <div>
