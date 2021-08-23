@@ -76,15 +76,6 @@
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-                @if ($wisata->video)
-                <div class="mt-4 videowrapper">
-                    <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/{{explode('/', $wisata->video->media_url)[3]}}"
-                        title="YouTube video player" frameborder="0" autoplay
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                @endif
             </div>
         </div>
         <!-- Content Ends-->
@@ -199,7 +190,16 @@
 
             </div>
             <div class="col-md-4 mt-4 mt-md-0">
-                <div class="card mb-4 text-white" style="background: #28a745">
+                @if ($wisata->video)
+                <div class="videowrapper">
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/{{explode('/', $wisata->video->media_url)[3]}}"
+                        title="YouTube video player" frameborder="0" autoplay
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                @endif
+                <div class="card mb-4 mt-4 text-white" style="background: #28a745">
                     <div class="card-header">
                         Harga Tiket Masuk
                     </div>
@@ -254,7 +254,11 @@
                             <div class="ml-4 d-flex flex-column" style="flex-grow: 1;">
                                 <div class="mb-auto">
                                     <h3 class="h3">{{$paket->name}}</h3>
-                                    <p>{{$paket->description}}</p>
+                                    <p class="text-paket" style="overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2; /* number of lines to show */
+                                    -webkit-box-orient: vertical;">{{$paket->description}}</p>
                                 </div>
                                 <div class="d-md-flex  justify-content-between align-items-end">
                                     <div>

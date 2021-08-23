@@ -33,7 +33,7 @@
                     </div>
                     <div class="mb-2">
                         <small>
-                            Lokasi Penjemputan
+                            Deskripsi
                         </small>
                         <p class="text-blue">{{$transaksi->paket->description}}</p>
                     </div>

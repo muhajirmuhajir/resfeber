@@ -12,7 +12,7 @@ class TravelController extends Controller
     {
 
         $travels = TourTravel::with(['pakets'=> function($query){
-            $query->orderBy('price')->take(1);
+            $query->orderBy('price');
         }])->get();
         return view('pages.travel', compact('travels'));
     }

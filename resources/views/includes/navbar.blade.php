@@ -56,7 +56,8 @@
                     @endif
                     <form action="{{route('logout')}}" method="post">
                         @csrf
-                        <button type="submit" class="btn btn-link d-block w-100 px-0 text-left">Logout</button>
+                        <button type="submit" class="btn btn-link d-block w-100 px-0 text-left"
+                            style="color: red;">Logout</button>
                     </form>
                 </div>
                 @else

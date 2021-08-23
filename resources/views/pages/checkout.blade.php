@@ -32,7 +32,7 @@
             <div class="col-3">
                 <p class="py-2">Tempat Wisata
                 </p>
-                <p class="py-2">Lokasi Penjemputan
+                <p class="py-2">Deskripsi
                 </p>
                 <p class="py-2">Tanggal Berangkat
                 </p>
