@@ -8,20 +8,20 @@
 <div id="dtr-main-content">
 
     <!-- hero section starts -->
-    <section id="home" class="dtr-section dtr-box-layout dtr-hero-section-top-padding" >
+    <section id="home" class="dtr-section dtr-box-layout dtr-hero-section-top-padding">
         <div class="row flex-row-reverse">
-            <div class="col-md-6" >
+            <div class="col-md-6">
                 <div class="img-container">
                     <div class="position-relative semarang">
                         <img src="{{url('frontpage/assets/images/image-register.png')}}" alt="" srcset=""
-                            class="img-fluid" >
+                            class="img-fluid">
                         <div class="h2 p-4 px-5 border-box register-text-position">
                             Semarang
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <Script>
                 gsap.from('.semarang',{duration: 1, x: 100, opacity: 5} );
             </Script>
@@ -30,7 +30,9 @@
                 <div class="card-container border-box px-4 pt-5">
                     <h1 class="h1">Daftar akun</h1>
                     @if ($errors->any())
-                    {{$errors}}
+                    <div class="alert alert-danger my-2">
+                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                    </div>
                     @endif
                     <form method="post" action="{{route('register')}}">
                         @csrf
