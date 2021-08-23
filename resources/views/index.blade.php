@@ -397,7 +397,7 @@
         </div>
         <!-- heading ends -->
         <div class="row">
-            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="220" data-aos-delay="300"
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="200" data-aos-delay="300"
                 data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/malang.png')}}" alt="">
@@ -407,7 +407,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4" class="col-md-4" data-aos="zoom-in-right" data-aos-offset="220" data-aos-delay="600"
+            <div class="col-md-4" class="col-md-4" data-aos="zoom-in-right" data-aos-offset="200" data-aos-delay="600"
                 data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/yogyakarta.png')}}" alt="">
@@ -417,7 +417,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="220" data-aos-delay="900"
+            <div class="col-md-4" data-aos="zoom-in-right" data-aos-offset="200" data-aos-delay="900"
                 data-aos-once="true">
                 <div class="position-relative">
                     <img class="img-fluid" src="{{url('frontpage/assets/images/surabaya.png')}}" alt="">
