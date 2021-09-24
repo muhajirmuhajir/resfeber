@@ -54,7 +54,7 @@
                     @if (auth()->user()->role === 3)
                     <a href="{{route('admin.dashboard')}}" class="d-block">Dashboard</a>
                     @endif
-                    <form action="{{route('logout')}}" method="post">
+                    <form action="{{route('logout')}}" method="post" id="logout_form">
                         @csrf
                         <button type="submit" class="btn btn-link d-block w-100 px-0 text-left"
                             style="color: red;">Logout</button>
@@ -90,6 +90,26 @@
                     @endif
                     <li> <a class="nav-link px-2 {{Route::currentRouteName() == 'about'? 'ctm-active': ''}}"
                             href="{{route('about')}}">Tentang</a> </li>
+                    @auth
+                    <li> <a class="nav-link px-2 d-md-none d-block {{Route::currentRouteName() == 'profile'? 'ctm-active': ''}}"
+                            href="{{route('profile')}}">Profile</a> </li>
+                    <li> <a class="nav-link px-2 d-md-none d-block {{Route::currentRouteName() == 'transaksi'? 'ctm-active': ''}}"
+                            href="{{route('transaksi')}}">Transaksi</a> </li>
+                    @if (auth()->user()->role === 3)
+                    <li> <a class="nav-link px-2 d-md-none d-block {{Route::currentRouteName() == 'admin.dashboard'? 'ctm-active': ''}}"
+                            href="{{route('admin.dashboard')}}">Dashboard</a> </li>
+                    @endif
+                    <a href="#" onclick="document.getElementById('logout_form').submit()"
+                        class="d-md-none d-block dtr-btn dtr-btn-right-icon mx-2 p-2 mb-2 dtr-mr-5 btn-danger text-white">Logout<span
+                            class="btn-span"><i class="icon-arrow-right"></i></span></a>
+                    @endauth
+                    @guest
+                    <a href="{{route('register')}}"
+                        class="d-md-none d-block dtr-btn dtr-btn-right-icon mx-2 p-2 mb-2 dtr-mr-5 btn-dark-blue text-white">Daftar</a>
+                    <a href="{{route('login')}}"
+                        class="d-md-none d-block dtr-btn dtr-btn-right-icon mx-2 p-2 mb-2 dtr-mr-5 btn-outline-primary"
+                        style="color: #1e247e;">Masuk</a>
+                    @endguest
                 </ul>
             </div>
             <!-- menu ends -->
