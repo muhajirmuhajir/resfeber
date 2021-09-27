@@ -44,6 +44,8 @@ class MidtransController extends Controller
             $transaction->transaction_status = 'FAILED';
         }else if($status == 'cancel'){
             $transaction->transaction_status = 'CANCELLED';
+        }else if($status == 'expire'){
+            $transaction->transaction_status = 'EXPIRED';
         }
 
         $transaction->save();
